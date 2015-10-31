@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration device="PIC24FJ64GA004" mcc_version="v2.25.2">
+    <managers>
+        <manager generated="true" name="Pin Manager" reloadPin="manual">
+            <setting name="package" option="TQFP44"/>
+            <setting name="sorting" option="true"/>
+            <resource customName="CARRAGE_UP" digital="true" direction="INPUT" function="RA1" ioc="0" module="GPIO" name="RA1" start="false" type="pin" wpu="false"/>
+            <resource customName="HEAD_SELECT_LED3" digital="true" direction="OUTPUT" function="RA2" ioc="0" module="GPIO" name="RA2" start="false" type="pin" wpu="false"/>
+            <resource customName="HEAD_SELECT_LED2" digital="true" direction="OUTPUT" function="RA3" ioc="0" module="GPIO" name="RA3" start="false" type="pin" wpu="false"/>
+            <resource customName="LED_OP1" digital="true" direction="OUTPUT" function="RA4" ioc="0" module="GPIO" name="RA4" start="false" type="pin" wpu="false"/>
+            <resource customName="SEAL_COIL" digital="true" direction="OUTPUT" function="RA7" module="GPIO" name="RA7" start="false" type="pin" wpu="false"/>
+            <resource customName="HEAD_SELECT_LED1" digital="true" direction="OUTPUT" function="RA8" module="GPIO" name="RA8" start="false" type="pin" wpu="false"/>
+            <resource customName="AIR_COIL" digital="true" direction="OUTPUT" function="RA10" module="GPIO" name="RA10" start="false" type="pin" wpu="false"/>
+            <resource customName="HEATER_TOP" digital="true" direction="OUTPUT" function="RB0" ioc="0" module="GPIO" name="RB0" start="false" type="pin" wpu="false"/>
+            <resource customName="HEATER_BOT" digital="true" direction="OUTPUT" function="RB1" ioc="0" module="GPIO" name="RB1" start="false" type="pin" wpu="false"/>
+            <resource customName="HEAD_SELECT_4" digital="true" direction="OUTPUT" function="RB2" ioc="0" module="GPIO" name="RB2" start="false" type="pin" wpu="false"/>
+            <resource customName="HEAD_SELECT_3" digital="true" direction="OUTPUT" function="RB3" ioc="0" module="GPIO" name="RB3" start="false" type="pin" wpu="false"/>
+            <resource customName="COUNTER" digital="true" direction="OUTPUT" function="RB4" ioc="0" module="GPIO" name="RB4" start="false" type="pin" wpu="false"/>
+            <resource customName="EXT_TMR1_OV" digital="true" direction="INPUT" function="RB5" ioc="0" module="GPIO" name="RB5" start="false" type="pin" wpu="false"/>
+            <resource customName="EXT_TMR2_OV" digital="true" direction="INPUT" function="RB6" ioc="0" module="GPIO" name="RB6" start="false" type="pin" wpu="false"/>
+            <resource customName="STEP_B_BAR" digital="true" direction="OUTPUT" function="RB7" ioc="0" module="GPIO" name="RB7" start="false" type="pin" wpu="false"/>
+            <resource customName="STEP_B" digital="true" direction="OUTPUT" function="RB8" ioc="0" module="GPIO" name="RB8" start="false" type="pin" wpu="false"/>
+            <resource customName="STEP_A_BAR" digital="true" direction="OUTPUT" function="RB9" ioc="0" module="GPIO" name="RB9" start="false" type="pin" wpu="false"/>
+            <resource customName="BOTTOM_COIL" digital="true" direction="OUTPUT" function="RB12" ioc="0" module="GPIO" name="RB12" start="false" type="pin" wpu="false"/>
+            <resource customName="MAG_COIL" digital="true" direction="OUTPUT" function="RB13" ioc="0" module="GPIO" name="RB13" start="false" type="pin" wpu="false"/>
+            <resource customName="PURGE_COIL" digital="true" direction="OUTPUT" function="RB14" ioc="0" module="GPIO" name="RB14" start="false" type="pin" wpu="false"/>
+            <resource customName="HEAD_SELECT_2" digital="true" direction="OUTPUT" function="RC0" ioc="0" module="GPIO" name="RC0" start="false" type="pin" wpu="false"/>
+            <resource customName="HEAD_SELECT_1" digital="true" direction="OUTPUT" function="RC1" ioc="0" module="GPIO" name="RC1" start="false" type="pin" wpu="false"/>
+            <resource customName="HEAD_SELECT_LED4" digital="true" direction="OUTPUT" function="RC2" ioc="0" module="GPIO" name="RC2" start="false" type="pin" wpu="false"/>
+            <resource customName="EXT_TMR1_TRIG" digital="true" direction="OUTPUT" function="RC3" ioc="0" module="GPIO" name="RC3" start="false" type="pin" wpu="false"/>
+            <resource customName="EXT_TMR2_TRIG" digital="true" direction="OUTPUT" function="RC4" ioc="0" module="GPIO" name="RC4" start="false" type="pin" wpu="false"/>
+            <resource customName="BUTTON_START" digital="true" direction="INPUT" function="RC5" ioc="0" module="GPIO" name="RC5" start="false" type="pin" wpu="false"/>
+            <resource customName="STEP_A" digital="true" direction="OUTPUT" function="RC6" ioc="0" module="GPIO" name="RC6" start="false" type="pin" wpu="false"/>
+            <resource customName="TILT_COIL" digital="true" direction="OUTPUT" function="RC7" ioc="0" module="GPIO" name="RC7" start="false" type="pin" wpu="false"/>
+            <resource customName="SPIKE_COIL_RIGHT" digital="true" direction="OUTPUT" function="RC8" ioc="0" module="GPIO" name="RC8" start="false" type="pin" wpu="false"/>
+            <resource customName="SPIKE_COIL_LEFT" digital="true" direction="OUTPUT" function="RC9" ioc="0" module="GPIO" name="RC9" start="false" type="pin" wpu="false"/>
+            <file checksum="3976938424" modified="false" name="pin_manager.c" path="mcc_generated_files/pin_manager.c"/>
+            <file checksum="1108504246" modified="true" name="pin_manager.h" path="mcc_generated_files/pin_manager.h"/>
+        </manager>
+        <manager generated="true" name="System" reloadPin="manual">
+            <initializer comment="" name="Initialize">
+                <setting name="DOZE" option="1:8" register="CLKDIV"/>
+                <setting name="DOZEN" option="disabled" register="CLKDIV"/>
+                <setting name="RCDIV" option="FRC/1" register="CLKDIV"/>
+                <setting name="ROI" option="disabled" register="CLKDIV"/>
+            </initializer>
+            <setting name="IESO" option="ON"/>
+            <setting name="IOL1WAY" option="ON"/>
+            <setting name="FNOSC" option="FRC"/>
+            <setting name="I2C1SEL" option="PRI"/>
+            <setting name="WUTSEL" option="LEG"/>
+            <setting name="POSCMOD" option="NONE"/>
+            <setting name="SOSCSEL" option="LPSOSC"/>
+            <setting name="OSCIOFNC" option="ON"/>
+            <setting name="FCKSM" option="CSDCMD"/>
+            <setting name="WDTPS" option="PS32768"/>
+            <setting name="COE" option="OFF"/>
+            <setting name="ICS" option="PGx2"/>
+            <setting name="FWPSA" option="PR128"/>
+            <setting name="WINDIS" option="ON"/>
+            <setting name="GWRP" option="OFF"/>
+            <setting name="GCP" option="OFF"/>
+            <setting name="FWDTEN" option="OFF"/>
+            <setting name="BKBUG" option="OFF"/>
+            <setting name="JTAGEN" option="OFF"/>
+            <setting name="Primary Oscillator" option="3000000"/>
+            <setting name="Secondary Oscillator" option="31000"/>
+            <setting name="generateConfigBits" option="true"/>
+            <file checksum="1187116203" modified="false" name="mcc.c" path="mcc_generated_files/mcc.c"/>
+            <file checksum="797518858" modified="true" name="mcc.h" path="mcc_generated_files/mcc.h"/>
+        </manager>
+        <manager generated="true" name="Interrupt Manager" reloadPin="manual">
+            <resource name="TI" type="TMR2" value="1"/>
+            <interrupt module="TMR2" name="TI" priority="1"/>
+            <file checksum="739478873" modified="false" name="interrupt_manager.c" path="mcc_generated_files/interrupt_manager.c"/>
+            <file checksum="2868707668" modified="false" name="interrupt_manager.h" path="mcc_generated_files/interrupt_manager.h"/>
+        </manager>
+    </managers>
+    <modules>
+        <module generated="true" mode="GPIO" name="GPIO" order="0" reloadPin="manual" type="GPIO">
+            <resource customName="STEP_A_BAR" digital="true" direction="OUTPUT" function="RB9" ioc="0" module="GPIO" name="RB9" start="false" type="pin" wpu="false"/>
+            <resource customName="STEP_A" digital="true" direction="OUTPUT" function="RC6" ioc="0" module="GPIO" name="RC6" start="false" type="pin" wpu="false"/>
+            <resource customName="TILT_COIL" digital="true" direction="OUTPUT" function="RC7" ioc="0" module="GPIO" name="RC7" start="false" type="pin" wpu="false"/>
+            <resource customName="SPIKE_COIL_RIGHT" digital="true" direction="OUTPUT" function="RC8" ioc="0" module="GPIO" name="RC8" start="false" type="pin" wpu="false"/>
+            <resource customName="SPIKE_COIL_LEFT" digital="true" direction="OUTPUT" function="RC9" ioc="0" module="GPIO" name="RC9" start="false" type="pin" wpu="false"/>
+            <resource customName="BOTTOM_COIL" digital="true" direction="OUTPUT" function="RB12" ioc="0" module="GPIO" name="RB12" start="false" type="pin" wpu="false"/>
+            <resource customName="MAG_COIL" digital="true" direction="OUTPUT" function="RB13" ioc="0" module="GPIO" name="RB13" start="false" type="pin" wpu="false"/>
+            <resource customName="AIR_COIL" digital="true" direction="OUTPUT" function="RA10" module="GPIO" name="RA10" start="false" type="pin" wpu="false"/>
+            <resource customName="SEAL_COIL" digital="true" direction="OUTPUT" function="RA7" module="GPIO" name="RA7" start="false" type="pin" wpu="false"/>
+            <resource customName="PURGE_COIL" digital="true" direction="OUTPUT" function="RB14" ioc="0" module="GPIO" name="RB14" start="false" type="pin" wpu="false"/>
+            <resource customName="CARRAGE_UP" digital="true" direction="INPUT" function="RA1" ioc="0" module="GPIO" name="RA1" start="false" type="pin" wpu="false"/>
+            <resource customName="HEATER_TOP" digital="true" direction="OUTPUT" function="RB0" ioc="0" module="GPIO" name="RB0" start="false" type="pin" wpu="false"/>
+            <resource customName="HEATER_BOT" digital="true" direction="OUTPUT" function="RB1" ioc="0" module="GPIO" name="RB1" start="false" type="pin" wpu="false"/>
+            <resource customName="HEAD_SELECT_4" digital="true" direction="OUTPUT" function="RB2" ioc="0" module="GPIO" name="RB2" start="false" type="pin" wpu="false"/>
+            <resource customName="HEAD_SELECT_3" digital="true" direction="OUTPUT" function="RB3" ioc="0" module="GPIO" name="RB3" start="false" type="pin" wpu="false"/>
+            <resource customName="HEAD_SELECT_2" digital="true" direction="OUTPUT" function="RC0" ioc="0" module="GPIO" name="RC0" start="false" type="pin" wpu="false"/>
+            <resource customName="HEAD_SELECT_1" digital="true" direction="OUTPUT" function="RC1" ioc="0" module="GPIO" name="RC1" start="false" type="pin" wpu="false"/>
+            <resource customName="HEAD_SELECT_LED4" digital="true" direction="OUTPUT" function="RC2" ioc="0" module="GPIO" name="RC2" start="false" type="pin" wpu="false"/>
+            <resource customName="HEAD_SELECT_LED3" digital="true" direction="OUTPUT" function="RA2" ioc="0" module="GPIO" name="RA2" start="false" type="pin" wpu="false"/>
+            <resource customName="HEAD_SELECT_LED2" digital="true" direction="OUTPUT" function="RA3" ioc="0" module="GPIO" name="RA3" start="false" type="pin" wpu="false"/>
+            <resource customName="HEAD_SELECT_LED1" digital="true" direction="OUTPUT" function="RA8" module="GPIO" name="RA8" start="false" type="pin" wpu="false"/>
+            <resource customName="COUNTER" digital="true" direction="OUTPUT" function="RB4" ioc="0" module="GPIO" name="RB4" start="false" type="pin" wpu="false"/>
+            <resource customName="LED_OP1" digital="true" direction="OUTPUT" function="RA4" ioc="0" module="GPIO" name="RA4" start="false" type="pin" wpu="false"/>
+            <resource customName="EXT_TMR1_TRIG" digital="true" direction="OUTPUT" function="RC3" ioc="0" module="GPIO" name="RC3" start="false" type="pin" wpu="false"/>
+            <resource customName="EXT_TMR2_TRIG" digital="true" direction="OUTPUT" function="RC4" ioc="0" module="GPIO" name="RC4" start="false" type="pin" wpu="false"/>
+            <resource customName="BUTTON_START" digital="true" direction="INPUT" function="RC5" ioc="0" module="GPIO" name="RC5" start="false" type="pin" wpu="false"/>
+            <resource customName="EXT_TMR1_OV" digital="true" direction="INPUT" function="RB5" ioc="0" module="GPIO" name="RB5" start="false" type="pin" wpu="false"/>
+            <resource customName="EXT_TMR2_OV" digital="true" direction="INPUT" function="RB6" ioc="0" module="GPIO" name="RB6" start="false" type="pin" wpu="false"/>
+            <resource customName="STEP_B_BAR" digital="true" direction="OUTPUT" function="RB7" ioc="0" module="GPIO" name="RB7" start="false" type="pin" wpu="false"/>
+            <resource customName="STEP_B" digital="true" direction="OUTPUT" function="RB8" ioc="0" module="GPIO" name="RB8" start="false" type="pin" wpu="false"/>
+        </module>
+        <module generated="true" mode="TMR" name="TMR2" order="1" reloadPin="auto" type="tmr_32b">
+            <initializer comment="" name="Initialize">
+                <setting name="TSIDL" option="disabled" register="T2CON"/>
+                <setting name="TGATE" option="disabled" register="T2CON"/>
+                <setting name="TCKPS" option="1:1" register="T2CON"/>
+                <setting name="TCS" option="FOSC/2" register="T2CON"/>
+                <setting name="T32" option="disabled" register="T2CON"/>
+                <setting name="TON" option="enabled" register="T2CON"/>
+                <setting name="TMR2" option="0" register="TMR2"/>
+                <setting name="PR2" option="4000" register="PR2"/>
+                <additionalSetting name="timerFrequency" option="4000000.0"/>
+                <additionalSetting name="tmrReloadValue" option="0"/>
+                <additionalSetting name="tmrPeriod" option="1.000 ms"/>
+                <additionalSetting name="tickerPeriod" option="1"/>
+                <additionalSetting name="tmrPeriodValue" option="4000"/>
+                <additionalSetting name="tickerInSec" option="1.000 ms"/>
+            </initializer>
+            <setting name="TI" option="true"/>
+            <setting name="tmrUpperHalf" option="0"/>
+            <file checksum="4180398847" modified="false" name="tmr2.c" path="mcc_generated_files/tmr2.c"/>
+            <file checksum="2312053509" modified="false" name="tmr2.h" path="mcc_generated_files/tmr2.h"/>
+        </module>
+    </modules>
+</configuration>
