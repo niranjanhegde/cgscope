@@ -25,14 +25,6 @@ extern "C" {
         }motors;
     }STEPPER;
 
-    typedef union
-    {
-        uint8_t reg;
-        struct
-        {
-            unsigned _LATC
-        };
-    };
     void StepperMotorCOntrol(void);
     void StepperMotor_OP_update(void);
 

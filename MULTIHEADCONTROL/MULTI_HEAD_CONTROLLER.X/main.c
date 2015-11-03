@@ -45,19 +45,49 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
  */
 
 #include "mcc_generated_files/mcc.h"
+#include "app/miniature_head1.h"
 
 /*
                          Main application
  */
-    unsigned int count1;
+unsigned int count1;
+HEAD_SELECT head_seelect;
 int main(void) {
     // initialize the device
     SYSTEM_Initialize();
 
     while (1)
-    {
+    {        
         Time_Counter_Update();
-        Miniature_Sequence1();       
+        if(HEAD_SELECT_1_GetValue() == 0)
+        {
+            HEAD_SELECT_LED1_SetLow();
+            HEAD_SELECT_LED2_SetHigh();
+            HEAD_SELECT_LED3_SetHigh();
+            HEAD_SELECT_LED4_SetHigh();
+            Miniature_head1();
+        }
+        else if (HEAD_SELECT_2_GetValue() == 0)
+        {
+            HEAD_SELECT_LED1_SetHigh();
+            HEAD_SELECT_LED2_SetLow();
+            HEAD_SELECT_LED3_SetHigh();
+            HEAD_SELECT_LED4_SetHigh();
+        }
+        else if (HEAD_SELECT_3_GetValue() == 0)
+        {
+            HEAD_SELECT_LED1_SetHigh();
+            HEAD_SELECT_LED2_SetHigh();
+            HEAD_SELECT_LED3_SetLow();
+            HEAD_SELECT_LED4_SetHigh();
+        }
+        else if (HEAD_SELECT_4_GetValue() == 0)
+        {
+            HEAD_SELECT_LED1_SetHigh();
+            HEAD_SELECT_LED2_SetHigh();
+            HEAD_SELECT_LED3_SetHigh();
+            HEAD_SELECT_LED4_SetLow();
+        }
     }
 }
 /**

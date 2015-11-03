@@ -56,9 +56,26 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 
 #include "time_counter.h"
 #include "../app/stepper_motor.h"
+#include "../app/miniature_head1.h"
 
 
 #define _XTAL_FREQ  8000000
+
+typedef enum
+{
+    Minuature_Head1,
+    Minuature_Head2,
+    Standard_Head1,
+    Standard_Head2
+}HEAD_SELECT;
+
+typedef enum
+    {
+        STEP1=0,
+        STEP2,
+        STEP3,
+        STEP4,
+    }STATES;
 
 /**
  * @Param

@@ -72,11 +72,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Set RA1 high (1)
-    CARRAGE_UP_SetHigh();
+    BLANK2_SetHigh();
     </code>
 
  */
-#define CARRAGE_UP_SetHigh()          _LATA1 = 1
+#define BLANK2_SetHigh()          _LATA1 = 1
 /**
   @Summary
     Sets the GPIO pin, RA1, low using LATA1.
@@ -96,11 +96,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Set RA1 low (0)
-    CARRAGE_UP_SetLow();
+    BLANK2_SetLow();
     </code>
 
  */
-#define CARRAGE_UP_SetLow()           _LATA1 = 0
+#define BLANK2_SetLow()           _LATA1 = 0
 /**
   @Summary
     Toggles the GPIO pin, RA1, using LATA1.
@@ -120,11 +120,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Toggle RA1
-    CARRAGE_UP_SetToggle();
+    BLANK2_SetToggle();
     </code>
 
  */
-#define CARRAGE_UP_Toggle()           _LATA1 ^= 1
+#define BLANK2_Toggle()           _LATA1 ^= 1
 /**
   @Summary
     Reads the value of the GPIO pin, RA1.
@@ -146,11 +146,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
     uint16_t portValue;
 
     // Read RA1
-    postValue = CARRAGE_UP_GetValue();
+    postValue = BLANK2_GetValue();
     </code>
 
  */
-#define CARRAGE_UP_GetValue()         _RA1
+#define BLANK2_GetValue()         _RA1
 /**
   @Summary
     Configures the GPIO pin, RA1, as an input.
@@ -170,11 +170,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Sets the RA1 as an input
-    CARRAGE_UP_SetDigitalInput();
+    BLANK2_SetDigitalInput();
     </code>
 
  */
-#define CARRAGE_UP_SetDigitalInput()  _TRISA1 = 1
+#define BLANK2_SetDigitalInput()  _TRISA1 = 1
 /**
   @Summary
     Configures the GPIO pin, RA1, as an output.
@@ -194,11 +194,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Sets the RA1 as an output
-    CARRAGE_UP_SetDigitalOutput();
+    BLANK2_SetDigitalOutput();
     </code>
 
  */
-#define CARRAGE_UP_SetDigitalOutput() _TRISA1 = 0
+#define BLANK2_SetDigitalOutput() _TRISA1 = 0
 /**
   @Summary
     Sets the GPIO pin, RA2, high using LATA2.
@@ -1094,11 +1094,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Set RB0 high (1)
-    HEATER_TOP_SetHigh();
+    BLANK1_SetHigh();
     </code>
 
  */
-#define HEATER_TOP_SetHigh()          _LATB0 = 1
+#define BLANK1_SetHigh()          _LATB0 = 1
 /**
   @Summary
     Sets the GPIO pin, RB0, low using LATB0.
@@ -1118,11 +1118,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Set RB0 low (0)
-    HEATER_TOP_SetLow();
+    BLANK1_SetLow();
     </code>
 
  */
-#define HEATER_TOP_SetLow()           _LATB0 = 0
+#define BLANK1_SetLow()           _LATB0 = 0
 /**
   @Summary
     Toggles the GPIO pin, RB0, using LATB0.
@@ -1142,11 +1142,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Toggle RB0
-    HEATER_TOP_SetToggle();
+    BLANK1_SetToggle();
     </code>
 
  */
-#define HEATER_TOP_Toggle()           _LATB0 ^= 1
+#define BLANK1_Toggle()           _LATB0 ^= 1
 /**
   @Summary
     Reads the value of the GPIO pin, RB0.
@@ -1168,11 +1168,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
     uint16_t portValue;
 
     // Read RB0
-    postValue = HEATER_TOP_GetValue();
+    postValue = BLANK1_GetValue();
     </code>
 
  */
-#define HEATER_TOP_GetValue()         _RB0
+#define BLANK1_GetValue()         _RB0
 /**
   @Summary
     Configures the GPIO pin, RB0, as an input.
@@ -1192,11 +1192,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Sets the RB0 as an input
-    HEATER_TOP_SetDigitalInput();
+    BLANK1_SetDigitalInput();
     </code>
 
  */
-#define HEATER_TOP_SetDigitalInput()  _TRISB0 = 1
+#define BLANK1_SetDigitalInput()  _TRISB0 = 1
 /**
   @Summary
     Configures the GPIO pin, RB0, as an output.
@@ -1216,11 +1216,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Sets the RB0 as an output
-    HEATER_TOP_SetDigitalOutput();
+    BLANK1_SetDigitalOutput();
     </code>
 
  */
-#define HEATER_TOP_SetDigitalOutput() _TRISB0 = 0
+#define BLANK1_SetDigitalOutput() _TRISB0 = 0
 /**
   @Summary
     Sets the GPIO pin, RB1, high using LATB1.
@@ -1240,11 +1240,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Set RB1 high (1)
-    HEATER_BOT_SetHigh();
+    HEATER_TOP_SetHigh();
     </code>
 
  */
-#define HEATER_BOT_SetHigh()          _LATB1 = 1
+#define HEATER_TOP_SetHigh()          _LATB1 = 1
 /**
   @Summary
     Sets the GPIO pin, RB1, low using LATB1.
@@ -1264,11 +1264,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Set RB1 low (0)
-    HEATER_BOT_SetLow();
+    HEATER_TOP_SetLow();
     </code>
 
  */
-#define HEATER_BOT_SetLow()           _LATB1 = 0
+#define HEATER_TOP_SetLow()           _LATB1 = 0
 /**
   @Summary
     Toggles the GPIO pin, RB1, using LATB1.
@@ -1288,11 +1288,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Toggle RB1
-    HEATER_BOT_SetToggle();
+    HEATER_TOP_SetToggle();
     </code>
 
  */
-#define HEATER_BOT_Toggle()           _LATB1 ^= 1
+#define HEATER_TOP_Toggle()           _LATB1 ^= 1
 /**
   @Summary
     Reads the value of the GPIO pin, RB1.
@@ -1314,11 +1314,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
     uint16_t portValue;
 
     // Read RB1
-    postValue = HEATER_BOT_GetValue();
+    postValue = HEATER_TOP_GetValue();
     </code>
 
  */
-#define HEATER_BOT_GetValue()         _RB1
+#define HEATER_TOP_GetValue()         _RB1
 /**
   @Summary
     Configures the GPIO pin, RB1, as an input.
@@ -1338,11 +1338,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Sets the RB1 as an input
-    HEATER_BOT_SetDigitalInput();
+    HEATER_TOP_SetDigitalInput();
     </code>
 
  */
-#define HEATER_BOT_SetDigitalInput()  _TRISB1 = 1
+#define HEATER_TOP_SetDigitalInput()  _TRISB1 = 1
 /**
   @Summary
     Configures the GPIO pin, RB1, as an output.
@@ -1362,11 +1362,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Sets the RB1 as an output
-    HEATER_BOT_SetDigitalOutput();
+    HEATER_TOP_SetDigitalOutput();
     </code>
 
  */
-#define HEATER_BOT_SetDigitalOutput() _TRISB1 = 0
+#define HEATER_TOP_SetDigitalOutput() _TRISB1 = 0
 /**
   @Summary
     Sets the GPIO pin, RB2, high using LATB2.
@@ -1824,11 +1824,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Set RB5 high (1)
-    EXT_TMR1_OV_SetHigh();
+    CARRAGE_UP_SetHigh();
     </code>
 
  */
-#define EXT_TMR1_OV_SetHigh()          _LATB5 = 1
+#define CARRAGE_UP_SetHigh()          _LATB5 = 1
 /**
   @Summary
     Sets the GPIO pin, RB5, low using LATB5.
@@ -1848,11 +1848,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Set RB5 low (0)
-    EXT_TMR1_OV_SetLow();
+    CARRAGE_UP_SetLow();
     </code>
 
  */
-#define EXT_TMR1_OV_SetLow()           _LATB5 = 0
+#define CARRAGE_UP_SetLow()           _LATB5 = 0
 /**
   @Summary
     Toggles the GPIO pin, RB5, using LATB5.
@@ -1872,11 +1872,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Toggle RB5
-    EXT_TMR1_OV_SetToggle();
+    CARRAGE_UP_SetToggle();
     </code>
 
  */
-#define EXT_TMR1_OV_Toggle()           _LATB5 ^= 1
+#define CARRAGE_UP_Toggle()           _LATB5 ^= 1
 /**
   @Summary
     Reads the value of the GPIO pin, RB5.
@@ -1898,11 +1898,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
     uint16_t portValue;
 
     // Read RB5
-    postValue = EXT_TMR1_OV_GetValue();
+    postValue = CARRAGE_UP_GetValue();
     </code>
 
  */
-#define EXT_TMR1_OV_GetValue()         _RB5
+#define CARRAGE_UP_GetValue()         _RB5
 /**
   @Summary
     Configures the GPIO pin, RB5, as an input.
@@ -1922,11 +1922,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Sets the RB5 as an input
-    EXT_TMR1_OV_SetDigitalInput();
+    CARRAGE_UP_SetDigitalInput();
     </code>
 
  */
-#define EXT_TMR1_OV_SetDigitalInput()  _TRISB5 = 1
+#define CARRAGE_UP_SetDigitalInput()  _TRISB5 = 1
 /**
   @Summary
     Configures the GPIO pin, RB5, as an output.
@@ -1946,11 +1946,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Sets the RB5 as an output
-    EXT_TMR1_OV_SetDigitalOutput();
+    CARRAGE_UP_SetDigitalOutput();
     </code>
 
  */
-#define EXT_TMR1_OV_SetDigitalOutput() _TRISB5 = 0
+#define CARRAGE_UP_SetDigitalOutput() _TRISB5 = 0
 /**
   @Summary
     Sets the GPIO pin, RB6, high using LATB6.
@@ -1970,11 +1970,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Set RB6 high (1)
-    EXT_TMR2_OV_SetHigh();
+    BLANK3_SetHigh();
     </code>
 
  */
-#define EXT_TMR2_OV_SetHigh()          _LATB6 = 1
+#define BLANK3_SetHigh()          _LATB6 = 1
 /**
   @Summary
     Sets the GPIO pin, RB6, low using LATB6.
@@ -1994,11 +1994,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Set RB6 low (0)
-    EXT_TMR2_OV_SetLow();
+    BLANK3_SetLow();
     </code>
 
  */
-#define EXT_TMR2_OV_SetLow()           _LATB6 = 0
+#define BLANK3_SetLow()           _LATB6 = 0
 /**
   @Summary
     Toggles the GPIO pin, RB6, using LATB6.
@@ -2018,11 +2018,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Toggle RB6
-    EXT_TMR2_OV_SetToggle();
+    BLANK3_SetToggle();
     </code>
 
  */
-#define EXT_TMR2_OV_Toggle()           _LATB6 ^= 1
+#define BLANK3_Toggle()           _LATB6 ^= 1
 /**
   @Summary
     Reads the value of the GPIO pin, RB6.
@@ -2044,11 +2044,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
     uint16_t portValue;
 
     // Read RB6
-    postValue = EXT_TMR2_OV_GetValue();
+    postValue = BLANK3_GetValue();
     </code>
 
  */
-#define EXT_TMR2_OV_GetValue()         _RB6
+#define BLANK3_GetValue()         _RB6
 /**
   @Summary
     Configures the GPIO pin, RB6, as an input.
@@ -2068,11 +2068,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Sets the RB6 as an input
-    EXT_TMR2_OV_SetDigitalInput();
+    BLANK3_SetDigitalInput();
     </code>
 
  */
-#define EXT_TMR2_OV_SetDigitalInput()  _TRISB6 = 1
+#define BLANK3_SetDigitalInput()  _TRISB6 = 1
 /**
   @Summary
     Configures the GPIO pin, RB6, as an output.
@@ -2092,11 +2092,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Sets the RB6 as an output
-    EXT_TMR2_OV_SetDigitalOutput();
+    BLANK3_SetDigitalOutput();
     </code>
 
  */
-#define EXT_TMR2_OV_SetDigitalOutput() _TRISB6 = 0
+#define BLANK3_SetDigitalOutput() _TRISB6 = 0
 /**
   @Summary
     Sets the GPIO pin, RB7, high using LATB7.
@@ -2981,6 +2981,152 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #define PURGE_COIL_SetDigitalOutput() _TRISB14 = 0
 /**
   @Summary
+    Sets the GPIO pin, RB15, high using LATB15.
+
+  @Description
+    Sets the GPIO pin, RB15, high using LATB15.
+
+  @Preconditions
+    The RB15 must be set to an output.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Set RB15 high (1)
+    HEATER_BOT_SetHigh();
+    </code>
+
+ */
+#define HEATER_BOT_SetHigh()          _LATB15 = 1
+/**
+  @Summary
+    Sets the GPIO pin, RB15, low using LATB15.
+
+  @Description
+    Sets the GPIO pin, RB15, low using LATB15.
+
+  @Preconditions
+    The RB15 must be set to an output.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Set RB15 low (0)
+    HEATER_BOT_SetLow();
+    </code>
+
+ */
+#define HEATER_BOT_SetLow()           _LATB15 = 0
+/**
+  @Summary
+    Toggles the GPIO pin, RB15, using LATB15.
+
+  @Description
+    Toggles the GPIO pin, RB15, using LATB15.
+
+  @Preconditions
+    The RB15 must be set to an output.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Toggle RB15
+    HEATER_BOT_SetToggle();
+    </code>
+
+ */
+#define HEATER_BOT_Toggle()           _LATB15 ^= 1
+/**
+  @Summary
+    Reads the value of the GPIO pin, RB15.
+
+  @Description
+    Reads the value of the GPIO pin, RB15.
+
+  @Preconditions
+    None.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    uint16_t portValue;
+
+    // Read RB15
+    postValue = HEATER_BOT_GetValue();
+    </code>
+
+ */
+#define HEATER_BOT_GetValue()         _RB15
+/**
+  @Summary
+    Configures the GPIO pin, RB15, as an input.
+
+  @Description
+    Configures the GPIO pin, RB15, as an input.
+
+  @Preconditions
+    None.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Sets the RB15 as an input
+    HEATER_BOT_SetDigitalInput();
+    </code>
+
+ */
+#define HEATER_BOT_SetDigitalInput()  _TRISB15 = 1
+/**
+  @Summary
+    Configures the GPIO pin, RB15, as an output.
+
+  @Description
+    Configures the GPIO pin, RB15, as an output.
+
+  @Preconditions
+    None.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Sets the RB15 as an output
+    HEATER_BOT_SetDigitalOutput();
+    </code>
+
+ */
+#define HEATER_BOT_SetDigitalOutput() _TRISB15 = 0
+/**
+  @Summary
     Sets the GPIO pin, RC0, high using LATC0.
 
   @Description
@@ -3436,11 +3582,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Set RC3 high (1)
-    EXT_TMR1_TRIG_SetHigh();
+    TMR1_LED_SetHigh();
     </code>
 
  */
-#define EXT_TMR1_TRIG_SetHigh()          _LATC3 = 1
+#define TMR1_LED_SetHigh()          _LATC3 = 1
 /**
   @Summary
     Sets the GPIO pin, RC3, low using LATC3.
@@ -3460,11 +3606,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Set RC3 low (0)
-    EXT_TMR1_TRIG_SetLow();
+    TMR1_LED_SetLow();
     </code>
 
  */
-#define EXT_TMR1_TRIG_SetLow()           _LATC3 = 0
+#define TMR1_LED_SetLow()           _LATC3 = 0
 /**
   @Summary
     Toggles the GPIO pin, RC3, using LATC3.
@@ -3484,11 +3630,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Toggle RC3
-    EXT_TMR1_TRIG_SetToggle();
+    TMR1_LED_SetToggle();
     </code>
 
  */
-#define EXT_TMR1_TRIG_Toggle()           _LATC3 ^= 1
+#define TMR1_LED_Toggle()           _LATC3 ^= 1
 /**
   @Summary
     Reads the value of the GPIO pin, RC3.
@@ -3510,11 +3656,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
     uint16_t portValue;
 
     // Read RC3
-    postValue = EXT_TMR1_TRIG_GetValue();
+    postValue = TMR1_LED_GetValue();
     </code>
 
  */
-#define EXT_TMR1_TRIG_GetValue()         _RC3
+#define TMR1_LED_GetValue()         _RC3
 /**
   @Summary
     Configures the GPIO pin, RC3, as an input.
@@ -3534,11 +3680,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Sets the RC3 as an input
-    EXT_TMR1_TRIG_SetDigitalInput();
+    TMR1_LED_SetDigitalInput();
     </code>
 
  */
-#define EXT_TMR1_TRIG_SetDigitalInput()  _TRISC3 = 1
+#define TMR1_LED_SetDigitalInput()  _TRISC3 = 1
 /**
   @Summary
     Configures the GPIO pin, RC3, as an output.
@@ -3558,11 +3704,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Sets the RC3 as an output
-    EXT_TMR1_TRIG_SetDigitalOutput();
+    TMR1_LED_SetDigitalOutput();
     </code>
 
  */
-#define EXT_TMR1_TRIG_SetDigitalOutput() _TRISC3 = 0
+#define TMR1_LED_SetDigitalOutput() _TRISC3 = 0
 /**
   @Summary
     Sets the GPIO pin, RC4, high using LATC4.
@@ -3582,11 +3728,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Set RC4 high (1)
-    EXT_TMR2_TRIG_SetHigh();
+    TMR2_LED_SetHigh();
     </code>
 
  */
-#define EXT_TMR2_TRIG_SetHigh()          _LATC4 = 1
+#define TMR2_LED_SetHigh()          _LATC4 = 1
 /**
   @Summary
     Sets the GPIO pin, RC4, low using LATC4.
@@ -3606,11 +3752,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Set RC4 low (0)
-    EXT_TMR2_TRIG_SetLow();
+    TMR2_LED_SetLow();
     </code>
 
  */
-#define EXT_TMR2_TRIG_SetLow()           _LATC4 = 0
+#define TMR2_LED_SetLow()           _LATC4 = 0
 /**
   @Summary
     Toggles the GPIO pin, RC4, using LATC4.
@@ -3630,11 +3776,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Toggle RC4
-    EXT_TMR2_TRIG_SetToggle();
+    TMR2_LED_SetToggle();
     </code>
 
  */
-#define EXT_TMR2_TRIG_Toggle()           _LATC4 ^= 1
+#define TMR2_LED_Toggle()           _LATC4 ^= 1
 /**
   @Summary
     Reads the value of the GPIO pin, RC4.
@@ -3656,11 +3802,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
     uint16_t portValue;
 
     // Read RC4
-    postValue = EXT_TMR2_TRIG_GetValue();
+    postValue = TMR2_LED_GetValue();
     </code>
 
  */
-#define EXT_TMR2_TRIG_GetValue()         _RC4
+#define TMR2_LED_GetValue()         _RC4
 /**
   @Summary
     Configures the GPIO pin, RC4, as an input.
@@ -3680,11 +3826,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Sets the RC4 as an input
-    EXT_TMR2_TRIG_SetDigitalInput();
+    TMR2_LED_SetDigitalInput();
     </code>
 
  */
-#define EXT_TMR2_TRIG_SetDigitalInput()  _TRISC4 = 1
+#define TMR2_LED_SetDigitalInput()  _TRISC4 = 1
 /**
   @Summary
     Configures the GPIO pin, RC4, as an output.
@@ -3704,11 +3850,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Sets the RC4 as an output
-    EXT_TMR2_TRIG_SetDigitalOutput();
+    TMR2_LED_SetDigitalOutput();
     </code>
 
  */
-#define EXT_TMR2_TRIG_SetDigitalOutput() _TRISC4 = 0
+#define TMR2_LED_SetDigitalOutput() _TRISC4 = 0
 /**
   @Summary
     Sets the GPIO pin, RC5, high using LATC5.
@@ -3879,6 +4025,9 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 
  */
 #define STEP_A_SetHigh()          _LATC6 = 1
+
+#define STEP_A _LATC6
+
 /**
   @Summary
     Sets the GPIO pin, RC6, low using LATC6.
