@@ -59,6 +59,7 @@ int main(void) {
     while (1)
     {        
         Time_Counter_Update();
+        
         if(HEAD_SELECT_1_GetValue() == 0)
         {
             HEAD_SELECT_LED1_SetLow();
@@ -73,6 +74,7 @@ int main(void) {
             HEAD_SELECT_LED2_SetLow();
             HEAD_SELECT_LED3_SetHigh();
             HEAD_SELECT_LED4_SetHigh();
+            Miniature_head2();
         }
         else if (HEAD_SELECT_3_GetValue() == 0)
         {

@@ -75,6 +75,7 @@ typedef enum
         STEP2,
         STEP3,
         STEP4,
+        STEP5,        
     }STATES;
 
 /**

@@ -3144,11 +3144,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Set RC0 high (1)
-    HEAD_SELECT_2_SetHigh();
+    HEAD_SELECT_1_SetHigh();
     </code>
 
  */
-#define HEAD_SELECT_2_SetHigh()          _LATC0 = 1
+#define HEAD_SELECT_1_SetHigh()          _LATC0 = 1
 /**
   @Summary
     Sets the GPIO pin, RC0, low using LATC0.
@@ -3168,11 +3168,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Set RC0 low (0)
-    HEAD_SELECT_2_SetLow();
+    HEAD_SELECT_1_SetLow();
     </code>
 
  */
-#define HEAD_SELECT_2_SetLow()           _LATC0 = 0
+#define HEAD_SELECT_1_SetLow()           _LATC0 = 0
 /**
   @Summary
     Toggles the GPIO pin, RC0, using LATC0.
@@ -3192,11 +3192,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Toggle RC0
-    HEAD_SELECT_2_SetToggle();
+    HEAD_SELECT_1_SetToggle();
     </code>
 
  */
-#define HEAD_SELECT_2_Toggle()           _LATC0 ^= 1
+#define HEAD_SELECT_1_Toggle()           _LATC0 ^= 1
 /**
   @Summary
     Reads the value of the GPIO pin, RC0.
@@ -3218,11 +3218,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
     uint16_t portValue;
 
     // Read RC0
-    postValue = HEAD_SELECT_2_GetValue();
+    postValue = HEAD_SELECT_1_GetValue();
     </code>
 
  */
-#define HEAD_SELECT_2_GetValue()         _RC0
+#define HEAD_SELECT_1_GetValue()         _RC0
 /**
   @Summary
     Configures the GPIO pin, RC0, as an input.
@@ -3242,11 +3242,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Sets the RC0 as an input
-    HEAD_SELECT_2_SetDigitalInput();
+    HEAD_SELECT_1_SetDigitalInput();
     </code>
 
  */
-#define HEAD_SELECT_2_SetDigitalInput()  _TRISC0 = 1
+#define HEAD_SELECT_1_SetDigitalInput()  _TRISC0 = 1
 /**
   @Summary
     Configures the GPIO pin, RC0, as an output.
@@ -3266,11 +3266,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Sets the RC0 as an output
-    HEAD_SELECT_2_SetDigitalOutput();
+    HEAD_SELECT_1_SetDigitalOutput();
     </code>
 
  */
-#define HEAD_SELECT_2_SetDigitalOutput() _TRISC0 = 0
+#define HEAD_SELECT_1_SetDigitalOutput() _TRISC0 = 0
 /**
   @Summary
     Sets the GPIO pin, RC1, high using LATC1.
@@ -3290,11 +3290,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Set RC1 high (1)
-    HEAD_SELECT_1_SetHigh();
+    HEAD_SELECT_2_SetHigh();
     </code>
 
  */
-#define HEAD_SELECT_1_SetHigh()          _LATC1 = 1
+#define HEAD_SELECT_2_SetHigh()          _LATC1 = 1
 /**
   @Summary
     Sets the GPIO pin, RC1, low using LATC1.
@@ -3314,11 +3314,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Set RC1 low (0)
-    HEAD_SELECT_1_SetLow();
+    HEAD_SELECT_2_SetLow();
     </code>
 
  */
-#define HEAD_SELECT_1_SetLow()           _LATC1 = 0
+#define HEAD_SELECT_2_SetLow()           _LATC1 = 0
 /**
   @Summary
     Toggles the GPIO pin, RC1, using LATC1.
@@ -3338,11 +3338,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Toggle RC1
-    HEAD_SELECT_1_SetToggle();
+    HEAD_SELECT_2_SetToggle();
     </code>
 
  */
-#define HEAD_SELECT_1_Toggle()           _LATC1 ^= 1
+#define HEAD_SELECT_2_Toggle()           _LATC1 ^= 1
 /**
   @Summary
     Reads the value of the GPIO pin, RC1.
@@ -3364,11 +3364,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
     uint16_t portValue;
 
     // Read RC1
-    postValue = HEAD_SELECT_1_GetValue();
+    postValue = HEAD_SELECT_2_GetValue();
     </code>
 
  */
-#define HEAD_SELECT_1_GetValue()         _RC1
+#define HEAD_SELECT_2_GetValue()         _RC1
 /**
   @Summary
     Configures the GPIO pin, RC1, as an input.
@@ -3388,11 +3388,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Sets the RC1 as an input
-    HEAD_SELECT_1_SetDigitalInput();
+    HEAD_SELECT_2_SetDigitalInput();
     </code>
 
  */
-#define HEAD_SELECT_1_SetDigitalInput()  _TRISC1 = 1
+#define HEAD_SELECT_2_SetDigitalInput()  _TRISC1 = 1
 /**
   @Summary
     Configures the GPIO pin, RC1, as an output.
@@ -3412,11 +3412,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Sets the RC1 as an output
-    HEAD_SELECT_1_SetDigitalOutput();
+    HEAD_SELECT_2_SetDigitalOutput();
     </code>
 
  */
-#define HEAD_SELECT_1_SetDigitalOutput() _TRISC1 = 0
+#define HEAD_SELECT_2_SetDigitalOutput() _TRISC1 = 0
 /**
   @Summary
     Sets the GPIO pin, RC2, high using LATC2.

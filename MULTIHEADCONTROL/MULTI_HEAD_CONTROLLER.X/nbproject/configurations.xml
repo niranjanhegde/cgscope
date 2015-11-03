@@ -8,6 +8,7 @@
         <itemPath>mcc_generated_files/time_counter.h</itemPath>
         <itemPath>app/stepper_motor.h</itemPath>
         <itemPath>app/miniature_head1.h</itemPath>
+        <itemPath>mcc_generated_files/miniature_head2.h</itemPath>
       </logicalFolder>
       <logicalFolder name="mcc_generated_files"
                      displayName="MCC Generated Files"
@@ -29,6 +30,7 @@
         <itemPath>mcc_generated_files/time_counter.c</itemPath>
         <itemPath>app/stepper_motor.c</itemPath>
         <itemPath>app/miniature_head1.c</itemPath>
+        <itemPath>mcc_generated_files/miniature_head2.c</itemPath>
       </logicalFolder>
       <logicalFolder name="mcc_generated_files"
                      displayName="MCC Generated Files"

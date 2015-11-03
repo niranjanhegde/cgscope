@@ -6,7 +6,7 @@ Tool Name:
 Command:
   -p24FJ64GA004 \
   -o \
-  dist/default/production/MULTI_HEAD_CONTROLLER_01.X.production.elf \
+  dist/default/debug/MULTI_HEAD_CONTROLLER.X.debug.elf \
   -Lc:/program files (x86)/microchip/xc16/v1.23/bin/bin/.. \
   -Lc:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib \
   -Lc:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib/PIC24E \
@@ -21,16 +21,25 @@ Command:
   -Lc:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../support/dsPIC33E/gld \
   -Lc:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib/dsPIC33F \
   -Lc:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../support/dsPIC33F/gld \
-  build/default/production/mcc_generated_files/time_counter.o \
-  build/default/production/app/stepper_motor.o \
-  build/default/production/app/miniature_head1.o \
-  build/default/production/mcc_generated_files/pin_manager.o \
-  build/default/production/mcc_generated_files/mcc.o \
-  build/default/production/mcc_generated_files/tmr2.o \
-  build/default/production/mcc_generated_files/interrupt_manager.o \
-  build/default/production/main.o \
+  build/default/debug/mcc_generated_files/time_counter.o \
+  build/default/debug/app/stepper_motor.o \
+  build/default/debug/app/miniature_head1.o \
+  build/default/debug/mcc_generated_files/pin_manager.o \
+  build/default/debug/mcc_generated_files/mcc.o \
+  build/default/debug/mcc_generated_files/tmr2.o \
+  build/default/debug/mcc_generated_files/interrupt_manager.o \
+  build/default/debug/main.o \
+  build/default/debug/mcc_generated_files/miniature_head2.o \
+  -TC:\Users\NIRANJ~1\AppData\Local\Temp\tmp00000e2c.00 \
+  -TC:\Users\NIRANJ~1\AppData\Local\Temp\tmp00000e2c.01 \
+  -TC:\Users\NIRANJ~1\AppData\Local\Temp\tmp00000e2c.02 \
+  -TC:\Users\NIRANJ~1\AppData\Local\Temp\tmp00000e2c.03 \
+  -TC:\Users\NIRANJ~1\AppData\Local\Temp\tmp00000e2c.04 \
   --defsym=__MPLAB_BUILD=1 \
-  -Tp24FJ64GA004.gld.00 \
+  --defsym=__MPLAB_DEBUG=1 \
+  --defsym=__DEBUG=1 \
+  --defsym=__MPLAB_DEBUGGER_PK3=1 \
+  -Tp24FJ64GA004.gld.05 \
   --stack=16 \
   --check-sections \
   --data-init \
@@ -42,7 +51,7 @@ Command:
   --stackguard=16 \
   --no-force-link \
   --smart-io \
-  -Map=dist/default/production/MULTI_HEAD_CONTROLLER_01.X.production.map \
+  -Map=dist/default/debug/MULTI_HEAD_CONTROLLER.X.debug.map \
   --report-mem \
   -start-group \
   --library=pic30-elf \
@@ -63,20 +72,25 @@ Program Memory  [Origin = 0x200, Length = 0xa9fc]
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200                0x9e            0xed  (237)
-.text                        0x29e               0x3a0           0x570  (1392)
-.dinit                       0x63e                0x20            0x30  (48)
-.text                        0x65e                0x28            0x3c  (60)
+.text                        0x29e               0x45e           0x68d  (1677)
+.dinit                       0x6fc                0x26            0x39  (57)
+.text                        0x722                0x4a            0x6f  (111)
 
-                     Total program memory used (bytes):          0x6c9  (1737) 2%
+                     Total program memory used (bytes):          0x822  (2082) 3%
 
 
 Data Memory  [Origin = 0x800, Length = 0x2000]
 
 section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
-.nbss                        0x800                   0            0x16  (22)
+reserve_data_0x800           0x800                0x20            0x20  (32)
+reserve_data_0x820           0x820                 0x2             0x2  (2)
+reserve_data_0x822           0x822                 0x2             0x2  (2)
+reserve_data_0x824           0x824                 0x2             0x2  (2)
+reserve_data_0x826           0x826                0x2a            0x2a  (42)
+.nbss                        0x850                   0            0x1a  (26)
 
-                        Total data memory used (bytes):           0x16  (22) <1%
+                        Total data memory used (bytes):           0x6a  (106) 1%
 
 
 Dynamic Memory Usage
@@ -84,39 +98,43 @@ Dynamic Memory Usage
 region                     address                      maximum length  (dec)
 ------                     -------                      ---------------------
 heap                             0                                   0  (0)
-stack                        0x816                              0x1fea  (8170)
+stack                        0x86a                              0x1f96  (8086)
 
-                        Maximum dynamic memory (bytes):         0x1fea  (8170)
+                        Maximum dynamic memory (bytes):         0x1f96  (8086)
 
 
 External Symbols in Data Memory (by address):
 
-                    0x0800                  _msec
-                    0x0802                  _TickCount
-                    0x0808                  _sec
-                    0x080a                  _min
-                    0x080c                  _count1
-                    0x080e                  _head_seelect
-                    0x0810                  _stepper1
-                    0x0812                  _state_min_head1
+                    0x0850                  _msec
+                    0x0852                  _TickCount
+                    0x0858                  _sec
+                    0x085a                  _min
+                    0x085c                  _i
+                    0x085e                  _stepper1
+                    0x0860                  _count1
+                    0x0862                  _head_seelect
+                    0x0864                  _state_min_head1
+                    0x0868                  _state_min_head2
 
 External Symbols in Data Memory (by name):
 
-                    0x0802                  _TickCount
-                    0x080c                  _count1
-                    0x080e                  _head_seelect
-                    0x080a                  _min
-                    0x0800                  _msec
-                    0x0808                  _sec
-                    0x0812                  _state_min_head1
-                    0x0810                  _stepper1
+                    0x0852                  _TickCount
+                    0x0860                  _count1
+                    0x0862                  _head_seelect
+                    0x085c                  _i
+                    0x085a                  _min
+                    0x0850                  _msec
+                    0x0858                  _sec
+                    0x0864                  _state_min_head1
+                    0x0868                  _state_min_head2
+                    0x085e                  _stepper1
 
 External Symbols in Program Memory (by address):
 
                   0x000200                  __resetPRI
                   0x00022c                  __psv_init
-                  0x00023c                  __data_init_standard
                   0x00023c                  __data_init
+                  0x00023c                  __data_init_standard
                   0x00029a                  __DefaultInterrupt
                   0x00029e                  _TMR2_Initialize
                   0x0002ba                  _DRV_TMR2_Initialize
@@ -140,18 +158,20 @@ External Symbols in Program Memory (by address):
                   0x0003d8                  _DRV_TMR2_SoftwareCounterGet
                   0x0003e4                  _TMR2_SoftwareCounterClear
                   0x0003f0                  _DRV_TMR2_SoftwareCounterClear
-                  0x0003f8                  _Time_Counter_Update
-                  0x000440                  _Timer_Soft_Start
-                  0x000458                  _Timer_Soft_Done
-                  0x000478                  _Timer_Soft_Delay_MS
-                  0x000496                  _StepperMotorCOntrol
-                  0x0004d8                  _StepperMotor_OP_update
-                  0x000534                  _Miniature_head1
-                  0x0005c8                  _main
-                  0x00061c                  _PIN_MANAGER_Initialize
-                  0x00065e                  _SYSTEM_Initialize
-                  0x00066c                  _OSCILLATOR_Initialize
-                  0x000676                  _INTERRUPT_Initialize
+                  0x0003f8                  _StepperMotor_Forward
+                  0x000438                  _StepperMotor_Reverse
+                  0x000478                  _StepperMotor_OP_update
+                  0x0004d4                  _Miniature_head2
+                  0x000574                  _Time_Counter_Update
+                  0x0005bc                  _Timer_Soft_Start
+                  0x0005d4                  _Timer_Soft_Done
+                  0x0005f4                  _Timer_Soft_Delay_MS
+                  0x000612                  _Miniature_head1
+                  0x0006a6                  _main
+                  0x000722                  _PIN_MANAGER_Initialize
+                  0x000744                  _SYSTEM_Initialize
+                  0x000752                  _OSCILLATOR_Initialize
+                  0x00075c                  _INTERRUPT_Initialize
 
 External Symbols in Program Memory (by name):
 
@@ -165,13 +185,15 @@ External Symbols in Program Memory (by name):
                   0x0003d8                  _DRV_TMR2_SoftwareCounterGet
                   0x00038a                  _DRV_TMR2_Start
                   0x00039c                  _DRV_TMR2_Stop
-                  0x000676                  _INTERRUPT_Initialize
-                  0x000534                  _Miniature_head1
-                  0x00066c                  _OSCILLATOR_Initialize
-                  0x00061c                  _PIN_MANAGER_Initialize
-                  0x00065e                  _SYSTEM_Initialize
-                  0x000496                  _StepperMotorCOntrol
-                  0x0004d8                  _StepperMotor_OP_update
+                  0x00075c                  _INTERRUPT_Initialize
+                  0x000612                  _Miniature_head1
+                  0x0004d4                  _Miniature_head2
+                  0x000752                  _OSCILLATOR_Initialize
+                  0x000722                  _PIN_MANAGER_Initialize
+                  0x000744                  _SYSTEM_Initialize
+                  0x0003f8                  _StepperMotor_Forward
+                  0x000478                  _StepperMotor_OP_update
+                  0x000438                  _StepperMotor_Reverse
                   0x000374                  _TMR2_CallBack
                   0x00035e                  _TMR2_Counter16BitGet
                   0x000340                  _TMR2_Counter16BitSet
@@ -183,17 +205,17 @@ External Symbols in Program Memory (by name):
                   0x0003cc                  _TMR2_SoftwareCounterGet
                   0x00037a                  _TMR2_Start
                   0x000392                  _TMR2_Stop
-                  0x0003f8                  _Time_Counter_Update
-                  0x000478                  _Timer_Soft_Delay_MS
-                  0x000458                  _Timer_Soft_Done
-                  0x000440                  _Timer_Soft_Start
+                  0x000574                  _Time_Counter_Update
+                  0x0005f4                  _Timer_Soft_Delay_MS
+                  0x0005d4                  _Timer_Soft_Done
+                  0x0005bc                  _Timer_Soft_Start
                   0x00029a                  __DefaultInterrupt
                   0x0002c2                  __T2Interrupt
                   0x00023c                  __data_init
                   0x00023c                  __data_init_standard
                   0x00022c                  __psv_init
                   0x000200                  __resetPRI
-                  0x0005c8                  _main
+                  0x0006a6                  _main
 
 Memory Configuration
 
@@ -210,15 +232,44 @@ CONFIG1          0x00abfe           0x000002
 
 Linker script and memory map
 
-LOAD build/default/production/mcc_generated_files/time_counter.o
-LOAD build/default/production/app/stepper_motor.o
-LOAD build/default/production/app/miniature_head1.o
-LOAD build/default/production/mcc_generated_files/pin_manager.o
-LOAD build/default/production/mcc_generated_files/mcc.o
-LOAD build/default/production/mcc_generated_files/tmr2.o
-LOAD build/default/production/mcc_generated_files/interrupt_manager.o
-LOAD build/default/production/main.o
+LOAD build/default/debug/mcc_generated_files/time_counter.o
+LOAD build/default/debug/app/stepper_motor.o
+LOAD build/default/debug/app/miniature_head1.o
+LOAD build/default/debug/mcc_generated_files/pin_manager.o
+LOAD build/default/debug/mcc_generated_files/mcc.o
+LOAD build/default/debug/mcc_generated_files/tmr2.o
+LOAD build/default/debug/mcc_generated_files/interrupt_manager.o
+LOAD build/default/debug/main.o
+LOAD build/default/debug/mcc_generated_files/miniature_head2.o
+
+reserve_data_0x800
+                    0x0800         0x20
+                    0x0820                  . = 0x20
+ *fill*             0x0800         0x2000
+
+reserve_data_0x820
+                    0x0820          0x2
+                    0x0822                  . = 0x2
+ *fill*             0x0820          0x200
+
+reserve_data_0x822
+                    0x0822          0x2
+                    0x0824                  . = 0x2
+ *fill*             0x0822          0x200
+
+reserve_data_0x824
+                    0x0824          0x2
+                    0x0826                  . = 0x2
+ *fill*             0x0824          0x200
+
+reserve_data_0x826
+                    0x0826         0x2a
+                    0x0850                  . = 0x2a
+ *fill*             0x0826         0x2a00
                     0x0001                  __MPLAB_BUILD = 0x1
+                    0x0001                  __MPLAB_DEBUG = 0x1
+                    0x0001                  __DEBUG = 0x1
+                    0x0001                  __MPLAB_DEBUGGER_PK3 = 0x1
 LOAD c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib/PIC24F\libpPIC24Fxxx-elf.a
 LOAD c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libfx-elf.a
                     0xabfc                  __CONFIG2 = 0xabfc
@@ -268,59 +319,64 @@ __CONFIG1
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x23be
+.debug_info       0x000000       0x2ab4
  *(.debug_info)
- .debug_info      0x000000        0x2eb build/default/production/mcc_generated_files/time_counter.o
- .debug_info      0x0002eb        0x4d7 build/default/production/app/stepper_motor.o
- .debug_info      0x0007c2        0x63e build/default/production/app/miniature_head1.o
- .debug_info      0x000e00        0x1d2 build/default/production/mcc_generated_files/pin_manager.o
- .debug_info      0x000fd2        0x1a1 build/default/production/mcc_generated_files/mcc.o
- .debug_info      0x001173        0x9a5 build/default/production/mcc_generated_files/tmr2.o
- .debug_info      0x001b18        0x260 build/default/production/mcc_generated_files/interrupt_manager.o
- .debug_info      0x001d78        0x646 build/default/production/main.o
+ .debug_info      0x000000        0x2f2 build/default/debug/mcc_generated_files/time_counter.o
+ .debug_info      0x0002f2        0x50d build/default/debug/app/stepper_motor.o
+ .debug_info      0x0007ff        0x64d build/default/debug/app/miniature_head1.o
+ .debug_info      0x000e4c        0x1d9 build/default/debug/mcc_generated_files/pin_manager.o
+ .debug_info      0x001025        0x1a8 build/default/debug/mcc_generated_files/mcc.o
+ .debug_info      0x0011cd        0x9ac build/default/debug/mcc_generated_files/tmr2.o
+ .debug_info      0x001b79        0x267 build/default/debug/mcc_generated_files/interrupt_manager.o
+ .debug_info      0x001de0        0x677 build/default/debug/main.o
+ .debug_info      0x002457        0x65d build/default/debug/mcc_generated_files/miniature_head2.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000        0x65a
+.debug_abbrev     0x000000        0x739
  *(.debug_abbrev)
- .debug_abbrev    0x000000         0xdf build/default/production/mcc_generated_files/time_counter.o
- .debug_abbrev    0x0000df        0x10e build/default/production/app/stepper_motor.o
- .debug_abbrev    0x0001ed         0xc2 build/default/production/app/miniature_head1.o
- .debug_abbrev    0x0002af         0x4c build/default/production/mcc_generated_files/pin_manager.o
- .debug_abbrev    0x0002fb         0x4c build/default/production/mcc_generated_files/mcc.o
- .debug_abbrev    0x000347        0x1b9 build/default/production/mcc_generated_files/tmr2.o
- .debug_abbrev    0x000500         0xa7 build/default/production/mcc_generated_files/interrupt_manager.o
- .debug_abbrev    0x0005a7         0xb3 build/default/production/main.o
+ .debug_abbrev    0x000000         0xdf build/default/debug/mcc_generated_files/time_counter.o
+ .debug_abbrev    0x0000df        0x10a build/default/debug/app/stepper_motor.o
+ .debug_abbrev    0x0001e9         0xc2 build/default/debug/app/miniature_head1.o
+ .debug_abbrev    0x0002ab         0x4c build/default/debug/mcc_generated_files/pin_manager.o
+ .debug_abbrev    0x0002f7         0x4c build/default/debug/mcc_generated_files/mcc.o
+ .debug_abbrev    0x000343        0x1b9 build/default/debug/mcc_generated_files/tmr2.o
+ .debug_abbrev    0x0004fc         0xa7 build/default/debug/mcc_generated_files/interrupt_manager.o
+ .debug_abbrev    0x0005a3         0xd4 build/default/debug/main.o
+ .debug_abbrev    0x000677         0xc2 build/default/debug/mcc_generated_files/miniature_head2.o
 
-.debug_line       0x000000        0xdfc
+.debug_line       0x000000       0x1119
  *(.debug_line)
- .debug_line      0x000000        0x142 build/default/production/mcc_generated_files/time_counter.o
- .debug_line      0x000142        0x179 build/default/production/app/stepper_motor.o
- .debug_line      0x0002bb        0x251 build/default/production/app/miniature_head1.o
- .debug_line      0x00050c         0xf8 build/default/production/mcc_generated_files/pin_manager.o
- .debug_line      0x000604         0xfa build/default/production/mcc_generated_files/mcc.o
- .debug_line      0x0006fe        0x490 build/default/production/mcc_generated_files/tmr2.o
- .debug_line      0x000b8e         0xce build/default/production/mcc_generated_files/interrupt_manager.o
- .debug_line      0x000c5c        0x1a0 build/default/production/main.o
+ .debug_line      0x000000        0x142 build/default/debug/mcc_generated_files/time_counter.o
+ .debug_line      0x000142        0x1fd build/default/debug/app/stepper_motor.o
+ .debug_line      0x00033f        0x251 build/default/debug/app/miniature_head1.o
+ .debug_line      0x000590         0xf8 build/default/debug/mcc_generated_files/pin_manager.o
+ .debug_line      0x000688         0xfa build/default/debug/mcc_generated_files/mcc.o
+ .debug_line      0x000782        0x490 build/default/debug/mcc_generated_files/tmr2.o
+ .debug_line      0x000c12         0xce build/default/debug/mcc_generated_files/interrupt_manager.o
+ .debug_line      0x000ce0        0x1a8 build/default/debug/main.o
+ .debug_line      0x000e88        0x291 build/default/debug/mcc_generated_files/miniature_head2.o
 
-.debug_frame      0x000000        0x2c0
+.debug_frame      0x000000        0x2f4
  *(.debug_frame)
- .debug_frame     0x000000         0x54 build/default/production/mcc_generated_files/time_counter.o
- .debug_frame     0x000054         0x34 build/default/production/app/stepper_motor.o
- .debug_frame     0x000088         0x24 build/default/production/app/miniature_head1.o
- .debug_frame     0x0000ac         0x24 build/default/production/mcc_generated_files/pin_manager.o
- .debug_frame     0x0000d0         0x34 build/default/production/mcc_generated_files/mcc.o
- .debug_frame     0x000104        0x174 build/default/production/mcc_generated_files/tmr2.o
- .debug_frame     0x000278         0x24 build/default/production/mcc_generated_files/interrupt_manager.o
- .debug_frame     0x00029c         0x24 build/default/production/main.o
+ .debug_frame     0x000000         0x54 build/default/debug/mcc_generated_files/time_counter.o
+ .debug_frame     0x000054         0x44 build/default/debug/app/stepper_motor.o
+ .debug_frame     0x000098         0x24 build/default/debug/app/miniature_head1.o
+ .debug_frame     0x0000bc         0x24 build/default/debug/mcc_generated_files/pin_manager.o
+ .debug_frame     0x0000e0         0x34 build/default/debug/mcc_generated_files/mcc.o
+ .debug_frame     0x000114        0x174 build/default/debug/mcc_generated_files/tmr2.o
+ .debug_frame     0x000288         0x24 build/default/debug/mcc_generated_files/interrupt_manager.o
+ .debug_frame     0x0002ac         0x24 build/default/debug/main.o
+ .debug_frame     0x0002d0         0x24 build/default/debug/mcc_generated_files/miniature_head2.o
 
-.debug_str        0x000000         0xb5
+.debug_str        0x000000         0xea
  *(.debug_str)
- .debug_str       0x000000          0xa build/default/production/mcc_generated_files/time_counter.o
- .debug_str       0x00000a         0x1b build/default/production/app/stepper_motor.o
- .debug_str       0x000025         0x35 build/default/production/app/miniature_head1.o
- .debug_str       0x00005a         0x2c build/default/production/mcc_generated_files/tmr2.o
- .debug_str       0x000086          0x9 build/default/production/mcc_generated_files/interrupt_manager.o
- .debug_str       0x00008f         0x26 build/default/production/main.o
+ .debug_str       0x000000          0xa build/default/debug/mcc_generated_files/time_counter.o
+ .debug_str       0x00000a         0x1b build/default/debug/app/stepper_motor.o
+ .debug_str       0x000025         0x35 build/default/debug/app/miniature_head1.o
+ .debug_str       0x00005a         0x2c build/default/debug/mcc_generated_files/tmr2.o
+ .debug_str       0x000086          0x9 build/default/debug/mcc_generated_files/interrupt_manager.o
+ .debug_str       0x00008f         0x26 build/default/debug/main.o
+ .debug_str       0x0000b5         0x35 build/default/debug/mcc_generated_files/miniature_head2.o
 
 .debug_loc
  *(.debug_loc)
@@ -329,46 +385,50 @@ __CONFIG1
  *(.debug_macinfo)
 
 .debug_pubnames
-                  0x000000        0x420
+                  0x000000        0x47a
  *(.debug_pubnames)
  .debug_pubnames
-                  0x000000         0x92 build/default/production/mcc_generated_files/time_counter.o
+                  0x000000         0x92 build/default/debug/mcc_generated_files/time_counter.o
  .debug_pubnames
-                  0x000092         0x52 build/default/production/app/stepper_motor.o
+                  0x000092         0x72 build/default/debug/app/stepper_motor.o
  .debug_pubnames
-                  0x0000e4         0x3a build/default/production/app/miniature_head1.o
+                  0x000104         0x3a build/default/debug/app/miniature_head1.o
  .debug_pubnames
-                  0x00011e         0x2d build/default/production/mcc_generated_files/pin_manager.o
+                  0x00013e         0x2d build/default/debug/mcc_generated_files/pin_manager.o
  .debug_pubnames
-                  0x00014b         0x42 build/default/production/mcc_generated_files/mcc.o
+                  0x00016b         0x42 build/default/debug/mcc_generated_files/mcc.o
  .debug_pubnames
-                  0x00018d        0x231 build/default/production/mcc_generated_files/tmr2.o
+                  0x0001ad        0x231 build/default/debug/mcc_generated_files/tmr2.o
  .debug_pubnames
-                  0x0003be         0x2b build/default/production/mcc_generated_files/interrupt_manager.o
+                  0x0003de         0x2b build/default/debug/mcc_generated_files/interrupt_manager.o
  .debug_pubnames
-                  0x0003e9         0x37 build/default/production/main.o
+                  0x000409         0x37 build/default/debug/main.o
+ .debug_pubnames
+                  0x000440         0x3a build/default/debug/mcc_generated_files/miniature_head2.o
 
 .debug_ranges
  *(.debug_ranges)
 
-.debug_aranges    0x000000         0xc0
+.debug_aranges    0x000000         0xd8
  *(.debug_aranges)
  .debug_aranges
-                  0x000000         0x18 build/default/production/mcc_generated_files/time_counter.o
+                  0x000000         0x18 build/default/debug/mcc_generated_files/time_counter.o
  .debug_aranges
-                  0x000018         0x18 build/default/production/app/stepper_motor.o
+                  0x000018         0x18 build/default/debug/app/stepper_motor.o
  .debug_aranges
-                  0x000030         0x18 build/default/production/app/miniature_head1.o
+                  0x000030         0x18 build/default/debug/app/miniature_head1.o
  .debug_aranges
-                  0x000048         0x18 build/default/production/mcc_generated_files/pin_manager.o
+                  0x000048         0x18 build/default/debug/mcc_generated_files/pin_manager.o
  .debug_aranges
-                  0x000060         0x18 build/default/production/mcc_generated_files/mcc.o
+                  0x000060         0x18 build/default/debug/mcc_generated_files/mcc.o
  .debug_aranges
-                  0x000078         0x18 build/default/production/mcc_generated_files/tmr2.o
+                  0x000078         0x18 build/default/debug/mcc_generated_files/tmr2.o
  .debug_aranges
-                  0x000090         0x18 build/default/production/mcc_generated_files/interrupt_manager.o
+                  0x000090         0x18 build/default/debug/mcc_generated_files/interrupt_manager.o
  .debug_aranges
-                  0x0000a8         0x18 build/default/production/main.o
+                  0x0000a8         0x18 build/default/debug/main.o
+ .debug_aranges
+                  0x0000c0         0x18 build/default/debug/mcc_generated_files/miniature_head2.o
 
 .ivt              0x000004         0xfc
                   0x000004          0x4 LONG 0x29a DEFINED (__ReservedTrap0)?ABSOLUTE (__ReservedTrap0):ABSOLUTE (__DefaultInterrupt)
@@ -1233,76 +1293,83 @@ LOAD c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libpic30-elf.
 LOAD c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libm-elf.a
 LOAD c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libc-elf.a
 END GROUP
-OUTPUT(dist/default/production/MULTI_HEAD_CONTROLLER_01.X.production.elf elf32-pic30)
+OUTPUT(dist/default/debug/MULTI_HEAD_CONTROLLER.X.debug.elf elf32-pic30)
 LOAD default_isr
 LOAD data_init
 
 .debug_pubtypes
-                  0x0000c0        0x28e
+                  0x0000d8        0x321
  .debug_pubtypes
-                  0x0000c0         0x12 build/default/production/mcc_generated_files/time_counter.o
+                  0x0000d8         0x12 build/default/debug/mcc_generated_files/time_counter.o
  .debug_pubtypes
-                  0x0000d2         0x58 build/default/production/app/stepper_motor.o
+                  0x0000ea         0x58 build/default/debug/app/stepper_motor.o
  .debug_pubtypes
-                  0x00012a         0x93 build/default/production/app/miniature_head1.o
+                  0x000142         0x93 build/default/debug/app/miniature_head1.o
  .debug_pubtypes
-                  0x0001bd         0x12 build/default/production/mcc_generated_files/pin_manager.o
+                  0x0001d5         0x12 build/default/debug/mcc_generated_files/pin_manager.o
  .debug_pubtypes
-                  0x0001cf         0x12 build/default/production/mcc_generated_files/mcc.o
+                  0x0001e7         0x12 build/default/debug/mcc_generated_files/mcc.o
  .debug_pubtypes
-                  0x0001e1         0xa4 build/default/production/mcc_generated_files/tmr2.o
+                  0x0001f9         0xa4 build/default/debug/mcc_generated_files/tmr2.o
  .debug_pubtypes
-                  0x000285         0x2f build/default/production/mcc_generated_files/interrupt_manager.o
+                  0x00029d         0x2f build/default/debug/mcc_generated_files/interrupt_manager.o
  .debug_pubtypes
-                  0x0002b4         0x9a build/default/production/main.o
+                  0x0002cc         0x9a build/default/debug/main.o
+ .debug_pubtypes
+                  0x000366         0x93 build/default/debug/mcc_generated_files/miniature_head2.o
 
 __c30_signature
-                  0x00034e         0x3c
+                  0x0003fa         0x42
  __c30_signature
-                  0x00034e          0x6 build/default/production/mcc_generated_files/time_counter.o
+                  0x0003fa          0x6 build/default/debug/mcc_generated_files/time_counter.o
  __c30_signature
-                  0x000354          0x6 build/default/production/app/stepper_motor.o
+                  0x000400          0x6 build/default/debug/app/stepper_motor.o
  __c30_signature
-                  0x00035a          0x6 build/default/production/app/miniature_head1.o
+                  0x000406          0x6 build/default/debug/app/miniature_head1.o
  __c30_signature
-                  0x000360          0x6 build/default/production/mcc_generated_files/pin_manager.o
+                  0x00040c          0x6 build/default/debug/mcc_generated_files/pin_manager.o
  __c30_signature
-                  0x000366          0x6 build/default/production/mcc_generated_files/mcc.o
+                  0x000412          0x6 build/default/debug/mcc_generated_files/mcc.o
  __c30_signature
-                  0x00036c          0x6 build/default/production/mcc_generated_files/tmr2.o
+                  0x000418          0x6 build/default/debug/mcc_generated_files/tmr2.o
  __c30_signature
-                  0x000372          0x6 build/default/production/mcc_generated_files/interrupt_manager.o
+                  0x00041e          0x6 build/default/debug/mcc_generated_files/interrupt_manager.o
  __c30_signature
-                  0x000378          0x6 build/default/production/main.o
+                  0x000424          0x6 build/default/debug/main.o
  __c30_signature
-                  0x00037e          0x6 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libpic30-elf.a(crt0_standard.o)
+                  0x00042a          0x6 build/default/debug/mcc_generated_files/miniature_head2.o
  __c30_signature
-                  0x000384          0x6 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libpic30-elf.a(data_init_standard.o)
+                  0x000430          0x6 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libpic30-elf.a(crt0_standard.o)
+ __c30_signature
+                  0x000436          0x6 c:/program files (x86)/microchip/xc16/v1.23/bin/bin/../../lib\libpic30-elf.a(data_init_standard.o)
 
-.nbss               0x0800         0x16
- .nbss              0x0800          0xc build/default/production/mcc_generated_files/time_counter.o
-                    0x0800                  _msec
-                    0x0802                  _TickCount
-                    0x0808                  _sec
-                    0x080a                  _min
- .nbss              0x080c          0x4 build/default/production/main.o
-                    0x080c                  _count1
-                    0x080e                  _head_seelect
- .nbss              0x0810          0x2 build/default/production/app/stepper_motor.o
-                    0x0810                  _stepper1
- .nbss              0x0812          0x2 build/default/production/app/miniature_head1.o
-                    0x0812                  _state_min_head1
- .nbss              0x0814          0x2 build/default/production/mcc_generated_files/tmr2.o
+.nbss               0x0850         0x1a
+ .nbss              0x0850          0xc build/default/debug/mcc_generated_files/time_counter.o
+                    0x0850                  _msec
+                    0x0852                  _TickCount
+                    0x0858                  _sec
+                    0x085a                  _min
+ .nbss              0x085c          0x4 build/default/debug/app/stepper_motor.o
+                    0x085c                  _i
+                    0x085e                  _stepper1
+ .nbss              0x0860          0x4 build/default/debug/main.o
+                    0x0860                  _count1
+                    0x0862                  _head_seelect
+ .nbss              0x0864          0x2 build/default/debug/app/miniature_head1.o
+                    0x0864                  _state_min_head1
+ .nbss              0x0866          0x2 build/default/debug/mcc_generated_files/tmr2.o
+ .nbss              0x0868          0x2 build/default/debug/mcc_generated_files/miniature_head2.o
+                    0x0868                  _state_min_head2
 
 .config_JTAGEN    0x00abfe          0x2
  .config_JTAGEN
-                  0x00abfe          0x2 build/default/production/mcc_generated_files/mcc.o
+                  0x00abfe          0x2 build/default/debug/mcc_generated_files/mcc.o
 
 .config_IESO      0x00abfc          0x2
- .config_IESO     0x00abfc          0x2 build/default/production/mcc_generated_files/mcc.o
+ .config_IESO     0x00abfc          0x2 build/default/debug/mcc_generated_files/mcc.o
 
-.text             0x00029e        0x3a0
- .text            0x00029e        0x15a build/default/production/mcc_generated_files/tmr2.o
+.text             0x00029e        0x45e
+ .text            0x00029e        0x15a build/default/debug/mcc_generated_files/tmr2.o
                   0x00029e                  _TMR2_Initialize
                   0x0002ba                  _DRV_TMR2_Initialize
                   0x0002c2                  __T2Interrupt
@@ -1325,27 +1392,30 @@ __c30_signature
                   0x0003d8                  _DRV_TMR2_SoftwareCounterGet
                   0x0003e4                  _TMR2_SoftwareCounterClear
                   0x0003f0                  _DRV_TMR2_SoftwareCounterClear
- .text            0x0003f8         0x9e build/default/production/mcc_generated_files/time_counter.o
-                  0x0003f8                  _Time_Counter_Update
-                  0x000440                  _Timer_Soft_Start
-                  0x000458                  _Timer_Soft_Done
-                  0x000478                  _Timer_Soft_Delay_MS
- .text            0x000496         0x9e build/default/production/app/stepper_motor.o
-                  0x000496                  _StepperMotorCOntrol
-                  0x0004d8                  _StepperMotor_OP_update
- .text            0x000534         0x94 build/default/production/app/miniature_head1.o
-                  0x000534                  _Miniature_head1
- .text            0x0005c8         0x54 build/default/production/main.o
-                  0x0005c8                  _main
- .text            0x00061c         0x22 build/default/production/mcc_generated_files/pin_manager.o
-                  0x00061c                  _PIN_MANAGER_Initialize
+ .text            0x0003f8         0xdc build/default/debug/app/stepper_motor.o
+                  0x0003f8                  _StepperMotor_Forward
+                  0x000438                  _StepperMotor_Reverse
+                  0x000478                  _StepperMotor_OP_update
+ .text            0x0004d4         0xa0 build/default/debug/mcc_generated_files/miniature_head2.o
+                  0x0004d4                  _Miniature_head2
+ .text            0x000574         0x9e build/default/debug/mcc_generated_files/time_counter.o
+                  0x000574                  _Time_Counter_Update
+                  0x0005bc                  _Timer_Soft_Start
+                  0x0005d4                  _Timer_Soft_Done
+                  0x0005f4                  _Timer_Soft_Delay_MS
+ .text            0x000612         0x94 build/default/debug/app/miniature_head1.o
+                  0x000612                  _Miniature_head1
+ .text            0x0006a6         0x56 build/default/debug/main.o
+                  0x0006a6                  _main
 
-.dinit            0x00063e         0x20
- .dinit           0x00063e         0x20 data_init
+.dinit            0x0006fc         0x26
+ .dinit           0x0006fc         0x26 data_init
 
-.text             0x00065e         0x28
- .text            0x00065e         0x18 build/default/production/mcc_generated_files/mcc.o
-                  0x00065e                  _SYSTEM_Initialize
-                  0x00066c                  _OSCILLATOR_Initialize
- .text            0x000676         0x10 build/default/production/mcc_generated_files/interrupt_manager.o
-                  0x000676                  _INTERRUPT_Initialize
+.text             0x000722         0x4a
+ .text            0x000722         0x22 build/default/debug/mcc_generated_files/pin_manager.o
+                  0x000722                  _PIN_MANAGER_Initialize
+ .text            0x000744         0x18 build/default/debug/mcc_generated_files/mcc.o
+                  0x000744                  _SYSTEM_Initialize
+                  0x000752                  _OSCILLATOR_Initialize
+ .text            0x00075c         0x10 build/default/debug/mcc_generated_files/interrupt_manager.o
+                  0x00075c                  _INTERRUPT_Initialize

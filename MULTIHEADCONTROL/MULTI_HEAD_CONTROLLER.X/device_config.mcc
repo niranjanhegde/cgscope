@@ -25,8 +25,8 @@
             <resource customName="MAG_COIL" digital="true" direction="OUTPUT" function="RB13" ioc="0" module="GPIO" name="RB13" start="false" type="pin" wpu="false"/>
             <resource customName="PURGE_COIL" digital="true" direction="OUTPUT" function="RB14" ioc="0" module="GPIO" name="RB14" start="false" type="pin" wpu="false"/>
             <resource customName="HEATER_BOT" digital="true" direction="OUTPUT" function="RB15" ioc="0" module="GPIO" name="RB15" start="false" type="pin" wpu="false"/>
-            <resource customName="HEAD_SELECT_2" digital="true" direction="INPUT" function="RC0" ioc="0" module="GPIO" name="RC0" start="false" type="pin" wpu="false"/>
-            <resource customName="HEAD_SELECT_1" digital="true" direction="INPUT" function="RC1" ioc="0" module="GPIO" name="RC1" start="false" type="pin" wpu="false"/>
+            <resource customName="HEAD_SELECT_1" digital="true" direction="INPUT" function="RC0" ioc="0" module="GPIO" name="RC0" start="false" type="pin" wpu="false"/>
+            <resource customName="HEAD_SELECT_2" digital="true" direction="INPUT" function="RC1" ioc="0" module="GPIO" name="RC1" start="false" type="pin" wpu="false"/>
             <resource customName="HEAD_SELECT_LED4" digital="true" direction="OUTPUT" function="RC2" ioc="0" module="GPIO" name="RC2" start="true" type="pin" wpu="false"/>
             <resource customName="TMR1_LED" digital="true" direction="OUTPUT" function="RC3" ioc="0" module="GPIO" name="RC3" start="true" type="pin" wpu="false"/>
             <resource customName="TMR2_LED" digital="true" direction="OUTPUT" function="RC4" ioc="0" module="GPIO" name="RC4" start="true" type="pin" wpu="false"/>
@@ -36,7 +36,7 @@
             <resource customName="SPIKE_COIL_RIGHT" digital="true" direction="OUTPUT" function="RC8" ioc="0" module="GPIO" name="RC8" start="false" type="pin" wpu="false"/>
             <resource customName="SPIKE_COIL_LEFT" digital="true" direction="OUTPUT" function="RC9" ioc="0" module="GPIO" name="RC9" start="false" type="pin" wpu="false"/>
             <file checksum="3608626253" modified="false" name="pin_manager.c" path="mcc_generated_files/pin_manager.c"/>
-            <file checksum="223373410" modified="true" name="pin_manager.h" path="mcc_generated_files/pin_manager.h"/>
+            <file checksum="3649138442" modified="true" name="pin_manager.h" path="mcc_generated_files/pin_manager.h"/>
         </manager>
         <manager generated="true" name="System" reloadPin="manual">
             <initializer comment="" name="Initialize">
@@ -68,7 +68,7 @@
             <setting name="Secondary Oscillator" option="31000"/>
             <setting name="generateConfigBits" option="true"/>
             <file checksum="1187116203" modified="false" name="mcc.c" path="mcc_generated_files/mcc.c"/>
-            <file checksum="2291560111" modified="true" name="mcc.h" path="mcc_generated_files/mcc.h"/>
+            <file checksum="2959110755" modified="true" name="mcc.h" path="mcc_generated_files/mcc.h"/>
         </manager>
         <manager generated="true" name="Interrupt Manager" reloadPin="manual">
             <resource name="TI" type="TMR2" value="1"/>
@@ -95,8 +95,8 @@
             <resource customName="HEATER_TOP" digital="true" direction="OUTPUT" function="RB1" ioc="0" module="GPIO" name="RB1" start="false" type="pin" wpu="false"/>
             <resource customName="HEAD_SELECT_4" digital="true" direction="INPUT" function="RB2" ioc="0" module="GPIO" name="RB2" start="false" type="pin" wpu="false"/>
             <resource customName="HEAD_SELECT_3" digital="true" direction="INPUT" function="RB3" ioc="0" module="GPIO" name="RB3" start="false" type="pin" wpu="false"/>
-            <resource customName="HEAD_SELECT_2" digital="true" direction="INPUT" function="RC0" ioc="0" module="GPIO" name="RC0" start="false" type="pin" wpu="false"/>
-            <resource customName="HEAD_SELECT_1" digital="true" direction="INPUT" function="RC1" ioc="0" module="GPIO" name="RC1" start="false" type="pin" wpu="false"/>
+            <resource customName="HEAD_SELECT_1" digital="true" direction="INPUT" function="RC0" ioc="0" module="GPIO" name="RC0" start="false" type="pin" wpu="false"/>
+            <resource customName="HEAD_SELECT_2" digital="true" direction="INPUT" function="RC1" ioc="0" module="GPIO" name="RC1" start="false" type="pin" wpu="false"/>
             <resource customName="HEAD_SELECT_LED4" digital="true" direction="OUTPUT" function="RC2" ioc="0" module="GPIO" name="RC2" start="true" type="pin" wpu="false"/>
             <resource customName="HEAD_SELECT_LED3" digital="true" direction="OUTPUT" function="RA2" ioc="0" module="GPIO" name="RA2" start="true" type="pin" wpu="false"/>
             <resource customName="HEAD_SELECT_LED2" digital="true" direction="OUTPUT" function="RA3" ioc="0" module="GPIO" name="RA3" start="true" type="pin" wpu="false"/>

@@ -6,30 +6,51 @@
  */
 #include "stepper_motor.h"
 #include "../mcc_generated_files/mcc.h"
-
+int i=0;
 STEPPER stepper1;   
-void StepperMotorCOntrol(void)
+void StepperMotor_Forward(void)
 {
-    int i=0;
-    for(i=0; i<40; i++)
+    
+    for(i=0; i<10; i++)
     {
         stepper1.Stepper=0b0110;
         StepperMotor_OP_update();
-        Timer_Soft_Delay_MS(15);
+        Timer_Soft_Delay_MS(50);
 
         stepper1.Stepper=0b1010;
         StepperMotor_OP_update();
-        Timer_Soft_Delay_MS(15);
+        Timer_Soft_Delay_MS(50);
 
         stepper1.Stepper=0b1001;
         StepperMotor_OP_update();
-        Timer_Soft_Delay_MS(15);
+        Timer_Soft_Delay_MS(50);
 
         stepper1.Stepper=0b0101;
         StepperMotor_OP_update();
-        Timer_Soft_Delay_MS(15);
+        Timer_Soft_Delay_MS(50);
     }
-    
+}
+
+void StepperMotor_Reverse(void)
+{
+    for(i=0; i<10; i++)
+    {
+        stepper1.Stepper=0b0101;
+        StepperMotor_OP_update();
+        Timer_Soft_Delay_MS(50);
+
+        stepper1.Stepper=0b1001;
+        StepperMotor_OP_update();
+        Timer_Soft_Delay_MS(50);
+
+        stepper1.Stepper=0b1010;
+        StepperMotor_OP_update();
+        Timer_Soft_Delay_MS(50);
+
+        stepper1.Stepper=0b0110;
+        StepperMotor_OP_update();
+        Timer_Soft_Delay_MS(50);
+    }
 }
 
 void StepperMotor_OP_update(void)

@@ -25,7 +25,8 @@ extern "C" {
         }motors;
     }STEPPER;
 
-    void StepperMotorCOntrol(void);
+    void StepperMotor_Forward(void);
+    void StepperMotor_Reverse(void);
     void StepperMotor_OP_update(void);
 
 
