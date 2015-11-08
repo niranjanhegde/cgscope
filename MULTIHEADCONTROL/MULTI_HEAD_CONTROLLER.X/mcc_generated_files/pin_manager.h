@@ -8,13 +8,13 @@
     pin_manager.h
 
   @Summary:
-    This is the generated manager file for the MPLAB® Code Configurator device.  This manager
+    This is the generated manager file for the MPLABï¿½ Code Configurator device.  This manager
     configures the pins direction, initial state, analog setting.
 
   @Description:
-    This source file provides implementations for MPLAB® Code Configurator interrupts.
+    This source file provides implementations for MPLABï¿½ Code Configurator interrupts.
     Generation Information :
-        Product Revision  :  MPLAB® Code Configurator - v2.25.2
+        Product Revision  :  MPLABï¿½ Code Configurator - v2.25.2
         Device            :  PIC24FJ64GA004
         Version           :  1.02
     The generated drivers are tested against the following:
@@ -1970,11 +1970,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Set RB6 high (1)
-    BLANK3_SetHigh();
+    CARRAGE_UP_CONF_SetHigh();
     </code>
 
  */
-#define BLANK3_SetHigh()          _LATB6 = 1
+#define CARRAGE_UP_CONF_SetHigh()          _LATB6 = 1
 /**
   @Summary
     Sets the GPIO pin, RB6, low using LATB6.
@@ -1994,11 +1994,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Set RB6 low (0)
-    BLANK3_SetLow();
+    CARRAGE_UP_CONF_SetLow();
     </code>
 
  */
-#define BLANK3_SetLow()           _LATB6 = 0
+#define CARRAGE_UP_CONF_SetLow()           _LATB6 = 0
 /**
   @Summary
     Toggles the GPIO pin, RB6, using LATB6.
@@ -2018,11 +2018,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Toggle RB6
-    BLANK3_SetToggle();
+    CARRAGE_UP_CONF_SetToggle();
     </code>
 
  */
-#define BLANK3_Toggle()           _LATB6 ^= 1
+#define CARRAGE_UP_CONF_Toggle()           _LATB6 ^= 1
 /**
   @Summary
     Reads the value of the GPIO pin, RB6.
@@ -2044,11 +2044,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
     uint16_t portValue;
 
     // Read RB6
-    postValue = BLANK3_GetValue();
+    postValue = CARRAGE_UP_CONF_GetValue();
     </code>
 
  */
-#define BLANK3_GetValue()         _RB6
+#define CARRAGE_UP_CONF_GetValue()         _RB6
 /**
   @Summary
     Configures the GPIO pin, RB6, as an input.
@@ -2068,11 +2068,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Sets the RB6 as an input
-    BLANK3_SetDigitalInput();
+    CARRAGE_UP_CONF_SetDigitalInput();
     </code>
 
  */
-#define BLANK3_SetDigitalInput()  _TRISB6 = 1
+#define CARRAGE_UP_CONF_SetDigitalInput()  _TRISB6 = 1
 /**
   @Summary
     Configures the GPIO pin, RB6, as an output.
@@ -2092,11 +2092,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   @Example
     <code>
     // Sets the RB6 as an output
-    BLANK3_SetDigitalOutput();
+    CARRAGE_UP_CONF_SetDigitalOutput();
     </code>
 
  */
-#define BLANK3_SetDigitalOutput() _TRISB6 = 0
+#define CARRAGE_UP_CONF_SetDigitalOutput() _TRISB6 = 0
 /**
   @Summary
     Sets the GPIO pin, RB7, high using LATB7.
@@ -4116,7 +4116,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
     None.
 
   @Param
-    None.
+    None.std_head1_timer
 
   @Example
     <code>
@@ -4597,7 +4597,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
     Configures the pin settings of the PIC24FJ64GA004
 
   @Description
-    This is the generated manager file for the MPLAB® Code Configurator device.  This manager
+    This is the generated manager file for the MPLABï¿½ Code Configurator device.  This manager
     configures the pins direction, initial state, analog setting.
 
   @Preconditions

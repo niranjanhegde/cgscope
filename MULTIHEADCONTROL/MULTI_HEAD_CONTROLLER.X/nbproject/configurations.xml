@@ -9,6 +9,7 @@
         <itemPath>app/miniature_head1.h</itemPath>
         <itemPath>app/miniature_head2.h</itemPath>
         <itemPath>app/standard_head1.h</itemPath>
+        <itemPath>app/standard_head2.h</itemPath>
       </logicalFolder>
       <logicalFolder name="mcc_generated_files"
                      displayName="MCC Generated Files"
@@ -34,6 +35,7 @@
         <itemPath>app/miniature_head1.c</itemPath>
         <itemPath>app/miniature_head2.c</itemPath>
         <itemPath>app/standard_head1.c</itemPath>
+        <itemPath>app/standard_head2.c</itemPath>
       </logicalFolder>
       <logicalFolder name="mcc_generated_files"
                      displayName="MCC Generated Files"
@@ -287,6 +289,7 @@
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
         <property key="UART 1" value="true"/>
         <property key="UART 2" value="true"/>
+        <property key="firmware.download.all" value="false"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>

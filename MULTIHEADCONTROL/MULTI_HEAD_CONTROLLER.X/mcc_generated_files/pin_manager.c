@@ -8,13 +8,13 @@
     pin_manager.c
 
   @Summary:
-    This is the generated manager file for the MPLAB® Code Configurator device.  This manager
+    This is the generated manager file for the MPLABï¿½ Code Configurator device.  This manager
     configures the pins direction, initial state, analog setting.
 
   @Description:
-    This source file provides implementations for MPLAB® Code Configurator interrupts.
+    This source file provides implementations for MPLABï¿½ Code Configurator interrupts.
     Generation Information : 
-        Product Revision  :  MPLAB® Code Configurator - v2.25.2
+        Product Revision  :  MPLABï¿½ Code Configurator - v2.25.2
         Device            :  PIC24FJ64GA004
         Version           :  1.02
     The generated drivers are tested against the following:
@@ -63,7 +63,7 @@ void PIN_MANAGER_Initialize(void) {
      * Setting the GPIO of PORTB
      ***************************************************************************/
     LATB = 0x10;
-    TRISB = 0x0C2D;
+    TRISB = 0x0C6D;
     /****************************************************************************
      * Setting the GPIO of PORTC
      ***************************************************************************/

@@ -98,6 +98,7 @@ int main(void) {
             HEAD_SELECT_LED2_SetHigh();
             HEAD_SELECT_LED3_SetHigh();
             HEAD_SELECT_LED4_SetLow();
+            Standard_head2();
         }
     }
 }

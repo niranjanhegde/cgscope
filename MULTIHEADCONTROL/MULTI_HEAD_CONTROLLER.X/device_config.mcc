@@ -17,7 +17,7 @@
             <resource customName="HEAD_SELECT_3" digital="true" direction="INPUT" function="RB3" ioc="0" module="GPIO" name="RB3" start="false" type="pin" wpu="false"/>
             <resource customName="COUNTER" digital="true" direction="OUTPUT" function="RB4" ioc="0" module="GPIO" name="RB4" start="true" type="pin" wpu="false"/>
             <resource customName="CARRAGE_UP" digital="true" direction="INPUT" function="RB5" ioc="0" module="GPIO" name="RB5" start="false" type="pin" wpu="false"/>
-            <resource customName="BLANK3" digital="true" direction="OUTPUT" function="RB6" ioc="0" module="GPIO" name="RB6" start="false" type="pin" wpu="false"/>
+            <resource customName="CARRAGE_UP_CONF" digital="true" direction="INPUT" function="RB6" ioc="0" module="GPIO" name="RB6" start="false" type="pin" wpu="false"/>
             <resource customName="STEP_B_BAR" digital="true" direction="OUTPUT" function="RB7" ioc="0" module="GPIO" name="RB7" start="false" type="pin" wpu="false"/>
             <resource customName="STEP_B" digital="true" direction="OUTPUT" function="RB8" ioc="0" module="GPIO" name="RB8" start="false" type="pin" wpu="false"/>
             <resource customName="STEP_A_BAR" digital="true" direction="OUTPUT" function="RB9" ioc="0" module="GPIO" name="RB9" start="false" type="pin" wpu="false"/>
@@ -35,8 +35,8 @@
             <resource customName="TILT_COIL" digital="true" direction="OUTPUT" function="RC7" ioc="0" module="GPIO" name="RC7" start="false" type="pin" wpu="false"/>
             <resource customName="SPIKE_COIL_RIGHT" digital="true" direction="OUTPUT" function="RC8" ioc="0" module="GPIO" name="RC8" start="false" type="pin" wpu="false"/>
             <resource customName="SPIKE_COIL_LEFT" digital="true" direction="OUTPUT" function="RC9" ioc="0" module="GPIO" name="RC9" start="false" type="pin" wpu="false"/>
-            <file checksum="3608626253" modified="false" name="pin_manager.c" path="mcc_generated_files/pin_manager.c"/>
-            <file checksum="3649138442" modified="true" name="pin_manager.h" path="mcc_generated_files/pin_manager.h"/>
+            <file checksum="2984134034" modified="false" name="pin_manager.c" path="mcc_generated_files/pin_manager.c"/>
+            <file checksum="4189565872" modified="true" name="pin_manager.h" path="mcc_generated_files/pin_manager.h"/>
         </manager>
         <manager generated="true" name="System" reloadPin="manual">
             <initializer comment="" name="Initialize">
@@ -67,8 +67,8 @@
             <setting name="Primary Oscillator" option="3000000"/>
             <setting name="Secondary Oscillator" option="31000"/>
             <setting name="generateConfigBits" option="true"/>
-            <file checksum="1187116203" modified="false" name="mcc.c" path="mcc_generated_files/mcc.c"/>
-            <file checksum="2959110755" modified="true" name="mcc.h" path="mcc_generated_files/mcc.h"/>
+            <file checksum="2465330525" modified="false" name="mcc.c" path="mcc_generated_files/mcc.c"/>
+            <file checksum="2040699679" modified="true" name="mcc.h" path="mcc_generated_files/mcc.h"/>
         </manager>
         <manager generated="true" name="Interrupt Manager" reloadPin="manual">
             <resource name="TI" type="TMR2" value="1"/>
@@ -107,7 +107,7 @@
             <resource customName="TMR2_LED" digital="true" direction="OUTPUT" function="RC4" ioc="0" module="GPIO" name="RC4" start="true" type="pin" wpu="false"/>
             <resource customName="BUTTON_START" digital="true" direction="INPUT" function="RC5" ioc="0" module="GPIO" name="RC5" start="false" type="pin" wpu="false"/>
             <resource customName="CARRAGE_UP" digital="true" direction="INPUT" function="RB5" ioc="0" module="GPIO" name="RB5" start="false" type="pin" wpu="false"/>
-            <resource customName="BLANK3" digital="true" direction="OUTPUT" function="RB6" ioc="0" module="GPIO" name="RB6" start="false" type="pin" wpu="false"/>
+            <resource customName="CARRAGE_UP_CONF" digital="true" direction="INPUT" function="RB6" ioc="0" module="GPIO" name="RB6" start="false" type="pin" wpu="false"/>
             <resource customName="STEP_B_BAR" digital="true" direction="OUTPUT" function="RB7" ioc="0" module="GPIO" name="RB7" start="false" type="pin" wpu="false"/>
             <resource customName="STEP_B" digital="true" direction="OUTPUT" function="RB8" ioc="0" module="GPIO" name="RB8" start="false" type="pin" wpu="false"/>
         </module>

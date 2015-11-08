@@ -9,4 +9,5 @@ app/../mcc_generated_files/mcc.h  \
  app/../mcc_generated_files/../app/stepper_motor.h  \
  app/../mcc_generated_files/../app/miniature_head1.h  \
  app/../mcc_generated_files/../app/miniature_head2.h  \
- app/../mcc_generated_files/../app/standard_head1.h 
+ app/../mcc_generated_files/../app/standard_head1.h  \
+ app/../mcc_generated_files/../app/standard_head2.h 
