@@ -54,9 +54,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include "tmr2.h"
 
 
-#include "time_counter.h"
+#include "../time_counters/time_counter.h"
 #include "../app/stepper_motor.h"
 #include "../app/miniature_head1.h"
+#include "../app/miniature_head2.h"
+#include "../app/standard_head1.h"
 
 
 #define _XTAL_FREQ  8000000

@@ -5,10 +5,10 @@
                    displayName="Header Files"
                    projectFiles="true">
       <logicalFolder name="f1" displayName="App" projectFiles="true">
-        <itemPath>mcc_generated_files/time_counter.h</itemPath>
         <itemPath>app/stepper_motor.h</itemPath>
         <itemPath>app/miniature_head1.h</itemPath>
-        <itemPath>mcc_generated_files/miniature_head2.h</itemPath>
+        <itemPath>app/miniature_head2.h</itemPath>
+        <itemPath>app/standard_head1.h</itemPath>
       </logicalFolder>
       <logicalFolder name="mcc_generated_files"
                      displayName="MCC Generated Files"
@@ -17,6 +17,9 @@
         <itemPath>mcc_generated_files/mcc.h</itemPath>
         <itemPath>mcc_generated_files/tmr2.h</itemPath>
         <itemPath>mcc_generated_files/interrupt_manager.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f2" displayName="time_counters" projectFiles="true">
+        <itemPath>time_counters/time_counter.h</itemPath>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
@@ -27,10 +30,10 @@
                    displayName="Source Files"
                    projectFiles="true">
       <logicalFolder name="f1" displayName="App" projectFiles="true">
-        <itemPath>mcc_generated_files/time_counter.c</itemPath>
         <itemPath>app/stepper_motor.c</itemPath>
         <itemPath>app/miniature_head1.c</itemPath>
-        <itemPath>mcc_generated_files/miniature_head2.c</itemPath>
+        <itemPath>app/miniature_head2.c</itemPath>
+        <itemPath>app/standard_head1.c</itemPath>
       </logicalFolder>
       <logicalFolder name="mcc_generated_files"
                      displayName="MCC Generated Files"
@@ -39,6 +42,9 @@
         <itemPath>mcc_generated_files/mcc.c</itemPath>
         <itemPath>mcc_generated_files/tmr2.c</itemPath>
         <itemPath>mcc_generated_files/interrupt_manager.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f2" displayName="time_counter" projectFiles="true">
+        <itemPath>time_counters/time_counter.c</itemPath>
       </logicalFolder>
       <itemPath>main.c</itemPath>
     </logicalFolder>
@@ -51,6 +57,8 @@
   </logicalFolder>
   <sourceRootList>
     <Elem>mcc_generated_files</Elem>
+    <Elem>app</Elem>
+    <Elem>time_counters</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -62,8 +70,8 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC16</languageToolchain>
-        <languageToolchainVersion>1.23</languageToolchainVersion>
-        <platform>3</platform>
+        <languageToolchainVersion>1.25</languageToolchainVersion>
+        <platform>2</platform>
       </toolsSet>
       <compileType>
         <linkerTool>
@@ -253,6 +261,7 @@
         <property key="ADC 1" value="true"/>
         <property key="AutoSelectMemRanges" value="auto"/>
         <property key="CRC" value="true"/>
+        <property key="Freeze All Other Peripherals" value="true"/>
         <property key="I2C1" value="true"/>
         <property key="I2C2" value="true"/>
         <property key="INPUT CAPTURE 1" value="true"/>
@@ -278,7 +287,6 @@
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
         <property key="UART 1" value="true"/>
         <property key="UART 2" value="true"/>
-        <property key="firmware.download.all" value="false"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>

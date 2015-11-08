@@ -46,21 +46,29 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 
 #include "mcc_generated_files/mcc.h"
 #include "app/miniature_head1.h"
+#include "app/standard_head1.h"
 
 /*
                          Main application
  */
+
 unsigned int count1;
-HEAD_SELECT head_seelect;
+HEAD_SELECT head_select;
+
+
 int main(void) {
     // initialize the device
     SYSTEM_Initialize();
-
+    if(HEAD_SELECT_1_GetValue() == 0) head_select=Minuature_Head1;
+    else if(HEAD_SELECT_2_GetValue() == 0) head_select=Minuature_Head2;
+    else if(HEAD_SELECT_3_GetValue() == 0) head_select=Standard_Head1;
+    else if(HEAD_SELECT_4_GetValue() == 0) head_select=Standard_Head2;
+    
     while (1)
     {        
         Time_Counter_Update();
         
-        if(HEAD_SELECT_1_GetValue() == 0)
+        if(head_select==Minuature_Head1)
         {
             HEAD_SELECT_LED1_SetLow();
             HEAD_SELECT_LED2_SetHigh();
@@ -68,7 +76,7 @@ int main(void) {
             HEAD_SELECT_LED4_SetHigh();
             Miniature_head1();
         }
-        else if (HEAD_SELECT_2_GetValue() == 0)
+        else if (head_select==Minuature_Head2)
         {
             HEAD_SELECT_LED1_SetHigh();
             HEAD_SELECT_LED2_SetLow();
@@ -76,14 +84,15 @@ int main(void) {
             HEAD_SELECT_LED4_SetHigh();
             Miniature_head2();
         }
-        else if (HEAD_SELECT_3_GetValue() == 0)
+        else if (head_select==Standard_Head1)
         {
             HEAD_SELECT_LED1_SetHigh();
             HEAD_SELECT_LED2_SetHigh();
             HEAD_SELECT_LED3_SetLow();
             HEAD_SELECT_LED4_SetHigh();
+            Standard_head1();
         }
-        else if (HEAD_SELECT_4_GetValue() == 0)
+        else if (head_select==Standard_Head2)
         {
             HEAD_SELECT_LED1_SetHigh();
             HEAD_SELECT_LED2_SetHigh();

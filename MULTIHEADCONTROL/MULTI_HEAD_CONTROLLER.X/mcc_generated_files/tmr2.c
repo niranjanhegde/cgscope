@@ -51,7 +51,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 
 #include <xc.h>
 #include "tmr2.h"
-#include "time_counter.h"
+#include "../time_counters/time_counter.h"
 
 extern volatile unsigned int msec;
 extern volatile unsigned int TickCount[3];
