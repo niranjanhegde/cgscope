@@ -1,5 +1,5 @@
 /**
-  @Generated MPLABï¿½ Code Configurator Source File
+  @Generated MPLAB® Code Configurator Source File
 
   @Company:
     Microchip Technology Inc.
@@ -8,12 +8,12 @@
     mcc.c
 
   @Summary:
-    This is the mcc.c file generated using MPLABï¿½ Code Configurator
+    This is the mcc.c file generated using MPLAB® Code Configurator
 
   @Description:
     This header file provides implementations for driver APIs for all modules selected in the GUI.
     Generation Information :
-        Product Revision  :  MPLABï¿½ Code Configurator - v2.25.2
+        Product Revision  :  MPLAB® Code Configurator - v2.25.2
         Device            :  PIC24FJ64GA004
         Driver Version    :  1.02
     The generated drivers are tested against the following:

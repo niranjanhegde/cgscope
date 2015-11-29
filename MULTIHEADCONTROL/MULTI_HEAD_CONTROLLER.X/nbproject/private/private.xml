@@ -3,17 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/niru/MyRepo/cgscope/MULTIHEADCONTROL/MULTI_HEAD_CONTROLLER.X/mcc_generated_files/mcc.h</file>
-            <file>file:/home/niru/MyRepo/cgscope/MULTIHEADCONTROL/MULTI_HEAD_CONTROLLER.X/main.c</file>
-            <file>file:/home/niru/MyRepo/cgscope/MULTIHEADCONTROL/MULTI_HEAD_CONTROLLER.X/app/miniature_head2.c</file>
-            <file>file:/home/niru/MyRepo/cgscope/MULTIHEADCONTROL/MULTI_HEAD_CONTROLLER.X/app/miniature_head2.h</file>
-            <file>file:/home/niru/MyRepo/cgscope/MULTIHEADCONTROL/MULTI_HEAD_CONTROLLER.X/app/miniature_head1.c</file>
-            <file>file:/home/niru/MyRepo/cgscope/MULTIHEADCONTROL/MULTI_HEAD_CONTROLLER.X/app/miniature_head1.h</file>
-            <file>file:/home/niru/MyRepo/cgscope/MULTIHEADCONTROL/MULTI_HEAD_CONTROLLER.X/time_counters/time_counter.c</file>
-            <file>file:/home/niru/MyRepo/cgscope/MULTIHEADCONTROL/MULTI_HEAD_CONTROLLER.X/time_counters/time_counter.h</file>
-            <file>file:/home/niru/MyRepo/cgscope/MULTIHEADCONTROL/MULTI_HEAD_CONTROLLER.X/mcc_generated_files/tmr2.c</file>
-            <file>file:/home/niru/MyRepo/cgscope/MULTIHEADCONTROL/MULTI_HEAD_CONTROLLER.X/app/standard_head1.c</file>
-            <file>file:/home/niru/MyRepo/cgscope/MULTIHEADCONTROL/MULTI_HEAD_CONTROLLER.X/app/standard_head1.h</file>
+            <file>file:/F:/MULTI_HEAD_CONTROLLER.X/app/standard_head1.c</file>
+            <file>file:/F:/MULTI_HEAD_CONTROLLER.X/mcc_generated_files/interrupt_manager.c</file>
+            <file>file:/F:/MULTI_HEAD_CONTROLLER.X/mcc_generated_files/tmr2.c</file>
+            <file>file:/F:/MULTI_HEAD_CONTROLLER.X/app/standard_head2.c</file>
+            <file>file:/F:/MULTI_HEAD_CONTROLLER.X/app/miniature_head2.c</file>
+            <file>file:/F:/MULTI_HEAD_CONTROLLER.X/main.c</file>
+            <file>file:/F:/MULTI_HEAD_CONTROLLER.X/mcc_generated_files/mcc.c</file>
+            <file>file:/F:/MULTI_HEAD_CONTROLLER.X/app/standard_head2.h</file>
+            <file>file:/F:/MULTI_HEAD_CONTROLLER.X/time_counters/time_counter.c</file>
+            <file>file:/F:/MULTI_HEAD_CONTROLLER.X/app/stepper_motor.h</file>
         </group>
     </open-files>
 </project-private>

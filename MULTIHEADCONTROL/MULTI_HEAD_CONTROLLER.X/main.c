@@ -54,52 +54,68 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 
 unsigned int count1;
 HEAD_SELECT head_select;
+bool PRG_RST_Flag=0; 
 
 
 int main(void) {
     // initialize the device
+    //stepper1.Stepper=0b1111;
     SYSTEM_Initialize();
+
     if(HEAD_SELECT_1_GetValue() == 0) head_select=Minuature_Head1;
     else if(HEAD_SELECT_2_GetValue() == 0) head_select=Minuature_Head2;
     else if(HEAD_SELECT_3_GetValue() == 0) head_select=Standard_Head1;
     else if(HEAD_SELECT_4_GetValue() == 0) head_select=Standard_Head2;
-    
+    TMR_TOP_TRIG_SetHigh();
+    TMR_BOT_TRIG_SetHigh();
     while (1)
-    {        
-        Time_Counter_Update();
-        
-        if(head_select==Minuature_Head1)
-        {
-            HEAD_SELECT_LED1_SetLow();
-            HEAD_SELECT_LED2_SetHigh();
-            HEAD_SELECT_LED3_SetHigh();
-            HEAD_SELECT_LED4_SetHigh();
-            Miniature_head1();
-        }
-        else if (head_select==Minuature_Head2)
-        {
-            HEAD_SELECT_LED1_SetHigh();
-            HEAD_SELECT_LED2_SetLow();
-            HEAD_SELECT_LED3_SetHigh();
-            HEAD_SELECT_LED4_SetHigh();
-            Miniature_head2();
-        }
-        else if (head_select==Standard_Head1)
-        {
-            HEAD_SELECT_LED1_SetHigh();
-            HEAD_SELECT_LED2_SetHigh();
-            HEAD_SELECT_LED3_SetLow();
-            HEAD_SELECT_LED4_SetHigh();
-            Standard_head1();
-        }
-        else if (head_select==Standard_Head2)
-        {
-            HEAD_SELECT_LED1_SetHigh();
-            HEAD_SELECT_LED2_SetHigh();
-            HEAD_SELECT_LED3_SetHigh();
-            HEAD_SELECT_LED4_SetLow();
-            Standard_head2();
-        }
+    {  
+//        if(PRG_RST_Flag == 0)
+//        {
+//            //SYSTEM_Initialize();
+//            LATA = 0x011C;
+//            LATB = 0x10;
+//            LATC = 0x1C;
+//
+//    PRG_RST_Flag=1;
+//            
+//        }
+//        else
+//        {
+            Time_Counter_Update();
+            if(head_select==Minuature_Head1)
+            {
+                HEAD_SELECT_LED1_SetLow();
+                HEAD_SELECT_LED2_SetHigh();
+                HEAD_SELECT_LED3_SetHigh();
+                HEAD_SELECT_LED4_SetHigh();
+                Miniature_head1();
+            }
+            else if (head_select==Minuature_Head2)
+            {
+                HEAD_SELECT_LED1_SetHigh();
+                HEAD_SELECT_LED2_SetLow();
+                HEAD_SELECT_LED3_SetHigh();
+                HEAD_SELECT_LED4_SetHigh();
+                Miniature_head2();
+            }
+            else if (head_select==Standard_Head1)
+            {
+                HEAD_SELECT_LED1_SetHigh();
+                HEAD_SELECT_LED2_SetHigh();
+                HEAD_SELECT_LED3_SetLow();
+                HEAD_SELECT_LED4_SetHigh();
+                Standard_head1();
+            }
+            else if (head_select==Standard_Head2)
+            {
+                HEAD_SELECT_LED1_SetHigh();
+                HEAD_SELECT_LED2_SetHigh();
+                HEAD_SELECT_LED3_SetHigh();
+                HEAD_SELECT_LED4_SetLow();
+                Standard_head2();
+            }
+        //}
     }
 }
 /**

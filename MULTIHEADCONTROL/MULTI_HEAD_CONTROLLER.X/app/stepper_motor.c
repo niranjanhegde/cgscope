@@ -1,4 +1,5 @@
 /* 
+ * 
  * File:   stepper_motor.h
  * Author: Niranjan Hegde
  *
@@ -10,47 +11,51 @@ int i=0;
 STEPPER stepper1;   
 void StepperMotor_Forward(void)
 {
-    
-    for(i=0; i<10; i++)
+    for(i=0; i<9; i++)
     {
         stepper1.Stepper=0b0110;
         StepperMotor_OP_update();
-        Timer_Soft_Delay_MS(50);
+        Timer_Soft_Delay_MS(5);
 
         stepper1.Stepper=0b1010;
         StepperMotor_OP_update();
-        Timer_Soft_Delay_MS(50);
+        Timer_Soft_Delay_MS(5);
 
         stepper1.Stepper=0b1001;
         StepperMotor_OP_update();
-        Timer_Soft_Delay_MS(50);
+        Timer_Soft_Delay_MS(5);
 
         stepper1.Stepper=0b0101;
         StepperMotor_OP_update();
-        Timer_Soft_Delay_MS(50);
+        Timer_Soft_Delay_MS(5);
+        
     }
+       stepper1.Stepper=0b0000;
+       StepperMotor_OP_update();
 }
 
 void StepperMotor_Reverse(void)
-{
-    for(i=0; i<10; i++)
+{ 
+    for(i=0; i<9; i++)
     {
         stepper1.Stepper=0b0101;
         StepperMotor_OP_update();
-        Timer_Soft_Delay_MS(50);
+        Timer_Soft_Delay_MS(400);
 
         stepper1.Stepper=0b1001;
         StepperMotor_OP_update();
-        Timer_Soft_Delay_MS(50);
+        Timer_Soft_Delay_MS(400);
 
         stepper1.Stepper=0b1010;
         StepperMotor_OP_update();
-        Timer_Soft_Delay_MS(50);
+        Timer_Soft_Delay_MS(400);
 
         stepper1.Stepper=0b0110;
         StepperMotor_OP_update();
-        Timer_Soft_Delay_MS(50);
+        Timer_Soft_Delay_MS(400);
     }
+      stepper1.Stepper=0b0000;
+      StepperMotor_OP_update();
 }
 
 void StepperMotor_OP_update(void)
