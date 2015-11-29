@@ -24,9 +24,7 @@ extern "C" {
     typedef struct
     {
         unsigned std_timer1_start:1;
-        unsigned std_timer1_stop:1;
         unsigned std_timer2_start:1;
-        unsigned std_timer2_stop:1;
         char std_timer1;
         char std_timer2;
     }STD_HEAD_TIMERS;

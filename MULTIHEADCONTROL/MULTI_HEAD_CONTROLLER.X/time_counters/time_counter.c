@@ -13,8 +13,7 @@
     volatile unsigned int TickCount[3] = {0, 0, 0};      //Keep track of three software timers
     unsigned int sec,min;
     extern unsigned int count1;
-    extern STD_HEAD_TIMERS std_head1_timer;
-    extern STD_HEAD_TIMERS std_head2_timer; 
+    extern STD_HEAD_TIMERS std_head_timer;
 void Time_Counter_Update(void)
 {
     if(msec > 999)
@@ -22,13 +21,13 @@ void Time_Counter_Update(void)
         msec=0;
         sec++;
         count1++;
-        if(std_head1_timer.std_timer1_start==1)
+        if(std_head_timer.std_timer1_start==1)
         {
-            std_head1_timer.std_timer1++;
+            std_head_timer.std_timer1++;
         }
-        if(std_head2_timer.std_timer2_start==1)
+        if(std_head_timer.std_timer2_start==1)
         {
-            std_head2_timer.std_timer2++;
+            std_head_timer.std_timer2++;
         }
     if(sec > 59)
     {
