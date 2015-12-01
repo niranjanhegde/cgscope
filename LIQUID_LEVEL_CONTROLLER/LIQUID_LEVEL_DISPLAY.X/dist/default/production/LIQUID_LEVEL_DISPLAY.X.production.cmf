@@ -12,24 +12,24 @@
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
 $dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-cinit CODE 0 7F4 7F4 C 2
-text1 CODE 0 53E 53E 4 2
-text2 CODE 0 56B 56B 18 2
-text3 CODE 0 542 542 5 2
-text4 CODE 0 54D 54D 8 2
-text5 CODE 0 6F8 6F8 FC 2
-text6 CODE 0 583 583 1B 2
-text7 CODE 0 59E 59E 2F 2
-text8 CODE 0 609 609 6D 2
-text9 CODE 0 676 676 82 2
-text10 CODE 0 5CD 5CD 3C 2
-maintext CODE 0 55F 55F C 2
+cinit CODE 0 7F8 7F8 8 2
+text1 CODE 0 593 593 3 2
+text2 CODE 0 5A1 5A1 18 2
+text3 CODE 0 596 596 5 2
+text4 CODE 0 723 723 64 2
+text5 CODE 0 5D1 5D1 23 2
+text6 CODE 0 6C7 6C7 5C 2
+text7 CODE 0 5F4 5F4 2C 2
+text8 CODE 0 620 620 34 2
+text9 CODE 0 689 689 3E 2
+text10 CODE 0 654 654 35 2
+maintext CODE 0 5B9 5B9 18 2
 cstackCOMMON COMMON 1 70 70 E 1
-cstackBANK0 BANK0 1 20 20 1A 1
-inittext CODE 0 547 547 6 2
-idataBANK0 CODE 0 555 555 A 2
-dataBANK0 BANK0 1 3A 3A A 1
-$C:\Users\NIRANJ~1\AppData\Local\Temp\s4ls.obj
+cstackBANK0 BANK0 1 20 20 20 1
+bssBANK0 BANK0 1 40 40 D 1
+stringtext STRCODE 0 787 787 71 2
+clrtext CODE 0 59B 59B 6 2
+$C:\Users\niranjan\AppData\Local\Temp\s59s.obj
 reset_vec CODE 0 0 0 1 2
 end_init CODE 0 1 1 1 2
 config CONFIG 0 8007 8007 2 2
@@ -39,12 +39,12 @@ config CONFIG 0 8007 8007 2 2
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 44-6F 1
+RAM 4D-6F 1
 RAM A0-BF 1
-BANK0 44-6F 1
+BANK0 4D-6F 1
 BANK1 A0-BF 1
-CONST 2-53D 2
-ENTRY 2-53D 2
+CONST 2-592 2
+ENTRY 2-592 2
 IDLOC 8000-8003 2
 SFR10 500-56F 1
 SFR11 580-5EF 1
@@ -68,8 +68,8 @@ SFR28 E00-E6F 1
 SFR29 E80-EEF 1
 SFR30 F00-F6F 1
 SFR31 F80-FEF 1
-STACK 2024-206F 1
-CODE 2-53D 2
+STACK 202D-206F 1
+CODE 2-592 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-16F 1
@@ -81,8 +81,8 @@ SFR7 380-3EF 1
 SFR8 400-46F 1
 SFR9 480-4EF 1
 BIGRAM 2000-206F 1
-STRCODE 2-53D 2
-STRING 2-53D 2
+STRCODE 2-592 2
+STRING 2-592 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -97,160 +97,141 @@ STRING 2-53D 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-7F4 cinit CODE >1592:C:\Users\NIRANJ~1\AppData\Local\Temp\s4ls.
-7F4 cinit CODE >1595:C:\Users\NIRANJ~1\AppData\Local\Temp\s4ls.
-7F4 cinit CODE >1619:C:\Users\NIRANJ~1\AppData\Local\Temp\s4ls.
-7F5 cinit CODE >1620:C:\Users\NIRANJ~1\AppData\Local\Temp\s4ls.
-7F6 cinit CODE >1621:C:\Users\NIRANJ~1\AppData\Local\Temp\s4ls.
-7F7 cinit CODE >1622:C:\Users\NIRANJ~1\AppData\Local\Temp\s4ls.
-7F8 cinit CODE >1623:C:\Users\NIRANJ~1\AppData\Local\Temp\s4ls.
-7F9 cinit CODE >1624:C:\Users\NIRANJ~1\AppData\Local\Temp\s4ls.
-7FA cinit CODE >1625:C:\Users\NIRANJ~1\AppData\Local\Temp\s4ls.
-7FB cinit CODE >1626:C:\Users\NIRANJ~1\AppData\Local\Temp\s4ls.
-7FC cinit CODE >1627:C:\Users\NIRANJ~1\AppData\Local\Temp\s4ls.
-7FD cinit CODE >1628:C:\Users\NIRANJ~1\AppData\Local\Temp\s4ls.
-7FE cinit CODE >1634:C:\Users\NIRANJ~1\AppData\Local\Temp\s4ls.
-7FE cinit CODE >1636:C:\Users\NIRANJ~1\AppData\Local\Temp\s4ls.
-7FF cinit CODE >1637:C:\Users\NIRANJ~1\AppData\Local\Temp\s4ls.
-5CD text10 CODE >54:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
-5CE text10 CODE >56:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
-5DC text10 CODE >57:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
-5DE text10 CODE >58:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
-5E0 text10 CODE >59:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
-5E1 text10 CODE >60:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
-5ED text10 CODE >62:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
-601 text10 CODE >63:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
-603 text10 CODE >64:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
-604 text10 CODE >60:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
-676 text9 CODE >6:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\aldiv.c
-676 text9 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\aldiv.c
-678 text9 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\aldiv.c
-67A text9 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\aldiv.c
-685 text9 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\aldiv.c
-687 text9 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\aldiv.c
-687 text9 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\aldiv.c
-689 text9 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\aldiv.c
-694 text9 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\aldiv.c
-698 text9 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\aldiv.c
-6A0 text9 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\aldiv.c
-6A6 text9 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\aldiv.c
-6A8 text9 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\aldiv.c
-6AA text9 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\aldiv.c
-6B1 text9 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\aldiv.c
-6B5 text9 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\aldiv.c
-6B6 text9 CODE >31:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\aldiv.c
-6BD text9 CODE >32:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\aldiv.c
-6CD text9 CODE >33:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\aldiv.c
-6D5 text9 CODE >34:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\aldiv.c
-6D6 text9 CODE >36:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\aldiv.c
-6DD text9 CODE >37:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\aldiv.c
-6E1 text9 CODE >39:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\aldiv.c
-6E4 text9 CODE >40:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\aldiv.c
-6EF text9 CODE >41:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\aldiv.c
-609 text8 CODE >5:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\almod.c
-609 text8 CODE >13:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\almod.c
-60A text8 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\almod.c
-60C text8 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\almod.c
-617 text8 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\almod.c
-619 text8 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\almod.c
-619 text8 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\almod.c
-61B text8 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\almod.c
-626 text8 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\almod.c
-62C text8 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\almod.c
-62E text8 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\almod.c
-630 text8 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\almod.c
-637 text8 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\almod.c
-63B text8 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\almod.c
-63C text8 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\almod.c
-64C text8 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\almod.c
-654 text8 CODE >29:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\almod.c
-65B text8 CODE >30:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\almod.c
-65F text8 CODE >32:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\almod.c
-662 text8 CODE >33:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\almod.c
-66D text8 CODE >34:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\almod.c
-59E text7 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul32.c
-59E text7 CODE >119:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul32.c
-5A6 text7 CODE >121:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul32.c
-5A8 text7 CODE >122:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul32.c
-5B0 text7 CODE >123:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul32.c
-5B7 text7 CODE >124:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul32.c
-5BE text7 CODE >125:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul32.c
-5C4 text7 CODE >128:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul32.c
-583 text6 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul16.c
-583 text6 CODE >43:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul16.c
-585 text6 CODE >45:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul16.c
-587 text6 CODE >46:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul16.c
-58B text6 CODE >47:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul16.c
-590 text6 CODE >48:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul16.c
-595 text6 CODE >49:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul16.c
-599 text6 CODE >52:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul16.c
-6F8 text5 CODE >11:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
-6F8 text5 CODE >13:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
-6FD text5 CODE >14:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
-6FE text5 CODE >15:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
-706 text5 CODE >16:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
-707 text5 CODE >17:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
-70F text5 CODE >19:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
-713 text5 CODE >20:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
-715 text5 CODE >21:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
-716 text5 CODE >26:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
-731 text5 CODE >27:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
-735 text5 CODE >24:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
-750 text5 CODE >29:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
-781 text5 CODE >31:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
-786 text5 CODE >34:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
-78A text5 CODE >36:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
-79E text5 CODE >37:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
-7A0 text5 CODE >38:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
-7BC text5 CODE >39:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
-7DC text5 CODE >41:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
-7DE text5 CODE >34:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
-7DF text5 CODE >43:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
-7E3 text5 CODE >45:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
-7E8 text5 CODE >47:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
-7EA text5 CODE >45:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
-7F0 text5 CODE >51:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
-7F2 text5 CODE >52:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
-54D text4 CODE >65:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/adc.c
-54D text4 CODE >69:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/adc.c
-550 text4 CODE >72:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/adc.c
-551 text4 CODE >75:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/adc.c
-552 text4 CODE >78:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/adc.c
-553 text4 CODE >81:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/adc.c
-554 text4 CODE >83:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/adc.c
-542 text3 CODE >73:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/mcc.c
-542 text3 CODE >75:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/mcc.c
-545 text3 CODE >77:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/mcc.c
-546 text3 CODE >80:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/mcc.c
-56B text2 CODE >50:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/pin_manager.c
-56B text2 CODE >51:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/pin_manager.c
-56D text2 CODE >52:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/pin_manager.c
-570 text2 CODE >53:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/pin_manager.c
-573 text2 CODE >54:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/pin_manager.c
-575 text2 CODE >56:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/pin_manager.c
-578 text2 CODE >57:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/pin_manager.c
-57B text2 CODE >58:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/pin_manager.c
-57E text2 CODE >60:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/pin_manager.c
-580 text2 CODE >62:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/pin_manager.c
-582 text2 CODE >65:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/pin_manager.c
-53E text1 CODE >67:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/mcc.c
-53E text1 CODE >68:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/mcc.c
-53F text1 CODE >69:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/mcc.c
-540 text1 CODE >70:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/mcc.c
-541 text1 CODE >71:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/mcc.c
-55F maintext CODE >52:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\main.c
-55F maintext CODE >54:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\main.c
-560 maintext CODE >70:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\main.c
-565 maintext CODE >71:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\main.c
-56A maintext CODE >73:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\main.c
-547 inittext CODE >1608:C:\Users\NIRANJ~1\AppData\Local\Temp\s4ls.
-547 inittext CODE >1609:C:\Users\NIRANJ~1\AppData\Local\Temp\s4ls.
-548 inittext CODE >1610:C:\Users\NIRANJ~1\AppData\Local\Temp\s4ls.
-548 inittext CODE >1611:C:\Users\NIRANJ~1\AppData\Local\Temp\s4ls.
-549 inittext CODE >1612:C:\Users\NIRANJ~1\AppData\Local\Temp\s4ls.
-54A inittext CODE >1613:C:\Users\NIRANJ~1\AppData\Local\Temp\s4ls.
-54B inittext CODE >1614:C:\Users\NIRANJ~1\AppData\Local\Temp\s4ls.
-54C inittext CODE >1615:C:\Users\NIRANJ~1\AppData\Local\Temp\s4ls.
+7F8 cinit CODE >1459:C:\Users\niranjan\AppData\Local\Temp\s59s.
+7F8 cinit CODE >1462:C:\Users\niranjan\AppData\Local\Temp\s59s.
+7F8 cinit CODE >1492:C:\Users\niranjan\AppData\Local\Temp\s59s.
+7F9 cinit CODE >1493:C:\Users\niranjan\AppData\Local\Temp\s59s.
+7FA cinit CODE >1494:C:\Users\niranjan\AppData\Local\Temp\s59s.
+7FB cinit CODE >1495:C:\Users\niranjan\AppData\Local\Temp\s59s.
+7FC cinit CODE >1496:C:\Users\niranjan\AppData\Local\Temp\s59s.
+7FD cinit CODE >1497:C:\Users\niranjan\AppData\Local\Temp\s59s.
+7FE cinit CODE >1503:C:\Users\niranjan\AppData\Local\Temp\s59s.
+7FE cinit CODE >1505:C:\Users\niranjan\AppData\Local\Temp\s59s.
+7FF cinit CODE >1506:C:\Users\niranjan\AppData\Local\Temp\s59s.
+654 text10 CODE >35:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+654 text10 CODE >37:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+658 text10 CODE >38:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+65B text10 CODE >40:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+65C text10 CODE >41:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+65D text10 CODE >44:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+65F text10 CODE >48:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+660 text10 CODE >49:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+662 text10 CODE >50:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+663 text10 CODE >51:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+668 text10 CODE >53:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+681 text10 CODE >54:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+683 text10 CODE >55:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+684 text10 CODE >51:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+689 text9 CODE >59:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+68A text9 CODE >62:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+68C text9 CODE >65:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+690 text9 CODE >66:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+694 text9 CODE >67:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+69A text9 CODE >69:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+69E text9 CODE >70:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+6A2 text9 CODE >67:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+6A3 text9 CODE >74:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+6A5 text9 CODE >75:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+6AF text9 CODE >76:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+6B3 text9 CODE >77:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+6B7 text9 CODE >72:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+6C2 text9 CODE >79:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+6C6 text9 CODE >80:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+620 text8 CODE >6:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\lwdiv.c
+620 text8 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\lwdiv.c
+622 text8 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\lwdiv.c
+626 text8 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\lwdiv.c
+628 text8 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\lwdiv.c
+62A text8 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\lwdiv.c
+62F text8 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\lwdiv.c
+633 text8 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\lwdiv.c
+634 text8 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\lwdiv.c
+639 text8 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\lwdiv.c
+641 text8 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\lwdiv.c
+645 text8 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\lwdiv.c
+646 text8 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\lwdiv.c
+64B text8 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\lwdiv.c
+64F text8 CODE >30:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\lwdiv.c
+5F4 text7 CODE >6:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\lwmod.c
+5F4 text7 CODE >13:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\lwmod.c
+5F8 text7 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\lwmod.c
+5FA text7 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\lwmod.c
+5FC text7 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\lwmod.c
+601 text7 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\lwmod.c
+605 text7 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\lwmod.c
+606 text7 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\lwmod.c
+60E text7 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\lwmod.c
+612 text7 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\lwmod.c
+617 text7 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\lwmod.c
+61B text7 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\lwmod.c
+6C7 text6 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\itoa.c
+6C9 text6 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\itoa.c
+6CD text6 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\itoa.c
+6DB text6 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\itoa.c
+6DF text6 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\itoa.c
+6E3 text6 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\itoa.c
+6E9 text6 CODE >29:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\itoa.c
+6F7 text6 CODE >30:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\itoa.c
+704 text6 CODE >31:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\itoa.c
+709 text6 CODE >32:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\itoa.c
+70D text6 CODE >33:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\itoa.c
+711 text6 CODE >34:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\itoa.c
+71A text6 CODE >35:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\itoa.c
+71E text6 CODE >36:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\itoa.c
+5D1 text5 CODE >4:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\itoa.c
+5D3 text5 CODE >6:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\itoa.c
+5D7 text5 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\itoa.c
+5D9 text5 CODE >9:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\itoa.c
+5E4 text5 CODE >10:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\itoa.c
+5E9 text5 CODE >12:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\itoa.c
+723 text4 CODE >11:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+723 text4 CODE >13:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+725 text4 CODE >14:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+729 text4 CODE >15:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+737 text4 CODE >16:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+745 text4 CODE >17:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+74F text4 CODE >18:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+756 text4 CODE >19:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+75B text4 CODE >20:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+75E text4 CODE >21:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+763 text4 CODE >23:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+76A text4 CODE >25:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+775 text4 CODE >29:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+77A text4 CODE >21:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+783 text4 CODE >32:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+785 text4 CODE >33:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
+596 text3 CODE >72:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/mcc.c
+596 text3 CODE >74:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/mcc.c
+599 text3 CODE >76:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/mcc.c
+59A text3 CODE >79:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/mcc.c
+5A1 text2 CODE >50:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/pin_manager.c
+5A1 text2 CODE >51:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/pin_manager.c
+5A3 text2 CODE >52:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/pin_manager.c
+5A6 text2 CODE >53:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/pin_manager.c
+5A9 text2 CODE >54:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/pin_manager.c
+5AB text2 CODE >56:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/pin_manager.c
+5AE text2 CODE >57:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/pin_manager.c
+5B1 text2 CODE >58:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/pin_manager.c
+5B4 text2 CODE >60:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/pin_manager.c
+5B6 text2 CODE >62:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/pin_manager.c
+5B8 text2 CODE >65:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/pin_manager.c
+593 text1 CODE >67:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/mcc.c
+593 text1 CODE >68:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/mcc.c
+594 text1 CODE >69:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/mcc.c
+595 text1 CODE >70:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/mcc.c
+5B9 maintext CODE >52:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\main.c
+5B9 maintext CODE >54:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\main.c
+5BA maintext CODE >71:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\main.c
+5BF maintext CODE >74:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\main.c
+5D0 maintext CODE >72:D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\main.c
+59B clrtext CODE >1481:C:\Users\niranjan\AppData\Local\Temp\s59s.
+59B clrtext CODE >1482:C:\Users\niranjan\AppData\Local\Temp\s59s.
+59C clrtext CODE >1483:C:\Users\niranjan\AppData\Local\Temp\s59s.
+59C clrtext CODE >1484:C:\Users\niranjan\AppData\Local\Temp\s59s.
+59D clrtext CODE >1485:C:\Users\niranjan\AppData\Local\Temp\s59s.
+59E clrtext CODE >1486:C:\Users\niranjan\AppData\Local\Temp\s59s.
+59F clrtext CODE >1487:C:\Users\niranjan\AppData\Local\Temp\s59s.
+5A0 clrtext CODE >1488:C:\Users\niranjan\AppData\Local\Temp\s59s.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -264,56 +245,56 @@ $dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 ___latbits 0 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-__LdataBANK0 0 0 ABS 0 dataBANK0 -
+___lwmod@counter 75 0 COMMON 1 cstackCOMMON dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 __Hspace_0 8009 0 ABS 0 - -
 __Hspace_1 7E 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
-__HidataBANK0 0 0 ABS 0 idataBANK0 -
 __size_of_Display_value 0 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 ltemp0 7E 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 ltemp1 82 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 ltemp2 86 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 ltemp3 80 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+__Lstringtext 0 0 ABS 0 stringtext -
+main@m 3F 0 BANK0 1 cstackBANK0 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 __Hstrings 0 0 ABS 0 strings -
+itoa@base 26 0 BANK0 1 cstackBANK0 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 _LATA 10C 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 _LATC 10E 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 _WPUA 20C 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-___sp 0 0 STACK 2 stack C:\Users\NIRANJ~1\AppData\Local\Temp\s4ls.obj
-_main ABE 0 CODE 0 maintext dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+___sp 0 0 STACK 2 stack C:\Users\niranjan\AppData\Local\Temp\s59s.obj
+_itoa BA2 0 CODE 0 text5 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+_main B72 0 CODE 0 maintext dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+_utoa D8E 0 CODE 0 text6 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 btemp 7E 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 ltemp 7E 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-start 2 0 CODE 0 init C:\Users\NIRANJ~1\AppData\Local\Temp\s4ls.obj
+start 2 0 CODE 0 init C:\Users\niranjan\AppData\Local\Temp\s59s.obj
 ttemp 7E 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 wtemp 7E 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-__size_of___aldiv 0 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-__size_of___almod 0 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+__size_of_itoa 0 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 __size_of_main 0 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-Display_value@digit_34 2F 0 BANK0 1 cstackBANK0 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-__end_of_Display_put C12 0 CODE 0 text10 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-?___lmul 70 0 COMMON 1 cstackCOMMON dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-?___wmul 70 0 COMMON 1 cstackCOMMON dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+__size_of_utoa 0 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+__size_of___lwdiv 0 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+__size_of___lwmod 0 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+__end_of_Display_put D12 0 CODE 0 text10 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 _OPTION_REGbits 95 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-__end_of_Display_value FE8 0 CODE 0 text5 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-Display_value@num 32 0 BANK0 1 cstackBANK0 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-__LidataBANK0 0 0 ABS 0 idataBANK0 -
+__end_of_Display_value F0E 0 CODE 0 text4 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 __Hpowerup 0 0 CODE 0 powerup -
-___almod@sign 7A 0 COMMON 1 cstackCOMMON dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 ttemp0 7E 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 ttemp1 81 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 ttemp2 84 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 ttemp3 87 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 ttemp4 7F 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 __size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-intlevel0 0 0 CODE 0 functab C:\Users\NIRANJ~1\AppData\Local\Temp\s4ls.obj
-intlevel1 0 0 CODE 0 functab C:\Users\NIRANJ~1\AppData\Local\Temp\s4ls.obj
-intlevel2 0 0 CODE 0 functab C:\Users\NIRANJ~1\AppData\Local\Temp\s4ls.obj
-intlevel3 0 0 CODE 0 functab C:\Users\NIRANJ~1\AppData\Local\Temp\s4ls.obj
-intlevel4 0 0 CODE 0 functab C:\Users\NIRANJ~1\AppData\Local\Temp\s4ls.obj
-intlevel5 0 0 CODE 0 functab C:\Users\NIRANJ~1\AppData\Local\Temp\s4ls.obj
-__size_of_ADC_Initialize 0 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-___aldiv@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+utoa@c 22 0 BANK0 1 cstackBANK0 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+utoa@v 20 0 BANK0 1 cstackBANK0 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+intlevel0 0 0 CODE 0 functab C:\Users\niranjan\AppData\Local\Temp\s59s.obj
+intlevel1 0 0 CODE 0 functab C:\Users\niranjan\AppData\Local\Temp\s59s.obj
+intlevel2 0 0 CODE 0 functab C:\Users\niranjan\AppData\Local\Temp\s59s.obj
+intlevel3 0 0 CODE 0 functab C:\Users\niranjan\AppData\Local\Temp\s59s.obj
+intlevel4 0 0 CODE 0 functab C:\Users\niranjan\AppData\Local\Temp\s59s.obj
+intlevel5 0 0 CODE 0 functab C:\Users\niranjan\AppData\Local\Temp\s59s.obj
 wtemp0 7E 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 wtemp1 80 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 wtemp2 82 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
@@ -322,39 +303,37 @@ wtemp4 86 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.ob
 wtemp5 88 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 wtemp6 7F 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 __Hfunctab 0 0 CODE 0 functab -
-___aldiv@sign 21 0 BANK0 1 cstackBANK0 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 __Hclrtext 0 0 ABS 0 clrtext -
-___wmul@multiplicand 72 0 COMMON 1 cstackCOMMON dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-_ADCON0 9D 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-_ADCON1 9E 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-_ADCON2 9F 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-_ADRESH 9C 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-_ADRESL 9B 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 _ANSELA 18C 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 _ANSELC 18E 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 _APFCON 11D 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-Display_put@i 7C 0 COMMON 1 cstackCOMMON dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-__end_of___lmul B9A 0 CODE 0 text7 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-__end_of___wmul B3C 0 CODE 0 text6 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-main@val 38 0 BANK0 1 cstackBANK0 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+Display_put@i 75 0 COMMON 1 cstackCOMMON dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 __Lmaintext 0 0 ABS 0 maintext -
-__end_of___aldiv DF0 0 CODE 0 text9 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-__end_of___almod CEC 0 CODE 0 text8 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-Display_value@digit 2D 0 BANK0 1 cstackBANK0 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-Display_value@power 34 0 BANK0 1 cstackBANK0 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-Display_value@value 26 0 BANK0 1 cstackBANK0 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-Display_value@i 2E 0 BANK0 1 cstackBANK0 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+Display_value@F3165 40 0 BANK0 1 bssBANK0 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+Display_value@F3167 46 0 BANK0 1 bssBANK0 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+___lwmod@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+__end_of___lwdiv CA8 0 CODE 0 text8 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+__end_of___lwmod C40 0 CODE 0 text7 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+Display_value@value 2A 0 BANK0 1 cstackBANK0 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+Display_value@i 3C 0 BANK0 1 cstackBANK0 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+__end_ofDisplay_put@display_segment FF0 0 STRCODE 0 stringtext dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+___lwdiv@quotient 75 0 COMMON 1 cstackCOMMON dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+_GetStringReverse D12 0 CODE 0 text9 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+itoa@buf 29 0 BANK0 1 cstackBANK0 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+itoa@val 24 0 BANK0 1 cstackBANK0 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+___lwmod@dividend 72 0 COMMON 1 cstackCOMMON dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 __CFG_MCLRE$OFF 0 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-_PIN_MANAGER_Initialize AD6 0 CODE 0 text2 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-start_initialization FE8 0 CODE 0 cinit dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+_PIN_MANAGER_Initialize B42 0 CODE 0 text2 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+start_initialization FF0 0 CODE 0 cinit dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 _OSCCON 99 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-___aldiv@quotient 22 0 BANK0 1 cstackBANK0 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+__end_of_lookup FDA 0 STRCODE 0 stringtext dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 __size_of_Display_put 0 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-___almod@dividend 74 0 COMMON 1 cstackCOMMON dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-__end_of_SYSTEM_Initialize A84 0 CODE 0 text1 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+__end_of_SYSTEM_Initialize B2C 0 CODE 0 text1 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+clear_ram0 B36 0 CODE 0 clrtext dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-___int_sp 0 0 STACK 2 stack C:\Users\NIRANJ~1\AppData\Local\Temp\s4ls.obj
-Display_value@power_count 31 0 BANK0 1 cstackBANK0 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+utoa@buf 23 0 BANK0 1 cstackBANK0 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+utoa@val 78 0 COMMON 1 cstackCOMMON dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+___int_sp 0 0 STACK 2 stack C:\Users\niranjan\AppData\Local\Temp\s59s.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 BANK2 1 bank2 -
@@ -391,6 +370,7 @@ __Hsfr29 0 0 ABS 0 sfr29 -
 __Hsfr30 0 0 ABS 0 sfr30 -
 __Hsfr31 0 0 ABS 0 sfr31 -
 __Hstack 0 0 STACK 2 stack -
+___lwdiv@counter 77 0 COMMON 1 cstackCOMMON dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 __Hbank10 0 0 BANK10 1 bank10 -
 __Hbank11 0 0 BANK11 1 bank11 -
 __Hbank12 0 0 BANK12 1 bank12 -
@@ -415,6 +395,7 @@ __Hbank30 0 0 BANK30 1 bank30 -
 __Hbank31 0 0 BANK31 1 bank31 -
 __Hbigram 0 0 ABS 0 bigram -
 __Hmaintext 0 0 ABS 0 maintext -
+Display_value@numChar 34 0 BANK0 1 cstackBANK0 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 __CFG_FOSC$INTOSC 0 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 10012 0 CONFIG 0 config -
@@ -428,7 +409,7 @@ __Lbank6 0 0 BANK6 1 bank6 -
 __Lbank7 0 0 BANK7 1 bank7 -
 __Lbank8 0 0 BANK8 1 bank8 -
 __Lbank9 0 0 BANK9 1 bank9 -
-__Lcinit FE8 0 CODE 0 cinit -
+__Lcinit FF0 0 CODE 0 cinit -
 __Lidloc 0 0 IDLOC 0 idloc -
 __Lsfr10 0 0 ABS 0 sfr10 -
 __Lsfr11 0 0 ABS 0 sfr11 -
@@ -453,8 +434,7 @@ __Lsfr29 0 0 ABS 0 sfr29 -
 __Lsfr30 0 0 ABS 0 sfr30 -
 __Lsfr31 0 0 ABS 0 sfr31 -
 __Lstack 0 0 STACK 2 stack -
-init_ram A8E 0 CODE 0 inittext dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-__Linittext 0 0 ABS 0 inittext -
+GetStringReverse@str 72 0 COMMON 1 cstackCOMMON dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
 __Hinit 2 0 CODE 0 init -
@@ -483,27 +463,27 @@ __Lsfr7 0 0 ABS 0 sfr7 -
 __Lsfr8 0 0 ABS 0 sfr8 -
 __Lsfr9 0 0 ABS 0 sfr9 -
 __Ltext 0 0 ABS 0 text -
-___lmul B3C 0 CODE 0 text7 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-___wmul B06 0 CODE 0 text6 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+__end_of_GetStringReverse D8E 0 CODE 0 text9 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 _RC3 73 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 __S0 8009 0 ABS 0 - -
 __S1 7E 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
-___almod@counter 79 0 COMMON 1 cstackCOMMON dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-_SYSTEM_Initialize A7C 0 CODE 0 text1 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+_dot 4C 0 BANK0 1 bssBANK0 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+__size_of_GetStringReverse 0 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+utoa@base 7A 0 COMMON 1 cstackCOMMON dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+_SYSTEM_Initialize B26 0 CODE 0 text1 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 __CFG_BOREN$ON 0 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 __Lintentry 2 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\NIRANJ~1\AppData\Local\Temp\s4ls.obj
-__pdataBANK0 3A 0 BANK0 1 dataBANK0 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-__size_of___lmul 0 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-__size_of___wmul 0 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-_ADC_Initialize A9A 0 CODE 0 text4 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-__ptext10 B9A 0 CODE 0 text10 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-__end_of_PIN_MANAGER_Initialize B06 0 CODE 0 text2 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-___aldiv CEC 0 CODE 0 text9 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-___almod C12 0 CODE 0 text8 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+reset_vec 0 0 CODE 0 reset_vec C:\Users\niranjan\AppData\Local\Temp\s59s.obj
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
+_lookup F0E 0 STRCODE 0 stringtext dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+__ptext10 CA8 0 CODE 0 text10 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+__end_of_PIN_MANAGER_Initialize B72 0 CODE 0 text2 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+Display_value@number 3A 0 BANK0 1 cstackBANK0 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+___lwdiv C40 0 CODE 0 text8 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+___lwmod BE8 0 CODE 0 text7 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 __Lbank10 0 0 BANK10 1 bank10 -
 __Lbank11 0 0 BANK11 1 bank11 -
 __Lbank12 0 0 BANK12 1 bank12 -
@@ -526,67 +506,67 @@ __Lbank28 0 0 BANK28 1 bank28 -
 __Lbank29 0 0 BANK29 1 bank29 -
 __Lbank30 0 0 BANK30 1 bank30 -
 __Lbank31 0 0 BANK31 1 bank31 -
-__pmaintext ABE 0 CODE 0 maintext dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+__pmaintext B72 0 CODE 0 maintext dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 __Lbigram 0 0 ABS 0 bigram -
 __CFG_BORV$LO 0 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-___lmul@multiplier 70 0 COMMON 1 cstackCOMMON dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 1000E 0 CONFIG 0 config -
 __CFG_CP$OFF 0 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 __CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-__Hinittext 0 0 ABS 0 inittext -
-___wmul@multiplier 70 0 COMMON 1 cstackCOMMON dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-Display_put@dig 7B 0 COMMON 1 cstackCOMMON dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-Display_put@display_segment 71 0 COMMON 1 cstackCOMMON dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-_Display_put B9A 0 CODE 0 text10 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-stackhi 206F 0 ABS 0 - C:\Users\NIRANJ~1\AppData\Local\Temp\s4ls.obj
-stacklo 2024 0 ABS 0 - C:\Users\NIRANJ~1\AppData\Local\Temp\s4ls.obj
+Display_put@dig 70 0 COMMON 1 cstackCOMMON dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+Display_put@display_segment FDA 0 STRCODE 0 stringtext dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+___lwdiv@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+itoa@cp 28 0 BANK0 1 cstackBANK0 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+_Display_put CA8 0 CODE 0 text10 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+stackhi 206F 0 ABS 0 - C:\Users\niranjan\AppData\Local\Temp\s59s.obj
+stacklo 202D 0 ABS 0 - C:\Users\niranjan\AppData\Local\Temp\s59s.obj
 _OSCSTAT 9A 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-_ADCON0bits 9D 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 __CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
-__end_of_ADC_Initialize AAA 0 CODE 0 text4 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __Lend_init 2 0 CODE 0 end_init -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 end_of_initialization FFC 0 CODE 0 cinit dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 __Hintentry 2 0 CODE 0 intentry -
 __CFG_STVREN$ON 0 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-___almod@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-Display_put@F2972 3A 0 BANK0 1 dataBANK0 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 __Lstrings 0 0 ABS 0 strings -
-?___aldiv 70 0 COMMON 1 cstackCOMMON dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-?___almod 70 0 COMMON 1 cstackCOMMON dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+___lwdiv@dividend 72 0 COMMON 1 cstackCOMMON dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+?___lwdiv 70 0 COMMON 1 cstackCOMMON dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+?___lwmod 70 0 COMMON 1 cstackCOMMON dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+Display_put@digit 74 0 COMMON 1 cstackCOMMON dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 __Hreset_vec 2 0 CODE 0 reset_vec -
-__ptext1 A7C 0 CODE 0 text1 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-__ptext2 AD6 0 CODE 0 text2 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-__ptext3 A84 0 CODE 0 text3 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-__ptext4 A9A 0 CODE 0 text4 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-__ptext5 DF0 0 CODE 0 text5 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-__ptext6 B06 0 CODE 0 text6 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-__ptext7 B3C 0 CODE 0 text7 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-__ptext8 C12 0 CODE 0 text8 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-__ptext9 CEC 0 CODE 0 text9 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-___aldiv@dividend 74 0 COMMON 1 cstackCOMMON dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
+__ptext1 B26 0 CODE 0 text1 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+__ptext2 B42 0 CODE 0 text2 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+__ptext3 B2C 0 CODE 0 text3 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+__ptext4 E46 0 CODE 0 text4 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+__ptext5 BA2 0 CODE 0 text5 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+__ptext6 D8E 0 CODE 0 text6 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+__ptext7 BE8 0 CODE 0 text7 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+__ptext8 C40 0 CODE 0 text8 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+__ptext9 D12 0 CODE 0 text9 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
+__pstringtext F0E 0 STRCODE 0 stringtext dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 __Lreset_vec 0 0 CODE 0 reset_vec -
-_Display_value DF0 0 CODE 0 text5 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+_Display_value E46 0 CODE 0 text4 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 __CFG_LPBOR$OFF 0 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 __CFG_CLKOUTEN$OFF 0 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 __end_of__initialization FFC 0 CODE 0 cinit dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 __Lfunctab 0 0 CODE 0 functab -
-__pidataBANK0 AAA 0 CODE 0 idataBANK0 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+Display_value@myBuffer 2E 0 BANK0 1 cstackBANK0 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 __Lclrtext 0 0 ABS 0 clrtext -
-___lmul@product 78 0 COMMON 1 cstackCOMMON dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-___lmul@multiplicand 74 0 COMMON 1 cstackCOMMON dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 __Hend_init 4 0 CODE 0 end_init -
-___aldiv@counter 20 0 BANK0 1 cstackBANK0 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-__end_of_main AD6 0 CODE 0 maintext dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+__end_of_itoa BE8 0 CODE 0 text5 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+__end_of_main BA2 0 CODE 0 maintext dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+__end_of_utoa E46 0 CODE 0 text6 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+GetStringReverse@buff 70 0 COMMON 1 cstackCOMMON dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+GetStringReverse@rptr 75 0 COMMON 1 cstackCOMMON dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+GetStringReverse@sptr 76 0 COMMON 1 cstackCOMMON dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 _LATC4 874 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 _LATC5 875 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 _TRISA 8C 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
@@ -594,13 +574,14 @@ _TRISC 8E 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.ob
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 __size_of_PIN_MANAGER_Initialize 0 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-__HdataBANK0 0 0 ABS 0 dataBANK0 -
-__end_of_OSCILLATOR_Initialize A8E 0 CODE 0 text3 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-__initialization FE8 0 CODE 0 cinit dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+__end_of_OSCILLATOR_Initialize B36 0 CODE 0 text3 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+__initialization FF0 0 CODE 0 cinit dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 __CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+__pbssBANK0 40 0 BANK0 1 bssBANK0 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+__Hstringtext 0 0 ABS 0 stringtext -
 __CFG_WRT$OFF 0 0 ABS 0 - dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-___wmul@product 74 0 COMMON 1 cstackCOMMON dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
-_OSCILLATOR_Initialize A84 0 CODE 0 text3 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+GetStringReverse@i 73 0 COMMON 1 cstackCOMMON dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
+_OSCILLATOR_Initialize B2C 0 CODE 0 text3 dist/default/production\LIQUID_LEVEL_DISPLAY.X.production.obj
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -626,21 +607,21 @@ _OSCILLATOR_Initialize A84 0 CODE 0 text3 dist/default/production\LIQUID_LEVEL_D
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-cinit 0 7F4 FE8 C 2
-text1 0 53E A7C 4 2
-text2 0 56B AD6 18 2
-text3 0 542 A84 5 2
-text4 0 54D A9A 8 2
-text5 0 6F8 DF0 FC 2
-text6 0 583 B06 1B 2
-text7 0 59E B3C 2F 2
-text8 0 609 C12 6D 2
-text9 0 676 CEC 82 2
-text10 0 5CD B9A 3C 2
-maintext 0 55F ABE C 2
+cinit 0 7F8 FF0 8 2
+text1 0 593 B26 3 2
+text2 0 5A1 B42 18 2
+text3 0 596 B2C 5 2
+text4 0 723 E46 64 2
+text5 0 5D1 BA2 23 2
+text6 0 6C7 D8E 5C 2
+text7 0 5F4 BE8 2C 2
+text8 0 620 C40 34 2
+text9 0 689 D12 3E 2
+text10 0 654 CA8 35 2
+maintext 0 5B9 B72 18 2
 cstackCOMMON 1 70 70 E 1
-cstackBANK0 1 20 20 24 1
-inittext 0 547 A8E 6 2
+cstackBANK0 1 20 20 2D 1
 reset_vec 0 0 0 2 2
-idataBANK0 0 555 AAA A 2
+stringtext 0 787 F0E 71 2
+clrtext 0 59B B36 6 2
 config 0 8007 1000E 2 2

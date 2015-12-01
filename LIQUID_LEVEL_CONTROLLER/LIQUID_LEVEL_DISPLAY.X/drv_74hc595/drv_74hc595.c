@@ -7,62 +7,74 @@
 
 #include "drv_74hc595.h"
 #include "../mcc_generated_files/mcc.h"
-
-void Display_value(unsigned int value)
+uint8_t dot=0;
+void Display_value(uint16_t value)
 {
-    unsigned int num=value;
     uint8_t i=0;
-    long power=1;
-    uint8_t power_count=0;
-    if(num == 0 || num == 1)
+    uint16_t number = value;    
+    char myBuffer[6]={'\0'};
+    char numChar[6]={'\0'};
+    itoa(myBuffer, number, 10);
+    GetStringReverse(myBuffer, numChar);
+    Display_put('0');                   //put 0 after dot
+    dot=1;
+    for(i=0; i<5; i++)                  //put for 5 displays
     {
-        uint8_t digit = num;
-        Display_put(digit);
+        if(numChar[i]!= '\0')           
+        {
+            Display_put(numChar[i]);    //if number present put to display
+        }
+        else
+        {
+            Display_put(NULL);          //if no number off the remaining display
+        }
+    }
+    STCP_SetHigh();                     //Latch toggle to put display
+    STCP_SetLow();       
+}
+void Display_put(char* dig)
+{
+    char digit = (char)dig;            //digit as local
+    if(digit == NULL)
+    {
+        digit = 0;                      //if null select display_segment[0]
     }
     else
     {
-        while(num > power)  
-        {
-            power*=10;
-            ++power_count;
-        }
-        if((num % power)!=0) {power/=10;}
-        else{
-            ++power_count;
-        }
-
-        while(num != 0)
-        {
-             int digit = num/power;
-             Display_put(digit);
-             if(digit != 0) num = num-digit*power;
-             if(power != 1) power/=10;
-             //if((num % power)==0)++power_count;
-             --power_count;
-        }
-        if(power_count>1)
-        {
-            for(i=0; i<power_count; i++)
-            {
-                Display_put(0);
-            }
-        }
+        digit -= 47;                    //subtract ascii value to select array
     }
-    STCP_SetHigh();
-    STCP_SetLow();
-}
-void Display_put(uint8_t dig)
-{
-    uint8_t display_segment[]={0b11111100,0b01100000,0b11011010,0b11110010,0b01100110,0b10110110,0b10111110,0b11100000,0b11111110,0b11110110};
-    int i=0;
-    SHCP_SetLow();
+    /*display segment sequences*/
+    const uint8_t const display_segment[]={0b00000000,0b01101111,0b00001010,0b01110110,0b01011110,0b00011011,0b01011101,0b01111101,0b00001110,0b01111111,0b01011111};
+    uint8_t i=0;
+    SHCP_SetLow();                      //clock
     STCP_SetLow();
     for(i=0; i<8; i++)
     {
-        DS_PORT = ((display_segment[dig] & MASK(i))==0)?0:1;
-        SHCP_SetHigh();
+        DS_PORT = ((display_segment[digit] & MASK(i))==0)?0:1; //On or Off
+        SHCP_SetHigh();                 //clock
         SHCP_SetLow();
     }
-//    STCP_SetHigh();
-//    STCP_SetLow();
+}
+
+void GetStringReverse(char *str, char*buff)
+{
+    //uint8_t j=0;
+    int i=0;
+    char *sptr;
+    char *rptr;
+    rptr=buff;
+    sptr=str;
+    while(*sptr)
+    {
+        sptr++;
+        i++;
+    }
+    while(i>0)
+    {
+        sptr--;
+        *rptr=*sptr;
+        rptr++;
+        --i;
+    }
+    *rptr='\0';
 }

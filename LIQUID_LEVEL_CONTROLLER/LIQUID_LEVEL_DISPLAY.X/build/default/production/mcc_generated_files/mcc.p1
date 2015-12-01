@@ -1,34 +1,32 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"84 mcc_generated_files/mcc.h
+"93 mcc_generated_files/mcc.h
 [v _OSCILLATOR_Initialize `(v ~T0 @X0 0 ef ]
 "109 mcc_generated_files/pin_manager.h
 [v _PIN_MANAGER_Initialize `(v ~T0 @X0 0 ef ]
-"125 mcc_generated_files/adc.h
-[v _ADC_Initialize `(v ~T0 @X0 0 ef ]
 "1335 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic16f1503.h
 [v _OSCCON `Vuc ~T0 @X0 0 e@153 ]
 "1400
 [v _OSCSTAT `Vuc ~T0 @X0 0 e@154 ]
 "50 mcc_generated_files/mcc.c
-[p x BOREN=ON ]
-"51
-[p x PWRTE=OFF ]
-"52
-[p x FOSC=INTOSC ]
-"53
-[p x MCLRE=OFF ]
-"54
-[p x CP=OFF ]
-"55
-[p x WDTE=OFF ]
-"56
 [p x CLKOUTEN=OFF ]
+"51
+[p x MCLRE=OFF ]
+"52
+[p x WDTE=OFF ]
+"53
+[p x FOSC=INTOSC ]
+"54
+[p x BOREN=ON ]
+"55
+[p x PWRTE=OFF ]
+"56
+[p x CP=OFF ]
 "59
-[p x WRT=OFF ]
-"60
 [p x LPBOR=OFF ]
-"61
+"60
 [p x LVP=OFF ]
+"61
+[p x WRT=OFF ]
 "62
 [p x STVREN=ON ]
 "63
@@ -2868,23 +2866,156 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdint.h: 210: typedef int16_t intptr_t;
 [; ;stdint.h: 215: typedef uint16_t uintptr_t;
 [; ;stdbool.h: 12: typedef unsigned char bool;
-[; ;adc.h: 72: typedef uint16_t adc_result_t;
-[; ;adc.h: 86: typedef enum {
-[; ;adc.h: 87: Temp_channel = 0x1D,
-[; ;adc.h: 88: DAC_channel = 0x1E,
-[; ;adc.h: 89: FVR_channel = 0x1F
-[; ;adc.h: 90: } adc_channel_t;
-[; ;adc.h: 125: void ADC_Initialize(void);
-[; ;adc.h: 154: void ADC_StartConversion(adc_channel_t channel);
-[; ;adc.h: 186: bool ADC_IsConversionDone();
-[; ;adc.h: 219: adc_result_t ADC_GetConversionResult(void);
-[; ;adc.h: 249: adc_result_t ADC_GetConversion(adc_channel_t channel);
-[; ;drv_74hc595.h: 19: void Display_value(unsigned int value);
-[; ;drv_74hc595.h: 20: void Display_put(uint8_t dig);
-[; ;drv_74hc595.h: 21: void Display_clear(void);
-[; ;drv_74hc595.h: 22: void Display_check(void);
-[; ;mcc.h: 71: void SYSTEM_Initialize(void);
-[; ;mcc.h: 84: void OSCILLATOR_Initialize(void);
+[; ;__size_t.h: 4: typedef unsigned size_t;
+[; ;stdlib.h: 7: typedef unsigned short wchar_t;
+[; ;stdlib.h: 15: typedef struct {
+[; ;stdlib.h: 16: int rem;
+[; ;stdlib.h: 17: int quot;
+[; ;stdlib.h: 18: } div_t;
+[; ;stdlib.h: 19: typedef struct {
+[; ;stdlib.h: 20: unsigned rem;
+[; ;stdlib.h: 21: unsigned quot;
+[; ;stdlib.h: 22: } udiv_t;
+[; ;stdlib.h: 23: typedef struct {
+[; ;stdlib.h: 24: long quot;
+[; ;stdlib.h: 25: long rem;
+[; ;stdlib.h: 26: } ldiv_t;
+[; ;stdlib.h: 27: typedef struct {
+[; ;stdlib.h: 28: unsigned long quot;
+[; ;stdlib.h: 29: unsigned long rem;
+[; ;stdlib.h: 30: } uldiv_t;
+[; ;stdlib.h: 53: extern double atof(const char *);
+[; ;stdlib.h: 54: extern double strtod(const char *, const char **);
+[; ;stdlib.h: 55: extern int atoi(const char *);
+[; ;stdlib.h: 56: extern unsigned xtoi(const char *);
+[; ;stdlib.h: 57: extern long atol(const char *);
+[; ;stdlib.h: 58: extern long strtol(const char *, char **, int);
+[; ;stdlib.h: 60: extern int rand(void);
+[; ;stdlib.h: 61: extern void srand(unsigned int);
+[; ;stdlib.h: 62: extern void * calloc(size_t, size_t);
+[; ;stdlib.h: 63: extern div_t div(int numer, int denom);
+[; ;stdlib.h: 64: extern udiv_t udiv(unsigned numer, unsigned denom);
+[; ;stdlib.h: 65: extern ldiv_t ldiv(long numer, long denom);
+[; ;stdlib.h: 66: extern uldiv_t uldiv(unsigned long numer,unsigned long denom);
+[; ;stdlib.h: 67: extern unsigned long _lrotl(unsigned long value, unsigned int shift);
+[; ;stdlib.h: 68: extern unsigned long _lrotr(unsigned long value, unsigned int shift);
+[; ;stdlib.h: 69: extern unsigned int _rotl(unsigned int value, unsigned int shift);
+[; ;stdlib.h: 70: extern unsigned int _rotr(unsigned int value, unsigned int shift);
+[; ;stdlib.h: 75: extern void * malloc(size_t);
+[; ;stdlib.h: 76: extern void free(void *);
+[; ;stdlib.h: 77: extern void * realloc(void *, size_t);
+[; ;stdlib.h: 86: extern int atexit(void (*)(void));
+[; ;stdlib.h: 87: extern char * getenv(const char *);
+[; ;stdlib.h: 88: extern char ** environ;
+[; ;stdlib.h: 89: extern int system(char *);
+[; ;stdlib.h: 90: extern void qsort(void *, size_t, size_t, int (*)(const void *, const void *));
+[; ;stdlib.h: 91: extern void * bsearch(const void *, void *, size_t, size_t, int(*)(const void *, const void *));
+[; ;stdlib.h: 92: extern int abs(int);
+[; ;stdlib.h: 93: extern long labs(long);
+[; ;stdlib.h: 95: extern char * itoa(char * buf, int val, int base);
+[; ;stdlib.h: 96: extern char * utoa(char * buf, unsigned val, int base);
+[; ;stdlib.h: 101: extern char * ltoa(char * buf, long val, int base);
+[; ;stdlib.h: 102: extern char * ultoa(char * buf, unsigned long val, int base);
+[; ;stdlib.h: 104: extern char * ftoa(float f, int * status);
+[; ;string.h: 14: extern void * memcpy(void *, const void *, size_t);
+[; ;string.h: 15: extern void * memmove(void *, const void *, size_t);
+[; ;string.h: 16: extern void * memset(void *, int, size_t);
+[; ;string.h: 20: extern void * __builtin_memcpy(void *, const void *, size_t);
+[; ;string.h: 34: extern char * strcat(char *, const char *);
+[; ;string.h: 35: extern char * strcpy(char *, const char *);
+[; ;string.h: 36: extern char * strncat(char *, const char *, size_t);
+[; ;string.h: 37: extern char * strncpy(char *, const char *, size_t);
+[; ;string.h: 38: extern char * strdup(const char *);
+[; ;string.h: 39: extern char * strtok(char *, const char *);
+[; ;string.h: 42: extern int memcmp(const void *, const void *, size_t);
+[; ;string.h: 43: extern int strcmp(const char *, const char *);
+[; ;string.h: 44: extern int stricmp(const char *, const char *);
+[; ;string.h: 45: extern int strncmp(const char *, const char *, size_t);
+[; ;string.h: 46: extern int strnicmp(const char *, const char *, size_t);
+[; ;string.h: 47: extern void * memchr(const void *, int, size_t);
+[; ;string.h: 48: extern size_t strcspn(const char *, const char *);
+[; ;string.h: 49: extern char * strpbrk(const char *, const char *);
+[; ;string.h: 50: extern size_t strspn(const char *, const char *);
+[; ;string.h: 51: extern char * strstr(const char *, const char *);
+[; ;string.h: 52: extern char * stristr(const char *, const char *);
+[; ;string.h: 53: extern char * strerror(int);
+[; ;string.h: 54: extern size_t strlen(const char *);
+[; ;string.h: 55: extern char * strchr(const char *, int);
+[; ;string.h: 56: extern char * strichr(const char *, int);
+[; ;string.h: 57: extern char * strrchr(const char *, int);
+[; ;string.h: 58: extern char * strrichr(const char *, int);
+[; ;drv_74hc595.h: 19: void Display_value(uint16_t value);
+[; ;drv_74hc595.h: 20: void Display_put(char *dig);
+[; ;drv_74hc595.h: 21: void GetStringReverse(char *str, char*buff);
+[; ;drv_74hc595.h: 22: void Display_clear(void);
+[; ;drv_74hc595.h: 23: void Display_check(void);
+"60 mcc_generated_files/mcc.h
+[v _lookup `Cui ~T0 @X0 -> 0 `x e ]
+[i _lookup
+:U ..
+"62
+-> -> 0 `i `ui
+-> -> 13 `i `ui
+-> -> 37 `i `ui
+-> -> 68 `i `ui
+-> -> 105 `i `ui
+-> -> 146 `i `ui
+-> -> 192 `i `ui
+-> -> 242 `i `ui
+-> -> 295 `i `ui
+-> -> 352 `i `ui
+-> -> 411 `i `ui
+-> -> 474 `i `ui
+-> -> 539 `i `ui
+-> -> 606 `i `ui
+-> -> 677 `i `ui
+-> -> 749 `i `ui
+-> -> 824 `i `ui
+-> -> 901 `i `ui
+-> -> 980 `i `ui
+-> -> 1061 `i `ui
+-> -> 1145 `i `ui
+-> -> 1229 `i `ui
+-> -> 1316 `i `ui
+-> -> 1405 `i `ui
+-> -> 1495 `i `ui
+-> -> 1587 `i `ui
+"63
+-> -> 1680 `i `ui
+-> -> 1775 `i `ui
+-> -> 1871 `i `ui
+-> -> 1969 `i `ui
+-> -> 2068 `i `ui
+-> -> 2159 `i `ui
+-> -> 2271 `i `ui
+-> -> 2374 `i `ui
+-> -> 2479 `i `ui
+-> -> 2585 `i `ui
+-> -> 2692 `i `ui
+-> -> 2800 `i `ui
+-> -> 2909 `i `ui
+-> -> 3020 `i `ui
+-> -> 3131 `i `ui
+-> -> 3244 `i `ui
+-> -> 3357 `i `ui
+-> -> 3472 `i `ui
+-> -> 3587 `i `ui
+-> -> 3704 `i `ui
+-> -> 3821 `i `ui
+-> -> 3939 `i `ui
+-> -> 4058 `i `ui
+-> -> 4178 `i `ui
+"64
+-> -> 4299 `i `ui
+..
+]
+[; ;mcc.h: 60: const uint16_t const lookup[]=
+[; ;mcc.h: 61: {
+[; ;mcc.h: 62: 0,13,37,68,105,146,192,242,295,352,411,474,539,606,677,749,824,901,980,1061,1145,1229,1316,1405,1495,1587,
+[; ;mcc.h: 63: 1680,1775,1871,1969,2068,2159,2271,2374,2479,2585,2692,2800,2909,3020,3131,3244,3357,3472,3587,3704,3821,3939,4058,4178,4299
+[; ;mcc.h: 64: };
+[; ;mcc.h: 80: void SYSTEM_Initialize(void);
+[; ;mcc.h: 93: void OSCILLATOR_Initialize(void);
 "67 mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize `(v ~T0 @X0 1 ef ]
 {
@@ -2897,26 +3028,23 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;mcc.c: 69: PIN_MANAGER_Initialize();
 "69
 [e ( _PIN_MANAGER_Initialize ..  ]
-[; ;mcc.c: 70: ADC_Initialize();
+[; ;mcc.c: 70: }
 "70
-[e ( _ADC_Initialize ..  ]
-[; ;mcc.c: 71: }
-"71
-[e :UE 342 ]
+[e :UE 346 ]
 }
-"73
+"72
 [v _OSCILLATOR_Initialize `(v ~T0 @X0 1 ef ]
 {
-[; ;mcc.c: 73: void OSCILLATOR_Initialize(void) {
+[; ;mcc.c: 72: void OSCILLATOR_Initialize(void) {
 [e :U _OSCILLATOR_Initialize ]
 [f ]
-[; ;mcc.c: 75: OSCCON = 0x7A;
-"75
+[; ;mcc.c: 74: OSCCON = 0x7A;
+"74
 [e = _OSCCON -> -> 122 `i `uc ]
-[; ;mcc.c: 77: OSCSTAT = 0x00;
-"77
+[; ;mcc.c: 76: OSCSTAT = 0x00;
+"76
 [e = _OSCSTAT -> -> 0 `i `uc ]
-[; ;mcc.c: 80: }
-"80
-[e :UE 343 ]
+[; ;mcc.c: 79: }
+"79
+[e :UE 347 ]
 }

@@ -67,12 +67,11 @@ void main(void) {
 
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
-    unsigned int val=10;
-    Display_value(val);
     
+    uint8_t m=23;
     while (1) 
     {
-        // Add your application code
+        Display_value(lookup[m]);
     }
 }
 /**

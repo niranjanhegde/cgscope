@@ -50,9 +50,18 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include "pin_manager.h"
 #include <stdint.h>
 #include <stdbool.h>
-#include "adc.h"
+#include <stdlib.h>
+#include <string.h>
+
 
 #include "../drv_74hc595/drv_74hc595.h"
+
+
+    const uint16_t const lookup[]=
+    {
+        0,13,37,68,105,146,192,242,295,352,411,474,539,606,677,749,824,901,980,1061,1145,1229,1316,1405,1495,1587,
+        1680,1775,1871,1969,2068,2159,2271,2374,2479,2585,2692,2800,2909,3020,3131,3244,3357,3472,3587,3704,3821,3939,4058,4178,4299
+    };
 
 
 #define _XTAL_FREQ  16000000

@@ -16,8 +16,9 @@ extern "C" {
   
 #define MASK(j) (1<<j)
 
-    void Display_value(unsigned int value);
-    void Display_put(uint8_t dig);
+    void Display_value(uint16_t value);
+    void Display_put(char *dig);
+    void GetStringReverse(char *str, char*buff);
     void Display_clear(void);
     void Display_check(void);
 
