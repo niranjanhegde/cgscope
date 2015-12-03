@@ -45,22 +45,22 @@ void Standard_head1(void)
             SEAL_COIL_SetHigh();
             HEATER_BOT_SetLow();
             TMR2_LED_SetLow();                    //Heater bott0om LED ON 
-            TMR_TOP_TRIG_SetLow();      // External Timer pulse
+            TMR_BOT_TRIG_SetLow();      // External Timer pulse
             Timer_Soft_Delay_MS(500);
-            TMR_TOP_TRIG_SetHigh();     // External Timer pulse
+            TMR_BOT_TRIG_SetHigh();     // External Timer pulse
             Timer_Soft_Delay_MS(500);
             states_std_head1=STEP4;
             break;
         }
         case STEP4:
         {
-            if(TMR_TOP_ELAPS_GetValue() == 1)
+            if(TMR_BOT_ELAPS_GetValue() == 1)
             {
                 std_head_timer.std_timer1_start=1;
 
-                TMR_BOT_TRIG_SetLow();     // External Timer pulse
+                TMR_TOP_TRIG_SetLow();     // External Timer pulse
                 Timer_Soft_Delay_MS(500);
-                TMR_BOT_TRIG_SetHigh();     // External Timer pulse
+                TMR_TOP_TRIG_SetHigh();     // External Timer pulse
 
                 HEATER_TOP_SetLow();        // Heater Top On
                 TMR1_LED_SetLow();          // Heater top LED ON
@@ -94,11 +94,12 @@ void Standard_head1(void)
         }
         case STEP6:
         {
-            if(TMR_BOT_ELAPS_GetValue() == 1)
+            if(TMR_TOP_ELAPS_GetValue() == 1)
             {
                 HEATER_TOP_SetHigh();       // heater bottom off
                 TMR1_LED_SetHigh();         //LED OFF
                 std_head_timer.std_timer2_start=1;
+                std_head_timer.std_timer2=0;
                 states_std_head1=STEP7;
             }
             break;
@@ -118,6 +119,7 @@ void Standard_head1(void)
                 COUNTER_SetLow();
                 BOTTOM_COIL_SetLow();         //Glass Hold
                 SPIKE_COIL_RIGHT_SetLow();
+                states_std_head1=STEP1;
             }
             break;
         }

@@ -2,7 +2,7 @@
 #include "cn_int.h"
 #include "../mcc_generated_files/mcc.h"
 
-extern bool PRG_RST_Flag;
+
 /******************************************************************************
  * CN INTERRUPT
  * This interrupt occures when change on input pin
@@ -27,7 +27,7 @@ void CN_INTERRUPT_Initialize(void)
 void __attribute__ ((__interrupt__, no_auto_psv)) _CNInterrupt(void)
 {
     CN_InterruptFlagClear();
-    if(PRG_RST_GetValue()==0) PRG_RST_Flag=0;
+    asm("RESET");
 }
 
 /*
