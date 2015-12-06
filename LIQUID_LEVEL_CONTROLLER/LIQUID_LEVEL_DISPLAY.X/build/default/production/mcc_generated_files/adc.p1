@@ -1,38 +1,35 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"90 mcc_generated_files/mcc.h
-[v _OSCILLATOR_Initialize `(v ~T0 @X0 0 ef ]
-"126 mcc_generated_files/pin_manager.h
-[v _PIN_MANAGER_Initialize `(v ~T0 @X0 0 ef ]
-"126 mcc_generated_files/adc.h
-[v _ADC_Initialize `(v ~T0 @X0 0 ef ]
-"1335 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic16f1503.h
-[v _OSCCON `Vuc ~T0 @X0 0 e@153 ]
-"1400
-[v _OSCSTAT `Vuc ~T0 @X0 0 e@154 ]
-"50 mcc_generated_files/mcc.c
-[p x CLKOUTEN=OFF ]
-"51
-[p x MCLRE=OFF ]
-"52
-[p x WDTE=OFF ]
-"53
-[p x FOSC=INTOSC ]
-"54
-[p x BOREN=ON ]
-"55
-[p x PWRTE=OFF ]
-"56
-[p x CP=OFF ]
-"59
-[p x LPBOR=OFF ]
-"60
-[p x LVP=OFF ]
-"61
-[p x WRT=OFF ]
-"62
-[p x STVREN=ON ]
-"63
-[p x BORV=LO ]
+"1476 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic16f1503.h
+[v _ADCON0 `Vuc ~T0 @X0 0 e@157 ]
+"1555
+[v _ADCON1 `Vuc ~T0 @X0 0 e@158 ]
+"1601
+[v _ADCON2 `Vuc ~T0 @X0 0 e@159 ]
+"1438
+[v _ADRESL `Vuc ~T0 @X0 0 e@155 ]
+"1457
+[v _ADRESH `Vuc ~T0 @X0 0 e@156 ]
+"85 mcc_generated_files/adc.c
+[c E2933 29 30 31 2 .. ]
+[n E2933 . Temp_channel DAC_channel FVR_channel WAT_LEVEL_AN  ]
+"1482 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic16f1503.h
+[s S86 :1 `uc 1 :1 `uc 1 :5 `uc 1 ]
+[n S86 . ADON GO_nDONE CHS ]
+"1487
+[s S87 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S87 . . ADGO CHS0 CHS1 CHS2 CHS3 CHS4 ]
+"1496
+[s S88 :1 `uc 1 :1 `uc 1 ]
+[n S88 . . GO ]
+"1481
+[u S85 `S86 1 `S87 1 `S88 1 ]
+[n S85 . . . . ]
+"1501
+[v _ADCON0bits `VS85 ~T0 @X0 0 e@157 ]
+[v F2899 `(v ~T0 @X0 1 tf1`ul ]
+"150 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic.h
+[v __delay `JF2899 ~T0 @X0 0 e ]
+[p i __delay ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -2837,8 +2834,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic.h: 184: extern unsigned char __resetbits;
 [; ;pic.h: 185: extern __bit __powerdown;
 [; ;pic.h: 186: extern __bit __timeout;
-[; ;pin_manager.h: 126: void PIN_MANAGER_Initialize(void);
-[; ;pin_manager.h: 138: void PIN_MANAGER_IOC(void);
 [; ;stdint.h: 13: typedef signed char int8_t;
 [; ;stdint.h: 20: typedef signed int int16_t;
 [; ;stdint.h: 28: typedef signed short long int int24_t;
@@ -2868,6 +2863,20 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdint.h: 210: typedef int16_t intptr_t;
 [; ;stdint.h: 215: typedef uint16_t uintptr_t;
 [; ;stdbool.h: 12: typedef unsigned char bool;
+[; ;adc.h: 72: typedef uint16_t adc_result_t;
+[; ;adc.h: 86: typedef enum {
+[; ;adc.h: 87: Temp_channel = 0x1D,
+[; ;adc.h: 88: DAC_channel = 0x1E,
+[; ;adc.h: 89: FVR_channel = 0x1F,
+[; ;adc.h: 90: WAT_LEVEL_AN = 0x02
+[; ;adc.h: 91: } adc_channel_t;
+[; ;adc.h: 126: void ADC_Initialize(void);
+[; ;adc.h: 155: void ADC_StartConversion(adc_channel_t channel);
+[; ;adc.h: 187: bool ADC_IsConversionDone();
+[; ;adc.h: 220: adc_result_t ADC_GetConversionResult(void);
+[; ;adc.h: 250: adc_result_t ADC_GetConversion(adc_channel_t channel);
+[; ;pin_manager.h: 126: void PIN_MANAGER_Initialize(void);
+[; ;pin_manager.h: 138: void PIN_MANAGER_IOC(void);
 [; ;__size_t.h: 4: typedef unsigned size_t;
 [; ;stdlib.h: 7: typedef unsigned short wchar_t;
 [; ;stdlib.h: 15: typedef struct {
@@ -2946,18 +2955,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;string.h: 56: extern char * strichr(const char *, int);
 [; ;string.h: 57: extern char * strrchr(const char *, int);
 [; ;string.h: 58: extern char * strrichr(const char *, int);
-[; ;adc.h: 72: typedef uint16_t adc_result_t;
-[; ;adc.h: 86: typedef enum {
-[; ;adc.h: 87: Temp_channel = 0x1D,
-[; ;adc.h: 88: DAC_channel = 0x1E,
-[; ;adc.h: 89: FVR_channel = 0x1F,
-[; ;adc.h: 90: WAT_LEVEL_AN = 0x02
-[; ;adc.h: 91: } adc_channel_t;
-[; ;adc.h: 126: void ADC_Initialize(void);
-[; ;adc.h: 155: void ADC_StartConversion(adc_channel_t channel);
-[; ;adc.h: 187: bool ADC_IsConversionDone();
-[; ;adc.h: 220: adc_result_t ADC_GetConversionResult(void);
-[; ;adc.h: 250: adc_result_t ADC_GetConversion(adc_channel_t channel);
 [; ;drv_74hc595.h: 19: void Display_value(uint16_t value);
 [; ;drv_74hc595.h: 20: void Display_put(char *dig);
 [; ;drv_74hc595.h: 21: void GetStringReverse(char *str, char*buff);
@@ -3210,38 +3207,118 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;water_level_display.h: 44: void WaterLevelDisplay_StateMachine(void);
 [; ;mcc.h: 77: void SYSTEM_Initialize(void);
 [; ;mcc.h: 90: void OSCILLATOR_Initialize(void);
-"67 mcc_generated_files/mcc.c
-[v _SYSTEM_Initialize `(v ~T0 @X0 1 ef ]
+"65 mcc_generated_files/adc.c
+[v _ADC_Initialize `(v ~T0 @X0 1 ef ]
 {
-[; ;mcc.c: 67: void SYSTEM_Initialize(void) {
-[e :U _SYSTEM_Initialize ]
+[; ;adc.c: 65: void ADC_Initialize(void) {
+[e :U _ADC_Initialize ]
 [f ]
-[; ;mcc.c: 68: OSCILLATOR_Initialize();
-"68
-[e ( _OSCILLATOR_Initialize ..  ]
-[; ;mcc.c: 69: PIN_MANAGER_Initialize();
+[; ;adc.c: 69: ADCON0 = 0x01;
 "69
-[e ( _PIN_MANAGER_Initialize ..  ]
-[; ;mcc.c: 70: ADC_Initialize();
-"70
-[e ( _ADC_Initialize ..  ]
-[; ;mcc.c: 71: }
-"71
+[e = _ADCON0 -> -> 1 `i `uc ]
+[; ;adc.c: 72: ADCON1 = 0xD0;
+"72
+[e = _ADCON1 -> -> 208 `i `uc ]
+[; ;adc.c: 75: ADCON2 = 0x00;
+"75
+[e = _ADCON2 -> -> 0 `i `uc ]
+[; ;adc.c: 78: ADRESL = 0x00;
+"78
+[e = _ADRESL -> -> 0 `i `uc ]
+[; ;adc.c: 81: ADRESH = 0x00;
+"81
+[e = _ADRESH -> -> 0 `i `uc ]
+[; ;adc.c: 83: }
+"83
 [e :UE 347 ]
 }
-"73
-[v _OSCILLATOR_Initialize `(v ~T0 @X0 1 ef ]
+"85
+[v _ADC_StartConversion `(v ~T0 @X0 1 ef1`E2933 ]
 {
-[; ;mcc.c: 73: void OSCILLATOR_Initialize(void) {
-[e :U _OSCILLATOR_Initialize ]
+[; ;adc.c: 85: void ADC_StartConversion(adc_channel_t channel) {
+[e :U _ADC_StartConversion ]
+[v _channel `E2933 ~T0 @X0 1 r1 ]
 [f ]
-[; ;mcc.c: 75: OSCCON = 0x7A;
-"75
-[e = _OSCCON -> -> 122 `i `uc ]
-[; ;mcc.c: 77: OSCSTAT = 0x00;
-"77
-[e = _OSCSTAT -> -> 0 `i `uc ]
-[; ;mcc.c: 80: }
-"80
+[; ;adc.c: 87: ADCON0bits.CHS = channel;
+"87
+[e = . . _ADCON0bits 0 2 -> _channel `uc ]
+[; ;adc.c: 90: ADCON0bits.ADON = 1;
+"90
+[e = . . _ADCON0bits 0 0 -> -> 1 `i `uc ]
+[; ;adc.c: 93: _delay((unsigned long)((5)*(16000000/4000000.0)));
+"93
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+[; ;adc.c: 96: ADCON0bits.GO_nDONE = 1;
+"96
+[e = . . _ADCON0bits 0 1 -> -> 1 `i `uc ]
+[; ;adc.c: 97: }
+"97
 [e :UE 348 ]
+}
+"99
+[v _ADC_IsConversionDone `(uc ~T0 @X0 1 ef ]
+{
+[; ;adc.c: 99: bool ADC_IsConversionDone() {
+[e :U _ADC_IsConversionDone ]
+[f ]
+[; ;adc.c: 101: return (!ADCON0bits.GO_nDONE);
+"101
+[e ) -> -> ! != -> . . _ADCON0bits 0 1 `i -> -> -> 0 `i `Vuc `i `i `uc ]
+[e $UE 349  ]
+[; ;adc.c: 102: }
+"102
+[e :UE 349 ]
+}
+"104
+[v _ADC_GetConversionResult `(ui ~T0 @X0 1 ef ]
+{
+[; ;adc.c: 104: adc_result_t ADC_GetConversionResult(void) {
+[e :U _ADC_GetConversionResult ]
+[f ]
+[; ;adc.c: 106: return ((ADRESH << 8) + ADRESL);
+"106
+[e ) -> + << -> _ADRESH `i -> 8 `i -> _ADRESL `i `ui ]
+[e $UE 350  ]
+[; ;adc.c: 107: }
+"107
+[e :UE 350 ]
+}
+"109
+[v _ADC_GetConversion `(ui ~T0 @X0 1 ef1`E2933 ]
+{
+[; ;adc.c: 109: adc_result_t ADC_GetConversion(adc_channel_t channel) {
+[e :U _ADC_GetConversion ]
+[v _channel `E2933 ~T0 @X0 1 r1 ]
+[f ]
+[; ;adc.c: 111: ADCON0bits.CHS = channel;
+"111
+[e = . . _ADCON0bits 0 2 -> _channel `uc ]
+[; ;adc.c: 114: ADCON0bits.ADON = 1;
+"114
+[e = . . _ADCON0bits 0 0 -> -> 1 `i `uc ]
+[; ;adc.c: 117: _delay((unsigned long)((5)*(16000000/4000000.0)));
+"117
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+[; ;adc.c: 120: ADCON0bits.GO_nDONE = 1;
+"120
+[e = . . _ADCON0bits 0 1 -> -> 1 `i `uc ]
+[; ;adc.c: 123: while (ADCON0bits.GO_nDONE) {
+"123
+[e $U 352  ]
+[e :U 353 ]
+{
+"124
+}
+[e :U 352 ]
+"123
+[e $ != -> . . _ADCON0bits 0 1 `i -> -> -> 0 `i `Vuc `i 353  ]
+[e :U 354 ]
+[; ;adc.c: 124: }
+[; ;adc.c: 127: return ((ADRESH << 8) + ADRESL);
+"127
+[e ) -> + << -> _ADRESH `i -> 8 `i -> _ADRESL `i `ui ]
+[e $UE 351  ]
+[; ;adc.c: 128: }
+"128
+[e :UE 351 ]
 }

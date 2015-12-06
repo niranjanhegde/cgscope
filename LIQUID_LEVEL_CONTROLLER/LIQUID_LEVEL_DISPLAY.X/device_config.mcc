@@ -2,18 +2,19 @@
 <configuration device="PIC16F1503" mcc_version="v2.25.2">
     <managers>
         <manager generated="true" name="Pin Manager" reloadPin="manual">
+            <setting name="SSSEL" option="RC3"/>
             <setting name="NCO1SEL" option="RC1"/>
             <setting name="SDOSEL" option="RC2"/>
-            <setting name="SSSEL" option="RC3"/>
             <setting name="CLC1SEL" option="RA2"/>
             <setting name="T1GSEL" option="RA4"/>
             <setting name="package" option="SOIC14"/>
             <setting name="sorting" option="true"/>
+            <resource customName="WAT_LEVEL_AN" digital="false" direction="INPUT" function="AN2" ioc="0" module="ADC" name="RA2" start="false" type="pin" wpu="false"/>
             <resource customName="DS" digital="true" direction="OUTPUT" function="RC3" module="GPIO" name="RC3" start="false" type="pin" wpu="false"/>
             <resource customName="STCP" digital="true" direction="OUTPUT" function="RC4" module="GPIO" name="RC4" start="true" type="pin" wpu="false"/>
             <resource customName="SHCP" digital="true" direction="OUTPUT" function="RC5" module="GPIO" name="RC5" start="false" type="pin" wpu="false"/>
             <file checksum="3284305252" modified="false" name="pin_manager.c" path="mcc_generated_files/pin_manager.c"/>
-            <file checksum="893751719" modified="false" name="pin_manager.h" path="mcc_generated_files/pin_manager.h"/>
+            <file checksum="1917881662" modified="false" name="pin_manager.h" path="mcc_generated_files/pin_manager.h"/>
         </manager>
         <manager generated="true" name="System" reloadPin="manual">
             <initializer comment="" name="Initialize">
@@ -38,8 +39,8 @@
             <setting name="STVREN" option="ON"/>
             <setting name="BORV" option="LO"/>
             <setting name="generateConfigBits" option="true"/>
-            <file checksum="2724218450" modified="false" name="mcc.c" path="mcc_generated_files/mcc.c"/>
-            <file checksum="1234393652" modified="true" name="mcc.h" path="mcc_generated_files/mcc.h"/>
+            <file checksum="1906003118" modified="false" name="mcc.c" path="mcc_generated_files/mcc.c"/>
+            <file checksum="4134625780" modified="true" name="mcc.h" path="mcc_generated_files/mcc.h"/>
         </manager>
     </managers>
     <modules>
@@ -47,6 +48,23 @@
             <resource customName="SHCP" digital="true" direction="OUTPUT" function="RC5" module="GPIO" name="RC5" start="false" type="pin" wpu="false"/>
             <resource customName="STCP" digital="true" direction="OUTPUT" function="RC4" module="GPIO" name="RC4" start="true" type="pin" wpu="false"/>
             <resource customName="DS" digital="true" direction="OUTPUT" function="RC3" module="GPIO" name="RC3" start="false" type="pin" wpu="false"/>
+        </module>
+        <module generated="true" mode="ADC" name="ADC" order="1" reloadPin="manual_auto" type="adc_sarcore_10bit">
+            <initializer comment="" name="Initialize">
+                <setting name="GO_nDONE" option="stop" register="ADCON0"/>
+                <setting name="ADON" option="enabled" register="ADCON0"/>
+                <setting name="CHS" option="AN0" register="ADCON0"/>
+                <setting name="ADFM" option="right" register="ADCON1"/>
+                <setting name="ADPREF" option="VDD" register="ADCON1"/>
+                <setting name="ADCS" option="FOSC/16" register="ADCON1"/>
+                <setting name="TRIGSEL" option="no_auto_trigger" register="ADCON2"/>
+                <setting name="ADRESL" option="0x0" register="ADRESL"/>
+                <setting name="ADRESH" option="0x0" register="ADRESH"/>
+            </initializer>
+            <setting name="ADI" option="false"/>
+            <resource customName="WAT_LEVEL_AN" function="AN2" name="RA2" type="pin"/>
+            <file checksum="4109106558" modified="false" name="adc.c" path="mcc_generated_files/adc.c"/>
+            <file checksum="735815564" modified="false" name="adc.h" path="mcc_generated_files/adc.h"/>
         </module>
     </modules>
 </configuration>

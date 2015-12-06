@@ -1,38 +1,14 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"90 mcc_generated_files/mcc.h
-[v _OSCILLATOR_Initialize `(v ~T0 @X0 0 ef ]
-"126 mcc_generated_files/pin_manager.h
-[v _PIN_MANAGER_Initialize `(v ~T0 @X0 0 ef ]
-"126 mcc_generated_files/adc.h
-[v _ADC_Initialize `(v ~T0 @X0 0 ef ]
-"1335 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic16f1503.h
-[v _OSCCON `Vuc ~T0 @X0 0 e@153 ]
-"1400
-[v _OSCSTAT `Vuc ~T0 @X0 0 e@154 ]
-"50 mcc_generated_files/mcc.c
-[p x CLKOUTEN=OFF ]
-"51
-[p x MCLRE=OFF ]
-"52
-[p x WDTE=OFF ]
-"53
-[p x FOSC=INTOSC ]
-"54
-[p x BOREN=ON ]
-"55
-[p x PWRTE=OFF ]
-"56
-[p x CP=OFF ]
-"59
-[p x LPBOR=OFF ]
-"60
-[p x LVP=OFF ]
-"61
-[p x WRT=OFF ]
-"62
-[p x STVREN=ON ]
-"63
-[p x BORV=LO ]
+"11 water_level_display/water_level_display.c
+[c E3180 0 1 2 3 .. ]
+[n E3180 . INITIALIZE SETTING LEVEL_DISPLAY IDLE  ]
+"25 water_level_display/water_level_display.h
+[s S346 `E3180 1 `ui 1 `uc 1 `uc 1 ]
+[n S346 . states zero_offset liter_per_step lookup ]
+"17 water_level_display/../mcc_generated_files/../water_level_display/water_level_conversion.h
+[v _WaterLevel_Lookup `(uc ~T0 @X0 0 ef2`ui`uc ]
+"19 water_level_display/../mcc_generated_files/../drv_74hc595/drv_74hc595.h
+[v _Display_value `(v ~T0 @X0 0 ef1`ui ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -2965,6 +2941,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;drv_74hc595.h: 23: void Display_check(void);
 [; ;water_level_conversion.h: 17: uint8_t WaterLevel_Lookup(uint16_t zeroSet, uint8_t stepLitre);
 [; ;water_level_conversion.h: 18: uint16_t ReadWaterLevel(void);
+[; ;mcc.h: 77: void SYSTEM_Initialize(void);
+[; ;mcc.h: 90: void OSCILLATOR_Initialize(void);
 [; ;water_level_display.h: 16: typedef enum
 [; ;water_level_display.h: 17: {
 [; ;water_level_display.h: 18: INITIALIZE=0,
@@ -2979,7 +2957,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;water_level_display.h: 28: uint8_t liter_per_step;
 [; ;water_level_display.h: 29: uint8_t lookup;
 [; ;water_level_display.h: 30: }WL_Data;
-"32 mcc_generated_files/../water_level_display/water_level_display.h
+"32 water_level_display/water_level_display.h
 [v _WaterLevelLookup `Cui ~T0 @X0 -> 0 `x e ]
 [i _WaterLevelLookup
 :U ..
@@ -3208,40 +3186,113 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;water_level_display.h: 42: 21954,21978,21991
 [; ;water_level_display.h: 43: };
 [; ;water_level_display.h: 44: void WaterLevelDisplay_StateMachine(void);
-[; ;mcc.h: 77: void SYSTEM_Initialize(void);
-[; ;mcc.h: 90: void OSCILLATOR_Initialize(void);
-"67 mcc_generated_files/mcc.c
-[v _SYSTEM_Initialize `(v ~T0 @X0 1 ef ]
+"11 water_level_display/water_level_display.c
+[v _wlData `S346 ~T0 @X0 1 e ]
+[; ;water_level_display.c: 11: WL_Data wlData;
+"14
+[v _WaterLevelDisplay_StateMachine `(v ~T0 @X0 1 ef ]
+"15
 {
-[; ;mcc.c: 67: void SYSTEM_Initialize(void) {
-[e :U _SYSTEM_Initialize ]
+[; ;water_level_display.c: 14: void WaterLevelDisplay_StateMachine(void)
+[; ;water_level_display.c: 15: {
+[e :U _WaterLevelDisplay_StateMachine ]
 [f ]
-[; ;mcc.c: 68: OSCILLATOR_Initialize();
-"68
-[e ( _OSCILLATOR_Initialize ..  ]
-[; ;mcc.c: 69: PIN_MANAGER_Initialize();
-"69
-[e ( _PIN_MANAGER_Initialize ..  ]
-[; ;mcc.c: 70: ADC_Initialize();
-"70
-[e ( _ADC_Initialize ..  ]
-[; ;mcc.c: 71: }
-"71
-[e :UE 347 ]
+[; ;water_level_display.c: 16: switch(wlData.states)
+"16
+[e $U 349  ]
+[; ;water_level_display.c: 17: {
+"17
+{
+[; ;water_level_display.c: 18: case INITIALIZE:
+"18
+[e :U 350 ]
+[; ;water_level_display.c: 19: {
+"19
+{
+[; ;water_level_display.c: 20: wlData.zero_offset = 400;
+"20
+[e = . _wlData 1 -> -> 400 `i `ui ]
+[; ;water_level_display.c: 21: wlData.liter_per_step = 8;
+"21
+[e = . _wlData 2 -> -> 8 `i `uc ]
+[; ;water_level_display.c: 22: wlData.lookup=0;
+"22
+[e = . _wlData 3 -> -> 0 `i `uc ]
+[; ;water_level_display.c: 23: wlData.states=LEVEL_DISPLAY;
+"23
+[e = . _wlData 0 . `E3180 2 ]
+[; ;water_level_display.c: 24: break;
+"24
+[e $U 348  ]
+"25
 }
-"73
-[v _OSCILLATOR_Initialize `(v ~T0 @X0 1 ef ]
+[; ;water_level_display.c: 25: }
+[; ;water_level_display.c: 26: case LEVEL_DISPLAY:
+"26
+[e :U 351 ]
+[; ;water_level_display.c: 27: {
+"27
 {
-[; ;mcc.c: 73: void OSCILLATOR_Initialize(void) {
-[e :U _OSCILLATOR_Initialize ]
-[f ]
-[; ;mcc.c: 75: OSCCON = 0x7A;
-"75
-[e = _OSCCON -> -> 122 `i `uc ]
-[; ;mcc.c: 77: OSCSTAT = 0x00;
-"77
-[e = _OSCSTAT -> -> 0 `i `uc ]
-[; ;mcc.c: 80: }
-"80
-[e :UE 348 ]
+[; ;water_level_display.c: 28: wlData.lookup=WaterLevel_Lookup(wlData.zero_offset, wlData.liter_per_step);
+"28
+[e = . _wlData 3 ( _WaterLevel_Lookup (2 , . _wlData 1 . _wlData 2 ]
+[; ;water_level_display.c: 29: if((wlData.lookup > 0) && (wlData.lookup < 201))
+"29
+[e $ ! && > -> . _wlData 3 `i -> 0 `i < -> . _wlData 3 `i -> 201 `i 352  ]
+[; ;water_level_display.c: 30: {
+"30
+{
+[; ;water_level_display.c: 31: Display_value(WaterLevelLookup[wlData.lookup]);
+"31
+[e ( _Display_value (1 *U + &U _WaterLevelLookup * -> . _wlData 3 `ux -> -> # *U &U _WaterLevelLookup `ui `ux ]
+"32
+}
+[; ;water_level_display.c: 32: }
+[e $U 353  ]
+"33
+[e :U 352 ]
+[; ;water_level_display.c: 33: else
+[; ;water_level_display.c: 34: {
+"34
+{
+[; ;water_level_display.c: 35: Display_value(0);
+"35
+[e ( _Display_value (1 -> -> 0 `i `ui ]
+"36
+}
+[e :U 353 ]
+[; ;water_level_display.c: 36: }
+[; ;water_level_display.c: 37: break;
+"37
+[e $U 348  ]
+"38
+}
+[; ;water_level_display.c: 38: }
+[; ;water_level_display.c: 39: case IDLE:
+"39
+[e :U 354 ]
+[; ;water_level_display.c: 40: {
+"40
+{
+[; ;water_level_display.c: 41: break;
+"41
+[e $U 348  ]
+"42
+}
+"43
+}
+[; ;water_level_display.c: 42: }
+[; ;water_level_display.c: 43: }
+[e $U 348  ]
+"16
+[e :U 349 ]
+[e [\ . _wlData 0 , $ . `E3180 0 350
+ , $ . `E3180 2 351
+ , $ . `E3180 3 354
+ 348 ]
+"43
+[e :U 348 ]
+[; ;water_level_display.c: 45: }
+"45
+[e :UE 347 ]
 }

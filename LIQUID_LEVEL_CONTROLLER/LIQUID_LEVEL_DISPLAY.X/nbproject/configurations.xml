@@ -12,6 +12,11 @@
                      projectFiles="true">
         <itemPath>mcc_generated_files/pin_manager.h</itemPath>
         <itemPath>mcc_generated_files/mcc.h</itemPath>
+        <itemPath>mcc_generated_files/adc.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f2" displayName="Water Level Disply" projectFiles="true">
+        <itemPath>water_level_display/water_level_display.h</itemPath>
+        <itemPath>water_level_display/water_level_conversion.h</itemPath>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
@@ -29,6 +34,11 @@
                      projectFiles="true">
         <itemPath>mcc_generated_files/pin_manager.c</itemPath>
         <itemPath>mcc_generated_files/mcc.c</itemPath>
+        <itemPath>mcc_generated_files/adc.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f2" displayName="Water Level Disply" projectFiles="true">
+        <itemPath>water_level_display/water_level_display.c</itemPath>
+        <itemPath>water_level_display/water_level_conversion.c</itemPath>
       </logicalFolder>
       <itemPath>main.c</itemPath>
     </logicalFolder>
@@ -41,6 +51,7 @@
   </logicalFolder>
   <sourceRootList>
     <Elem>mcc_generated_files</Elem>
+    <Elem>water_level_display</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>

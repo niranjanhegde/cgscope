@@ -86,7 +86,8 @@ extern "C" {
     typedef enum {
         Temp_channel = 0x1D,
         DAC_channel = 0x1E,
-        FVR_channel = 0x1F
+        FVR_channel = 0x1F,
+        WAT_LEVEL_AN = 0x02
     } adc_channel_t;
 
     /**

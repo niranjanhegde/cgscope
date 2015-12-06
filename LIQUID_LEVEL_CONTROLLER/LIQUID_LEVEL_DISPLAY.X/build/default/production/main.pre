@@ -3779,10 +3779,10 @@ extern unsigned char __resetbits;
 extern __bit __powerdown;
 extern __bit __timeout;
 
-# 109 "mcc_generated_files/pin_manager.h"
+# 126 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize(void);
 
-# 121
+# 138
 void PIN_MANAGER_IOC(void);
 
 # 13 "C:\Program Files (x86)\Microchip\xc8\v1.35\include\stdint.h"
@@ -3987,6 +3987,32 @@ extern char * strichr(const char *, int);
 extern char * strrchr(const char *, int);
 extern char * strrichr(const char *, int);
 
+# 72 "mcc_generated_files/adc.h"
+typedef uint16_t adc_result_t;
+
+# 86
+typedef enum {
+Temp_channel = 0x1D,
+DAC_channel = 0x1E,
+FVR_channel = 0x1F,
+WAT_LEVEL_AN = 0x02
+} adc_channel_t;
+
+# 126
+void ADC_Initialize(void);
+
+# 155
+void ADC_StartConversion(adc_channel_t channel);
+
+# 187
+bool ADC_IsConversionDone();
+
+# 220
+adc_result_t ADC_GetConversionResult(void);
+
+# 250
+adc_result_t ADC_GetConversion(adc_channel_t channel);
+
 # 19 "mcc_generated_files/../drv_74hc595/drv_74hc595.h"
 void Display_value(uint16_t value);
 void Display_put(char *dig);
@@ -3994,17 +4020,45 @@ void GetStringReverse(char *str, char*buff);
 void Display_clear(void);
 void Display_check(void);
 
-# 60 "mcc_generated_files/mcc.h"
-const uint16_t const lookup[]=
+# 17 "mcc_generated_files/../water_level_display/water_level_conversion.h"
+uint8_t WaterLevel_Lookup(uint16_t zeroSet, uint8_t stepLitre);
+uint16_t ReadWaterLevel(void);
+
+# 16 "mcc_generated_files/../water_level_display/water_level_display.h"
+typedef enum
+{
+INITIALIZE=0,
+SETTING,
+LEVEL_DISPLAY,
+IDLE
+}STATES;
+
+typedef struct
+{
+STATES states;
+uint16_t zero_offset;
+uint8_t liter_per_step;
+uint8_t lookup;
+}WL_Data;
+
+const uint16_t const WaterLevelLookup[]=
 {
 0,13,37,68,105,146,192,242,295,352,411,474,539,606,677,749,824,901,980,1061,1145,1229,1316,1405,1495,1587,
-1680,1775,1871,1969,2068,2159,2271,2374,2479,2585,2692,2800,2909,3020,3131,3244,3357,3472,3587,3704,3821,3939,4058,4178,4299
+1680,1775,1871,1969,2068,2159,2271,2374,2479,2585,2692,2800,2909,3020,3131,3244,3357,3472,3587,3704,3821,3939,4058,4178,4299,
+4421,4543,4667,4791,4915,5041,5167,5293,5421,5549,5677,5807,5936,6067,6198,6329,6461,6593,6726,6859,6993,7127,7262,7397,7532,
+7668,7804,7941,8077,8214,8352,8489,8627,8765,8903,9042,9181,9320,9459,9598,9737,9877,10016,10156,10295,10436,10576,10716,10856,10996,
+11136,11276,11416,11555,11695,11835,11975,12114,12254,12393,12532,12672,12810,12949,13088,13226,13364,13502,13639,13777,13914,14051,14187,14323,
+14459,14594,14729,14864,14998,15132,15265,15398,15530,15662,15794,16055,16185,16314,16442,16570,16598,16825,16951,17076,17201,17325,17448,17570,
+17692,17813,17933,18052,18170,18288,18404,18519,18634,18748,18860,18972,19082,19191,19299,19406,19512,19617,19720,19822,19923,20022,20120,20216,
+20311,20405,20496,20587,20675,20762,20847,20930,21011,21090,21167,21242,21314,21385,21452,21518,21580,21640,21695,21749,21799,21845,21836,21923,
+21954,21978,21991
 };
+void WaterLevelDisplay_StateMachine(void);
 
-# 80
+# 77 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
 
-# 93
+# 90
 void OSCILLATOR_Initialize(void);
 
 # 52 "main.c"
@@ -4013,10 +4067,9 @@ void main(void) {
 SYSTEM_Initialize();
 
 # 71
-uint8_t m=23;
 while (1)
 {
-Display_value(lookup[m]);
+WaterLevelDisplay_StateMachine();
 }
 }
 

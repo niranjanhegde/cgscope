@@ -59,6 +59,23 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #define PULL_UP_ENABLED      1
 #define PULL_UP_DISABLED     0
 
+// get/set WAT_LEVEL_AN aliases
+#define WAT_LEVEL_AN_TRIS               TRISA2
+#define WAT_LEVEL_AN_LAT                LATA2
+#define WAT_LEVEL_AN_PORT               RA2
+#define WAT_LEVEL_AN_WPU                WPUA2
+#define WAT_LEVEL_AN_ANS                ANSA2
+#define WAT_LEVEL_AN_SetHigh()    do { LATA2 = 1; } while(0)
+#define WAT_LEVEL_AN_SetLow()   do { LATA2 = 0; } while(0)
+#define WAT_LEVEL_AN_Toggle()   do { LATA2 = ~LATA2; } while(0)
+#define WAT_LEVEL_AN_GetValue()         RA2
+#define WAT_LEVEL_AN_SetDigitalInput()    do { TRISA2 = 1; } while(0)
+#define WAT_LEVEL_AN_SetDigitalOutput()   do { TRISA2 = 0; } while(0)
+
+#define WAT_LEVEL_AN_SetPullup()    do { WPUA2 = 1; } while(0)
+#define WAT_LEVEL_AN_ResetPullup()   do { WPUA2 = 0; } while(0)
+#define WAT_LEVEL_AN_SetAnalogMode()   do { ANSA2 = 1; } while(0)
+#define WAT_LEVEL_AN_SetDigitalMode()   do { ANSA2 = 0; } while(0)
 // get/set DS aliases
 #define DS_TRIS               TRISC3
 #define DS_LAT                LATC3

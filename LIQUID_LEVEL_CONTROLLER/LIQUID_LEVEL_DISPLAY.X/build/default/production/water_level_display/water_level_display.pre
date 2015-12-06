@@ -1,22 +1,5 @@
 
-# 1 "mcc_generated_files/mcc.c"
-
-
-# 50
-#pragma config CLKOUTEN = OFF
-#pragma config MCLRE = OFF
-#pragma config WDTE = OFF
-#pragma config FOSC = INTOSC
-#pragma config BOREN = ON
-#pragma config PWRTE = OFF
-#pragma config CP = OFF
-
-
-#pragma config LPBOR = OFF
-#pragma config LVP = OFF
-#pragma config WRT = OFF
-#pragma config STVREN = ON
-#pragma config BORV = LO
+# 1 "water_level_display/water_level_display.c"
 
 # 26 "C:\Program Files (x86)\Microchip\xc8\v1.35\include\htc.h"
 extern const char __xc8_OPTIM_SPEED;
@@ -3796,7 +3779,7 @@ extern unsigned char __resetbits;
 extern __bit __powerdown;
 extern __bit __timeout;
 
-# 126 "mcc_generated_files/pin_manager.h"
+# 126 "water_level_display/../mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize(void);
 
 # 138
@@ -4004,7 +3987,7 @@ extern char * strichr(const char *, int);
 extern char * strrchr(const char *, int);
 extern char * strrichr(const char *, int);
 
-# 72 "mcc_generated_files/adc.h"
+# 72 "water_level_display/../mcc_generated_files/adc.h"
 typedef uint16_t adc_result_t;
 
 # 86
@@ -4030,18 +4013,24 @@ adc_result_t ADC_GetConversionResult(void);
 # 250
 adc_result_t ADC_GetConversion(adc_channel_t channel);
 
-# 19 "mcc_generated_files/../drv_74hc595/drv_74hc595.h"
+# 19 "water_level_display/../mcc_generated_files/../drv_74hc595/drv_74hc595.h"
 void Display_value(uint16_t value);
 void Display_put(char *dig);
 void GetStringReverse(char *str, char*buff);
 void Display_clear(void);
 void Display_check(void);
 
-# 17 "mcc_generated_files/../water_level_display/water_level_conversion.h"
+# 17 "water_level_display/../mcc_generated_files/../water_level_display/water_level_conversion.h"
 uint8_t WaterLevel_Lookup(uint16_t zeroSet, uint8_t stepLitre);
 uint16_t ReadWaterLevel(void);
 
-# 16 "mcc_generated_files/../water_level_display/water_level_display.h"
+# 77 "water_level_display/../mcc_generated_files/mcc.h"
+void SYSTEM_Initialize(void);
+
+# 90
+void OSCILLATOR_Initialize(void);
+
+# 16 "water_level_display/water_level_display.h"
 typedef enum
 {
 INITIALIZE=0,
@@ -4072,25 +4061,39 @@ const uint16_t const WaterLevelLookup[]=
 };
 void WaterLevelDisplay_StateMachine(void);
 
-# 77 "mcc_generated_files/mcc.h"
-void SYSTEM_Initialize(void);
+# 11 "water_level_display/water_level_display.c"
+WL_Data wlData;
 
-# 90
-void OSCILLATOR_Initialize(void);
 
-# 67 "mcc_generated_files/mcc.c"
-void SYSTEM_Initialize(void) {
-OSCILLATOR_Initialize();
-PIN_MANAGER_Initialize();
-ADC_Initialize();
+void WaterLevelDisplay_StateMachine(void)
+{
+switch(wlData.states)
+{
+case INITIALIZE:
+{
+wlData.zero_offset = 400;
+wlData.liter_per_step = 8;
+wlData.lookup=0;
+wlData.states=LEVEL_DISPLAY;
+break;
+}
+case LEVEL_DISPLAY:
+{
+wlData.lookup=WaterLevel_Lookup(wlData.zero_offset, wlData.liter_per_step);
+if((wlData.lookup > 0) && (wlData.lookup < 201))
+{
+Display_value(WaterLevelLookup[wlData.lookup]);
+}
+else
+{
+Display_value(0);
+}
+break;
+}
+case IDLE:
+{
+break;
+}
 }
 
-void OSCILLATOR_Initialize(void) {
-
-OSCCON = 0x7A;
-
-OSCSTAT = 0x00;
-
-
 }
-

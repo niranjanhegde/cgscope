@@ -68,10 +68,9 @@ void main(void) {
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
     
-    uint8_t m=23;
     while (1) 
     {
-        Display_value(lookup[m]);
+        WaterLevelDisplay_StateMachine();
     }
 }
 /**
