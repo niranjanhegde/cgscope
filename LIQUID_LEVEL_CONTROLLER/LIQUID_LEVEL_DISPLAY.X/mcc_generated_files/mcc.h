@@ -53,7 +53,10 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include <stdlib.h>
 #include <string.h>
 
+#include "interrupt_manager.h"
 #include "adc.h"
+#include "tmr1.h"
+#include "tmr0.h"
 
 #include "../drv_74hc595/drv_74hc595.h"
 #include "../water_level_display/water_level_conversion.h"

@@ -53,7 +53,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #pragma config FOSC = INTOSC    // Oscillator Selection Bits->INTOSC oscillator: I/O function on CLKIN pin
 #pragma config BOREN = ON    // Brown-out Reset Enable->Brown-out Reset enabled
 #pragma config PWRTE = OFF    // Power-up Timer Enable->PWRT disabled
-#pragma config CP = OFF    // Flash Program Memory Code Protection->Program memory code protection is disabled
+#pragma config CP = ON    // Flash Program Memory Code Protection->Program memory code protection is disabled
 
 // CONFIG2
 #pragma config LPBOR = OFF    // Low-Power Brown Out Reset->Low-Power BOR is disabled
@@ -68,6 +68,8 @@ void SYSTEM_Initialize(void) {
     OSCILLATOR_Initialize();
     PIN_MANAGER_Initialize();
     ADC_Initialize();
+    TMR1_Initialize();
+    TMR0_Initialize();
 }
 
 void OSCILLATOR_Initialize(void) {

@@ -2929,6 +2929,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;string.h: 56: extern char * strichr(const char *, int);
 [; ;string.h: 57: extern char * strrchr(const char *, int);
 [; ;string.h: 58: extern char * strrichr(const char *, int);
+[; ;interrupt_manager.h: 111: void interrupt INTERRUPT_InterruptManager(void);
 [; ;adc.h: 72: typedef uint16_t adc_result_t;
 [; ;adc.h: 86: typedef enum {
 [; ;adc.h: 87: Temp_channel = 0x1D,
@@ -2941,6 +2942,22 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;adc.h: 187: bool ADC_IsConversionDone();
 [; ;adc.h: 220: adc_result_t ADC_GetConversionResult(void);
 [; ;adc.h: 250: adc_result_t ADC_GetConversion(adc_channel_t channel);
+[; ;tmr1.h: 101: void TMR1_Initialize(void);
+[; ;tmr1.h: 130: void TMR1_StartTimer(void);
+[; ;tmr1.h: 162: void TMR1_StopTimer(void);
+[; ;tmr1.h: 197: uint16_t TMR1_ReadTimer(void);
+[; ;tmr1.h: 236: void TMR1_WriteTimer(uint16_t timerVal);
+[; ;tmr1.h: 272: void TMR1_Reload(void);
+[; ;tmr1.h: 311: void TMR1_StartSinglePulseAcquisition(void);
+[; ;tmr1.h: 350: uint8_t TMR1_CheckGateValueStatus(void);
+[; ;tmr1.h: 368: void TMR1_ISR(void);
+[; ;tmr1.h: 386: void TMR1_CallBack(void);
+[; ;tmr0.h: 104: void TMR0_Initialize(void);
+[; ;tmr0.h: 137: uint8_t TMR0_ReadTimer(void);
+[; ;tmr0.h: 176: void TMR0_WriteTimer(uint8_t timerVal);
+[; ;tmr0.h: 212: void TMR0_Reload(void);
+[; ;tmr0.h: 230: void TMR0_ISR(void);
+[; ;tmr0.h: 248: void TMR0_CallBack(void);
 [; ;water_level_conversion.h: 17: uint8_t WaterLevel_Lookup(uint16_t zeroSet, uint8_t stepLitre);
 [; ;water_level_conversion.h: 18: uint16_t ReadWaterLevel(void);
 [; ;water_level_display.h: 16: typedef enum
@@ -2956,12 +2973,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;water_level_display.h: 27: uint16_t zero_offset;
 [; ;water_level_display.h: 28: uint8_t liter_per_step;
 [; ;water_level_display.h: 29: uint8_t lookup;
-[; ;water_level_display.h: 30: }WL_Data;
-"32 drv_74hc595/../mcc_generated_files/../water_level_display/water_level_display.h
+[; ;water_level_display.h: 30: uint8_t lookup_old;
+[; ;water_level_display.h: 31: }WL_Data;
+"33 drv_74hc595/../mcc_generated_files/../water_level_display/water_level_display.h
 [v _WaterLevelLookup `Cui ~T0 @X0 -> 0 `x e ]
 [i _WaterLevelLookup
 :U ..
-"34
+"35
 -> -> 0 `i `ui
 -> -> 13 `i `ui
 -> -> 37 `i `ui
@@ -2988,7 +3006,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> -> 1405 `i `ui
 -> -> 1495 `i `ui
 -> -> 1587 `i `ui
-"35
+"36
 -> -> 1680 `i `ui
 -> -> 1775 `i `ui
 -> -> 1871 `i `ui
@@ -3014,7 +3032,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> -> 4058 `i `ui
 -> -> 4178 `i `ui
 -> -> 4299 `i `ui
-"36
+"37
 -> -> 4421 `i `ui
 -> -> 4543 `i `ui
 -> -> 4667 `i `ui
@@ -3040,7 +3058,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> -> 7262 `i `ui
 -> -> 7397 `i `ui
 -> -> 7532 `i `ui
-"37
+"38
 -> -> 7668 `i `ui
 -> -> 7804 `i `ui
 -> -> 7941 `i `ui
@@ -3066,7 +3084,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> -> 10716 `i `ui
 -> -> 10856 `i `ui
 -> -> 10996 `i `ui
-"38
+"39
 -> -> 11136 `i `ui
 -> -> 11276 `i `ui
 -> -> 11416 `i `ui
@@ -3091,7 +3109,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> -> 14051 `i `ui
 -> -> 14187 `i `ui
 -> -> 14323 `i `ui
-"39
+"40
 -> -> 14459 `i `ui
 -> -> 14594 `i `ui
 -> -> 14729 `i `ui
@@ -3116,7 +3134,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> -> 17325 `i `ui
 -> -> 17448 `i `ui
 -> -> 17570 `i `ui
-"40
+"41
 -> -> 17692 `i `ui
 -> -> 17813 `i `ui
 -> -> 17933 `i `ui
@@ -3141,7 +3159,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> -> 20022 `i `ui
 -> -> 20120 `i `ui
 -> -> 20216 `i `ui
-"41
+"42
 -> -> 20311 `i `ui
 -> -> 20405 `i `ui
 -> -> 20496 `i `ui
@@ -3166,28 +3184,28 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> -> 21845 `i `ui
 -> -> 21836 `i `ui
 -> -> 21923 `i `ui
-"42
+"43
 -> -> 21954 `i `ui
 -> -> 21978 `i `ui
-"43
+"44
 -> -> 21991 `i `ui
 ..
 ]
-[; ;water_level_display.h: 32: const uint16_t const WaterLevelLookup[]=
-[; ;water_level_display.h: 33: {
-[; ;water_level_display.h: 34: 0,13,37,68,105,146,192,242,295,352,411,474,539,606,677,749,824,901,980,1061,1145,1229,1316,1405,1495,1587,
-[; ;water_level_display.h: 35: 1680,1775,1871,1969,2068,2159,2271,2374,2479,2585,2692,2800,2909,3020,3131,3244,3357,3472,3587,3704,3821,3939,4058,4178,4299,
-[; ;water_level_display.h: 36: 4421,4543,4667,4791,4915,5041,5167,5293,5421,5549,5677,5807,5936,6067,6198,6329,6461,6593,6726,6859,6993,7127,7262,7397,7532,
-[; ;water_level_display.h: 37: 7668,7804,7941,8077,8214,8352,8489,8627,8765,8903,9042,9181,9320,9459,9598,9737,9877,10016,10156,10295,10436,10576,10716,10856,10996,
-[; ;water_level_display.h: 38: 11136,11276,11416,11555,11695,11835,11975,12114,12254,12393,12532,12672,12810,12949,13088,13226,13364,13502,13639,13777,13914,14051,14187,14323,
-[; ;water_level_display.h: 39: 14459,14594,14729,14864,14998,15132,15265,15398,15530,15662,15794,16055,16185,16314,16442,16570,16598,16825,16951,17076,17201,17325,17448,17570,
-[; ;water_level_display.h: 40: 17692,17813,17933,18052,18170,18288,18404,18519,18634,18748,18860,18972,19082,19191,19299,19406,19512,19617,19720,19822,19923,20022,20120,20216,
-[; ;water_level_display.h: 41: 20311,20405,20496,20587,20675,20762,20847,20930,21011,21090,21167,21242,21314,21385,21452,21518,21580,21640,21695,21749,21799,21845,21836,21923,
-[; ;water_level_display.h: 42: 21954,21978,21991
-[; ;water_level_display.h: 43: };
-[; ;water_level_display.h: 44: void WaterLevelDisplay_StateMachine(void);
-[; ;mcc.h: 77: void SYSTEM_Initialize(void);
-[; ;mcc.h: 90: void OSCILLATOR_Initialize(void);
+[; ;water_level_display.h: 33: const uint16_t const WaterLevelLookup[]=
+[; ;water_level_display.h: 34: {
+[; ;water_level_display.h: 35: 0,13,37,68,105,146,192,242,295,352,411,474,539,606,677,749,824,901,980,1061,1145,1229,1316,1405,1495,1587,
+[; ;water_level_display.h: 36: 1680,1775,1871,1969,2068,2159,2271,2374,2479,2585,2692,2800,2909,3020,3131,3244,3357,3472,3587,3704,3821,3939,4058,4178,4299,
+[; ;water_level_display.h: 37: 4421,4543,4667,4791,4915,5041,5167,5293,5421,5549,5677,5807,5936,6067,6198,6329,6461,6593,6726,6859,6993,7127,7262,7397,7532,
+[; ;water_level_display.h: 38: 7668,7804,7941,8077,8214,8352,8489,8627,8765,8903,9042,9181,9320,9459,9598,9737,9877,10016,10156,10295,10436,10576,10716,10856,10996,
+[; ;water_level_display.h: 39: 11136,11276,11416,11555,11695,11835,11975,12114,12254,12393,12532,12672,12810,12949,13088,13226,13364,13502,13639,13777,13914,14051,14187,14323,
+[; ;water_level_display.h: 40: 14459,14594,14729,14864,14998,15132,15265,15398,15530,15662,15794,16055,16185,16314,16442,16570,16598,16825,16951,17076,17201,17325,17448,17570,
+[; ;water_level_display.h: 41: 17692,17813,17933,18052,18170,18288,18404,18519,18634,18748,18860,18972,19082,19191,19299,19406,19512,19617,19720,19822,19923,20022,20120,20216,
+[; ;water_level_display.h: 42: 20311,20405,20496,20587,20675,20762,20847,20930,21011,21090,21167,21242,21314,21385,21452,21518,21580,21640,21695,21749,21799,21845,21836,21923,
+[; ;water_level_display.h: 43: 21954,21978,21991
+[; ;water_level_display.h: 44: };
+[; ;water_level_display.h: 45: void WaterLevelDisplay_StateMachine(void);
+[; ;mcc.h: 80: void SYSTEM_Initialize(void);
+[; ;mcc.h: 93: void OSCILLATOR_Initialize(void);
 "10 drv_74hc595/drv_74hc595.c
 [v _dot `uc ~T0 @X0 1 e ]
 [i _dot
@@ -3213,8 +3231,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _number `ui ~T0 @X0 1 a ]
 [; ;drv_74hc595.c: 14: uint16_t number = value;
 [e = _number _value ]
-[v F3200 `uc ~T0 @X0 -> 6 `i s ]
-[i F3200
+[v F3236 `uc ~T0 @X0 -> 6 `i s ]
+[i F3236
 :U ..
 "15
 -> -> 0 `ui `uc
@@ -3222,9 +3240,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 ]
 [v _myBuffer `uc ~T0 @X0 -> 6 `i a ]
 [; ;drv_74hc595.c: 15: char myBuffer[6]={'\0'};
-[e = _myBuffer F3200 ]
-[v F3202 `uc ~T0 @X0 -> 6 `i s ]
-[i F3202
+[e = _myBuffer F3236 ]
+[v F3238 `uc ~T0 @X0 -> 6 `i s ]
+[i F3238
 :U ..
 "16
 -> -> 0 `ui `uc
@@ -3232,7 +3250,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 ]
 [v _numChar `uc ~T0 @X0 -> 6 `i a ]
 [; ;drv_74hc595.c: 16: char numChar[6]={'\0'};
-[e = _numChar F3202 ]
+[e = _numChar F3238 ]
 [; ;drv_74hc595.c: 17: itoa(myBuffer, number, 10);
 "17
 [e ( _itoa (3 , , &U _myBuffer -> _number `i -> 10 `i ]
@@ -3349,8 +3367,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 }
 [e :U 361 ]
 "47
-[v F3206 `Cuc ~T0 @X0 -> 0 `x s display_segment ]
-[i F3206
+[v F3242 `Cuc ~T0 @X0 -> 0 `x s display_segment ]
+[i F3242
 :U ..
 -> -> 0 `i `uc
 -> -> 111 `i `uc
@@ -3397,7 +3415,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;drv_74hc595.c: 53: RC3 = ((display_segment[digit] & (1<<i))==0)?0:1;
 "53
-[e = _RC3 -> ? == & -> *U + &U F3206 * -> _digit `ux -> -> # *U &U F3206 `ui `ux `i << -> 1 `i _i -> 0 `i : -> 0 `i -> 1 `i `b ]
+[e = _RC3 -> ? == & -> *U + &U F3242 * -> _digit `ux -> -> # *U &U F3242 `ui `ux `i << -> 1 `i _i -> 0 `i : -> 0 `i -> 1 `i `b ]
 [; ;drv_74hc595.c: 54: do { LATC5 = 1; } while(0);
 "54
 [e :U 373 ]

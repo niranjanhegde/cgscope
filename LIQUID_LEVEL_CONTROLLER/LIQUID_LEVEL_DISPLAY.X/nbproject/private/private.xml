@@ -7,6 +7,11 @@
             <file>file:/D:/Niranjan/MyRepo/cgscope/LIQUID_LEVEL_CONTROLLER/LIQUID_LEVEL_DISPLAY.X/water_level_display/water_level_display.c</file>
             <file>file:/D:/Niranjan/MyRepo/cgscope/LIQUID_LEVEL_CONTROLLER/LIQUID_LEVEL_DISPLAY.X/water_level_display/water_level_conversion.h</file>
             <file>file:/D:/Niranjan/MyRepo/cgscope/LIQUID_LEVEL_CONTROLLER/LIQUID_LEVEL_DISPLAY.X/water_level_display/water_level_display.h</file>
+            <file>file:/D:/Niranjan/MyRepo/cgscope/LIQUID_LEVEL_CONTROLLER/LIQUID_LEVEL_DISPLAY.X/main.c</file>
+            <file>file:/D:/Niranjan/MyRepo/cgscope/LIQUID_LEVEL_CONTROLLER/LIQUID_LEVEL_DISPLAY.X/mcc_generated_files/mcc.c</file>
+            <file>file:/D:/Niranjan/MyRepo/cgscope/LIQUID_LEVEL_CONTROLLER/LIQUID_LEVEL_DISPLAY.X/mcc_generated_files/tmr1.c</file>
+            <file>file:/D:/Niranjan/MyRepo/cgscope/LIQUID_LEVEL_CONTROLLER/LIQUID_LEVEL_DISPLAY.X/mcc_generated_files/interrupt_manager.c</file>
+            <file>file:/D:/Niranjan/MyRepo/cgscope/LIQUID_LEVEL_CONTROLLER/LIQUID_LEVEL_DISPLAY.X/mcc_generated_files/interrupt_manager.h</file>
         </group>
     </open-files>
 </project-private>

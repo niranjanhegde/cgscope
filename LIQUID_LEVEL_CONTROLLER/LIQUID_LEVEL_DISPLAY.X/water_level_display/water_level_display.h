@@ -27,6 +27,7 @@ extern "C" {
         uint16_t zero_offset;
         uint8_t  liter_per_step;
         uint8_t lookup;
+        uint8_t lookup_old;
     }WL_Data;
 
     const uint16_t const WaterLevelLookup[]=

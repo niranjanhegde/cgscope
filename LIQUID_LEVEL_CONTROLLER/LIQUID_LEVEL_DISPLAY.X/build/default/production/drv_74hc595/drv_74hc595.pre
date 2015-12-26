@@ -3994,6 +3994,9 @@ extern char * strichr(const char *, int);
 extern char * strrchr(const char *, int);
 extern char * strrichr(const char *, int);
 
+# 111 "drv_74hc595/../mcc_generated_files/interrupt_manager.h"
+void interrupt INTERRUPT_InterruptManager(void);
+
 # 72 "drv_74hc595/../mcc_generated_files/adc.h"
 typedef uint16_t adc_result_t;
 
@@ -4020,6 +4023,54 @@ adc_result_t ADC_GetConversionResult(void);
 # 250
 adc_result_t ADC_GetConversion(adc_channel_t channel);
 
+# 101 "drv_74hc595/../mcc_generated_files/tmr1.h"
+void TMR1_Initialize(void);
+
+# 130
+void TMR1_StartTimer(void);
+
+# 162
+void TMR1_StopTimer(void);
+
+# 197
+uint16_t TMR1_ReadTimer(void);
+
+# 236
+void TMR1_WriteTimer(uint16_t timerVal);
+
+# 272
+void TMR1_Reload(void);
+
+# 311
+void TMR1_StartSinglePulseAcquisition(void);
+
+# 350
+uint8_t TMR1_CheckGateValueStatus(void);
+
+# 368
+void TMR1_ISR(void);
+
+# 386
+void TMR1_CallBack(void);
+
+# 104 "drv_74hc595/../mcc_generated_files/tmr0.h"
+void TMR0_Initialize(void);
+
+# 137
+uint8_t TMR0_ReadTimer(void);
+
+# 176
+void TMR0_WriteTimer(uint8_t timerVal);
+
+# 212
+void TMR0_Reload(void);
+
+# 230
+void TMR0_ISR(void);
+
+# 248
+void TMR0_CallBack(void);
+
 # 17 "drv_74hc595/../mcc_generated_files/../water_level_display/water_level_conversion.h"
 uint8_t WaterLevel_Lookup(uint16_t zeroSet, uint8_t stepLitre);
 uint16_t ReadWaterLevel(void);
@@ -4039,6 +4090,7 @@ STATES states;
 uint16_t zero_offset;
 uint8_t liter_per_step;
 uint8_t lookup;
+uint8_t lookup_old;
 }WL_Data;
 
 const uint16_t const WaterLevelLookup[]=
@@ -4055,10 +4107,10 @@ const uint16_t const WaterLevelLookup[]=
 };
 void WaterLevelDisplay_StateMachine(void);
 
-# 77 "drv_74hc595/../mcc_generated_files/mcc.h"
+# 80 "drv_74hc595/../mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
 
-# 90
+# 93
 void OSCILLATOR_Initialize(void);
 
 # 10 "drv_74hc595/drv_74hc595.c"

@@ -39,8 +39,17 @@
             <setting name="STVREN" option="ON"/>
             <setting name="BORV" option="LO"/>
             <setting name="generateConfigBits" option="true"/>
-            <file checksum="1906003118" modified="false" name="mcc.c" path="mcc_generated_files/mcc.c"/>
-            <file checksum="4134625780" modified="true" name="mcc.h" path="mcc_generated_files/mcc.h"/>
+            <file checksum="2886818333" modified="false" name="mcc.c" path="mcc_generated_files/mcc.c"/>
+            <file checksum="2056545641" modified="true" name="mcc.h" path="mcc_generated_files/mcc.h"/>
+        </manager>
+        <manager generated="true" name="Interrupt Manager" reloadPin="manual">
+            <setting name="preemptHigh" option="true"/>
+            <setting name="preemptLow" option="true"/>
+            <setting name="useIPEN" option="false"/>
+            <file checksum="1282467031" modified="true" name="interrupt_manager.c" path="mcc_generated_files/interrupt_manager.c"/>
+            <file checksum="2029386593" modified="false" name="interrupt_manager.h" path="mcc_generated_files/interrupt_manager.h"/>
+            <interrupt module="TMR1" name="TMRI" priority="2"/>
+            <interrupt module="TMR0" name="TMRI" priority="2"/>
         </manager>
     </managers>
     <modules>
@@ -65,6 +74,48 @@
             <resource customName="WAT_LEVEL_AN" function="AN2" name="RA2" type="pin"/>
             <file checksum="4109106558" modified="false" name="adc.c" path="mcc_generated_files/adc.c"/>
             <file checksum="735815564" modified="false" name="adc.h" path="mcc_generated_files/adc.h"/>
+        </module>
+        <module generated="true" mode="Timer" name="TMR1" order="2" reloadPin="manual" type="tmr_mid1">
+            <initializer comment="" name="Initialize">
+                <setting name="T1CKPS" option="1:8" register="T1CON"/>
+                <setting name="TMR1CS" option="FOSC/4" register="T1CON"/>
+                <setting name="nT1SYNC" option="synchronize" register="T1CON"/>
+                <setting name="TMR1ON" option="disabled" register="T1CON"/>
+                <setting name="T1GTM" option="disabled" register="T1GCON"/>
+                <setting name="T1GPOL" option="low" register="T1GCON"/>
+                <setting name="T1GVAL" option="disabled" register="T1GCON"/>
+                <setting name="TMR1GE" option="disabled" register="T1GCON"/>
+                <setting name="T1GSS" option="T1G" register="T1GCON"/>
+                <setting name="T1GGO_nDONE" option="done" register="T1GCON"/>
+                <setting name="T1GSPM" option="disabled" register="T1GCON"/>
+                <setting name="TMR1H" option="10" register="TMR1H"/>
+                <setting name="TMR1L" option="255" register="TMR1L"/>
+                <additionalSetting name="timerstart" option="enabled"/>
+                <additionalSetting name="externalFreq" option=""/>
+            </initializer>
+            <setting name="TMRI" option="true"/>
+            <setting name="TMRGI" option="false"/>
+            <setting name="ticker" option="1"/>
+            <setting name="hasGate" option="true"/>
+            <file checksum="2556157901" modified="false" name="tmr1.c" path="mcc_generated_files/tmr1.c"/>
+            <file checksum="126192905" modified="false" name="tmr1.h" path="mcc_generated_files/tmr1.h"/>
+        </module>
+        <module generated="true" mode="Timer" name="TMR0" order="3" reloadPin="manual" type="tmr_0">
+            <initializer comment="" name="Initialize">
+                <setting name="PS" option="1:16" register="OPTION_REG"/>
+                <setting name="TMR0SE" option="Increment_hi_lo" register="OPTION_REG"/>
+                <setting name="nWPUEN" option="disabled" register="OPTION_REG"/>
+                <setting name="TMR0CS" option="FOSC/4" register="OPTION_REG"/>
+                <setting name="INTEDG" option="rising" register="OPTION_REG"/>
+                <setting name="PSA" option="assigned" register="OPTION_REG"/>
+                <setting name="TMR0" option="6" register="TMR0"/>
+                <additionalSetting name="extfreq" option="100 kHz"/>
+                <additionalSetting name="timerstart" option="enabled"/>
+            </initializer>
+            <setting name="TMRI" option="true"/>
+            <setting name="ticker" option="1"/>
+            <file checksum="3127892238" modified="false" name="tmr0.c" path="mcc_generated_files/tmr0.c"/>
+            <file checksum="2975488337" modified="false" name="tmr0.h" path="mcc_generated_files/tmr0.h"/>
         </module>
     </modules>
 </configuration>

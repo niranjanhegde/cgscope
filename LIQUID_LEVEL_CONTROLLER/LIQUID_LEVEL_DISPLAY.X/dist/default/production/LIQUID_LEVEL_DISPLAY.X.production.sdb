@@ -10,15 +10,22 @@ DAC_channel 30
 FVR_channel 31
 WAT_LEVEL_AN 2
 ]
+"56 D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/interrupt_manager.c
+[e E3211 . `uc
+INITIALIZE 0
+SETTING 1
+LEVEL_DISPLAY 2
+IDLE 3
+]
 "11 D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\water_level_display/water_level_display.c
-[e E3180 . `uc
+[e E3215 . `uc
 INITIALIZE 0
 SETTING 1
 LEVEL_DISPLAY 2
 IDLE 3
 ]
 "16 D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\water_level_display/water_level_conversion.c
-[e E3145 . `uc
+[e E3148 . `uc
 Temp_channel 29
 DAC_channel 30
 FVR_channel 31
@@ -50,22 +57,119 @@ WAT_LEVEL_AN 2
 [v _ADC_Initialize ADC_Initialize `(v  1 e 0 0 ]
 "109
 [v _ADC_GetConversion ADC_GetConversion `(ui  1 e 2 0 ]
+"52 D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 0 0 ]
 "67 D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 0 0 ]
-"73
+"75
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 0 0 ]
 "50 D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 0 0 ]
+"64 D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/tmr0.c
+[v _TMR0_Initialize TMR0_Initialize `(v  1 e 0 0 ]
+"101
+[v _TMR0_ISR TMR0_ISR `(v  1 e 0 0 ]
+"115
+[v _TMR0_CallBack TMR0_CallBack `(v  1 e 0 0 ]
+"63 D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/tmr1.c
+[v _TMR1_Initialize TMR1_Initialize `(v  1 e 0 0 ]
+"91
+[v _TMR1_StartTimer TMR1_StartTimer `(v  1 e 0 0 ]
+"141
+[v _TMR1_ISR TMR1_ISR `(v  1 e 0 0 ]
+"155
+[v _TMR1_CallBack TMR1_CallBack `(v  1 e 0 0 ]
 "13 D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\water_level_display/water_level_conversion.c
 [v _ReadWaterLevel ReadWaterLevel `(ui  1 e 2 0 ]
 "21
 [v _WaterLevel_Lookup WaterLevel_Lookup `(uc  1 e 1 0 ]
 "14 D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\water_level_display/water_level_display.c
 [v _WaterLevelDisplay_StateMachine WaterLevelDisplay_StateMachine `(v  1 e 0 0 ]
-"932 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic16f1503.h
+[s S382 . 1 `uc 1 IOCIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 IOCIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"360 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic16f1503.h
+[s S391 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S396 . 1 `S382 1 . 1 0 `S391 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES396  1 e 1 @11 ]
+[s S200 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 SSP1IF 1 0 :1:3 
+`uc 1 . 1 0 :2:4 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 TMR1GIF 1 0 :1:7 
+]
+"528
+[u S208 . 1 `S200 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES208  1 e 1 @17 ]
+"621
+[v _TMR0 TMR0 `VEuc  1 e 1 @21 ]
+"646
+[v _TMR1L TMR1L `VEuc  1 e 1 @22 ]
+"665
+[v _TMR1H TMR1H `VEuc  1 e 1 @23 ]
+"684
+[v _T1CON T1CON `VEuc  1 e 1 @24 ]
+[s S242 . 1 `uc 1 TMR1ON 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 nT1SYNC 1 0 :1:2 
+`uc 1 T1OSCEN 1 0 :1:3 
+`uc 1 T1CKPS 1 0 :2:4 
+`uc 1 TMR1CS 1 0 :2:6 
+]
+"706
+[s S249 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 T1CKPS0 1 0 :1:4 
+`uc 1 T1CKPS1 1 0 :1:5 
+`uc 1 TMR1CS0 1 0 :1:6 
+`uc 1 TMR1CS1 1 0 :1:7 
+]
+[u S255 . 1 `S242 1 . 1 0 `S249 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES255  1 e 1 @24 ]
+"755
+[v _T1GCON T1GCON `VEuc  1 e 1 @25 ]
+[s S272 . 1 `uc 1 T1GSS 1 0 :2:0 
+`uc 1 T1GVAL 1 0 :1:2 
+`uc 1 T1GGO_nDONE 1 0 :1:3 
+`uc 1 T1GSPM 1 0 :1:4 
+`uc 1 T1GTM 1 0 :1:5 
+`uc 1 T1GPOL 1 0 :1:6 
+`uc 1 TMR1GE 1 0 :1:7 
+]
+"775
+[s S280 . 1 `uc 1 T1GSS0 1 0 :1:0 
+`uc 1 T1GSS1 1 0 :1:1 
+]
+[u S283 . 1 `S272 1 . 1 0 `S280 1 . 1 0 ]
+[v _T1GCONbits T1GCONbits `VES283  1 e 1 @25 ]
+"932
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
 "981
 [v _TRISC TRISC `VEuc  1 e 1 @142 ]
+[s S219 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 SSP1IE 1 0 :1:3 
+`uc 1 . 1 0 :2:4 
+`uc 1 ADIE 1 0 :1:6 
+`uc 1 TMR1GIE 1 0 :1:7 
+]
+"1046
+[u S227 . 1 `S219 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES227  1 e 1 @145 ]
+"1139
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @149 ]
 [s S71 . 1 `uc 1 PS 1 0 :3:0 
 `uc 1 PSA 1 0 :1:3 
 `uc 1 TMR0SE 1 0 :1:4 
@@ -93,12 +197,12 @@ WAT_LEVEL_AN 2
 [v _ADRESH ADRESH `VEuc  1 e 1 @156 ]
 "1476
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @157 ]
-[s S136 . 1 `uc 1 ADON 1 0 :1:0 
+[s S144 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :5:2 
 ]
 "1501
-[s S140 . 1 `uc 1 . 1 0 :1:0 
+[s S148 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADGO 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
@@ -106,11 +210,11 @@ WAT_LEVEL_AN 2
 `uc 1 CHS3 1 0 :1:5 
 `uc 1 CHS4 1 0 :1:6 
 ]
-[s S148 . 1 `uc 1 . 1 0 :1:0 
+[s S156 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 ]
-[u S151 . 1 `S136 1 . 1 0 `S140 1 . 1 0 `S148 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES151  1 e 1 @157 ]
+[u S159 . 1 `S144 1 . 1 0 `S148 1 . 1 0 `S156 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES159  1 e 1 @157 ]
 "1555
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @158 ]
 "1601
@@ -135,11 +239,15 @@ WAT_LEVEL_AN 2
 [v _RC3 RC3 `VEb  1 e 0 @115 ]
 "10 D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
 [v _dot dot `uc  1 e 1 0 ]
-"32 D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X/water_level_display/water_level_display.h
+"33 D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X/water_level_display/water_level_display.h
 [v _WaterLevelLookup WaterLevelLookup `DCC[200]ui  1 e 400 0 ]
-[s S193 . 5 `E3180 1 states 1 0 `ui 1 zero_offset 2 1 `uc 1 liter_per_step 1 3 `uc 1 lookup 1 4 ]
+"58 D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/tmr0.c
+[v _timer0ReloadVal timer0ReloadVal `VEuc  1 e 1 0 ]
+"57 D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/tmr1.c
+[v _timer1ReloadVal timer1ReloadVal `VEui  1 e 2 0 ]
+[s S370 . 6 `E3211 1 states 1 0 `ui 1 zero_offset 2 1 `uc 1 liter_per_step 1 3 `uc 1 lookup 1 4 `uc 1 lookup_old 1 5 ]
 "11 D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\water_level_display/water_level_display.c
-[v _wlData wlData `S193  1 e 5 0 ]
+[v _wlData wlData `S370  1 e 6 0 ]
 "52 D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\main.c
 [v _main main `(v  1 e 0 0 ]
 {
@@ -148,35 +256,35 @@ WAT_LEVEL_AN 2
 "14 D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\water_level_display/water_level_display.c
 [v _WaterLevelDisplay_StateMachine WaterLevelDisplay_StateMachine `(v  1 e 0 0 ]
 {
-"45
+"51
 } 0
 "21 D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\water_level_display/water_level_conversion.c
 [v _WaterLevel_Lookup WaterLevel_Lookup `(uc  1 e 1 0 ]
 {
 "23
-[v WaterLevel_Lookup@waterLevelRead waterLevelRead `ui  1 a 2 15 ]
+[v WaterLevel_Lookup@waterLevelRead waterLevelRead `ui  1 a 2 22 ]
 "24
-[v WaterLevel_Lookup@waterLevelLookup waterLevelLookup `uc  1 a 1 14 ]
+[v WaterLevel_Lookup@waterLevelLookup waterLevelLookup `uc  1 a 1 21 ]
 "21
-[v WaterLevel_Lookup@zeroSet zeroSet `ui  1 p 2 8 ]
-[v WaterLevel_Lookup@stepLitre stepLitre `uc  1 p 1 10 ]
+[v WaterLevel_Lookup@zeroSet zeroSet `ui  1 p 2 15 ]
+[v WaterLevel_Lookup@stepLitre stepLitre `uc  1 p 1 17 ]
 "29
 } 0
 "13
 [v _ReadWaterLevel ReadWaterLevel `(ui  1 e 2 0 ]
 {
 "15
-[v ReadWaterLevel@adcValue adcValue `ui  1 a 2 6 ]
+[v ReadWaterLevel@adcValue adcValue `ui  1 a 2 13 ]
 "19
 } 0
 "15 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul16.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
 {
 "17
-[v ___wmul@product product `ui  1 a 2 4 ]
+[v ___wmul@product product `ui  1 a 2 6 ]
 "15
-[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
-[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+[v ___wmul@multiplier multiplier `ui  1 p 2 2 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 4 ]
 "53
 } 0
 "109 D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/adc.c
@@ -185,26 +293,26 @@ WAT_LEVEL_AN 2
 [v ADC_GetConversion@channel channel `E2933  1 a 1 wreg ]
 [v ADC_GetConversion@channel channel `E2933  1 a 1 wreg ]
 "111
-[v ADC_GetConversion@channel channel `E2933  1 a 1 3 ]
+[v ADC_GetConversion@channel channel `E2933  1 a 1 5 ]
 "128
 } 0
 "11 D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
 [v _Display_value Display_value `(v  1 e 0 0 ]
 {
 "16
-[v Display_value@numChar numChar `[6]uc  1 a 6 26 ]
+[v Display_value@numChar numChar `[6]uc  1 a 6 32 ]
 "15
-[v Display_value@myBuffer myBuffer `[6]uc  1 a 6 20 ]
+[v Display_value@myBuffer myBuffer `[6]uc  1 a 6 26 ]
 "14
-[v Display_value@number number `ui  1 a 2 32 ]
+[v Display_value@number number `ui  1 a 2 38 ]
 "13
-[v Display_value@i i `uc  1 a 1 34 ]
+[v Display_value@i i `uc  1 a 1 40 ]
 "11
-[v Display_value@value value `ui  1 p 2 16 ]
+[v Display_value@value value `ui  1 p 2 22 ]
 "14
-[v Display_value@F3200 F3200 `[6]uc  1 s 6 F3200 ]
+[v Display_value@F3236 F3236 `[6]uc  1 s 6 F3236 ]
 "15
-[v Display_value@F3202 F3202 `[6]uc  1 s 6 F3202 ]
+[v Display_value@F3238 F3238 `[6]uc  1 s 6 F3238 ]
 "34
 } 0
 "4 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\itoa.c
@@ -212,13 +320,13 @@ WAT_LEVEL_AN 2
 {
 [v itoa@buf buf `*.4uc  1 a 1 wreg ]
 "6
-[v itoa@cp cp `*.4uc  1 a 1 14 ]
+[v itoa@cp cp `*.4uc  1 a 1 20 ]
 "4
 [v itoa@buf buf `*.4uc  1 a 1 wreg ]
-[v itoa@val val `i  1 p 2 9 ]
-[v itoa@base base `i  1 p 2 11 ]
+[v itoa@val val `i  1 p 2 15 ]
+[v itoa@base base `i  1 p 2 17 ]
 "6
-[v itoa@buf buf `*.4uc  1 a 1 15 ]
+[v itoa@buf buf `*.4uc  1 a 1 21 ]
 "14
 } 0
 "17
@@ -226,37 +334,37 @@ WAT_LEVEL_AN 2
 {
 [v utoa@buf buf `*.4uc  1 a 1 wreg ]
 "19
-[v utoa@v v `ui  1 a 2 5 ]
+[v utoa@v v `ui  1 a 2 11 ]
 "20
-[v utoa@c c `uc  1 a 1 7 ]
+[v utoa@c c `uc  1 a 1 13 ]
 "17
 [v utoa@buf buf `*.4uc  1 a 1 wreg ]
-[v utoa@val val `ui  1 p 2 0 ]
-[v utoa@base base `i  1 p 2 2 ]
+[v utoa@val val `ui  1 p 2 7 ]
+[v utoa@base base `i  1 p 2 9 ]
 "22
-[v utoa@buf buf `*.4uc  1 a 1 8 ]
+[v utoa@buf buf `*.4uc  1 a 1 14 ]
 "37
 } 0
 "6 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\lwmod.c
 [v ___lwmod __lwmod `(ui  1 e 2 0 ]
 {
 "11
-[v ___lwmod@counter counter `uc  1 a 1 5 ]
+[v ___lwmod@counter counter `uc  1 a 1 7 ]
 "6
-[v ___lwmod@divisor divisor `ui  1 p 2 0 ]
-[v ___lwmod@dividend dividend `ui  1 p 2 2 ]
+[v ___lwmod@divisor divisor `ui  1 p 2 2 ]
+[v ___lwmod@dividend dividend `ui  1 p 2 4 ]
 "26
 } 0
 "6 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\lwdiv.c
 [v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
 {
 "11
-[v ___lwdiv@quotient quotient `ui  1 a 2 11 ]
+[v ___lwdiv@quotient quotient `ui  1 a 2 5 ]
 "12
-[v ___lwdiv@counter counter `uc  1 a 1 13 ]
+[v ___lwdiv@counter counter `uc  1 a 1 4 ]
 "6
-[v ___lwdiv@divisor divisor `ui  1 p 2 6 ]
-[v ___lwdiv@dividend dividend `ui  1 p 2 8 ]
+[v ___lwdiv@divisor divisor `ui  1 p 2 0 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
 "31
 } 0
 "59 D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\drv_74hc595/drv_74hc595.c
@@ -264,27 +372,27 @@ WAT_LEVEL_AN 2
 {
 [v GetStringReverse@str str `*.4uc  1 a 1 wreg ]
 "62
-[v GetStringReverse@i i `i  1 a 2 3 ]
+[v GetStringReverse@i i `i  1 a 2 5 ]
 "63
-[v GetStringReverse@sptr sptr `*.4uc  1 a 1 6 ]
+[v GetStringReverse@sptr sptr `*.4uc  1 a 1 8 ]
 "64
-[v GetStringReverse@rptr rptr `*.4uc  1 a 1 5 ]
+[v GetStringReverse@rptr rptr `*.4uc  1 a 1 7 ]
 "59
 [v GetStringReverse@str str `*.4uc  1 a 1 wreg ]
-[v GetStringReverse@buff buff `*.4uc  1 p 1 0 ]
+[v GetStringReverse@buff buff `*.4uc  1 p 1 2 ]
 "62
-[v GetStringReverse@str str `*.4uc  1 a 1 2 ]
+[v GetStringReverse@str str `*.4uc  1 a 1 4 ]
 "80
 } 0
 "35
 [v _Display_put Display_put `(v  1 e 0 0 ]
 {
 "48
-[v Display_put@i i `uc  1 a 1 5 ]
+[v Display_put@i i `uc  1 a 1 7 ]
 "37
-[v Display_put@digit digit `uc  1 a 1 4 ]
+[v Display_put@digit digit `uc  1 a 1 6 ]
 "35
-[v Display_put@dig dig `*.39uc  1 p 2 0 ]
+[v Display_put@dig dig `*.39uc  1 p 2 2 ]
 "47
 [v Display_put@display_segment display_segment `DCC[11]uc  1 s 11 display_segment ]
 "57
@@ -292,20 +400,60 @@ WAT_LEVEL_AN 2
 "67 D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 0 0 ]
 {
-"71
+"73
+} 0
+"63 D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/tmr1.c
+[v _TMR1_Initialize TMR1_Initialize `(v  1 e 0 0 ]
+{
+"89
+} 0
+"91
+[v _TMR1_StartTimer TMR1_StartTimer `(v  1 e 0 0 ]
+{
+"94
+} 0
+"64 D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/tmr0.c
+[v _TMR0_Initialize TMR0_Initialize `(v  1 e 0 0 ]
+{
+"81
 } 0
 "50 D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 0 0 ]
 {
 "65
 } 0
-"73 D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/mcc.c
+"75 D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 0 0 ]
 {
-"80
+"82
 } 0
 "65 D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 0 0 ]
 {
 "83
+} 0
+"52 D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 0 0 ]
+{
+"62
+} 0
+"141 D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/tmr1.c
+[v _TMR1_ISR TMR1_ISR `(v  1 e 0 0 ]
+{
+"153
+} 0
+"155
+[v _TMR1_CallBack TMR1_CallBack `(v  1 e 0 0 ]
+{
+"157
+} 0
+"101 D:\Niranjan\MyRepo\cgscope\LIQUID_LEVEL_CONTROLLER\LIQUID_LEVEL_DISPLAY.X\mcc_generated_files/tmr0.c
+[v _TMR0_ISR TMR0_ISR `(v  1 e 0 0 ]
+{
+"113
+} 0
+"115
+[v _TMR0_CallBack TMR0_CallBack `(v  1 e 0 0 ]
+{
+"118
 } 0
