@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration device="PIC16F1503" mcc_version="v2.25.2">
+    <managers>
+        <manager generated="true" name="Pin Manager" reloadPin="manual">
+            <setting name="SSSEL" option="RC3"/>
+            <setting name="NCO1SEL" option="RC1"/>
+            <setting name="SDOSEL" option="RC2"/>
+            <setting name="CLC1SEL" option="RA2"/>
+            <setting name="T1GSEL" option="RA4"/>
+            <setting name="package" option="SOIC14"/>
+            <setting name="sorting" option="true"/>
+            <resource customName="SENSOR2" digital="true" direction="INPUT" function="RA4" ioc="1" module="GPIO" name="RA4" start="false" type="pin" wpu="false"/>
+            <resource customName="SENSOR1" digital="true" direction="INPUT" function="RA5" ioc="0" module="GPIO" name="RA5" start="false" type="pin" wpu="false"/>
+            <resource customName="OUTPUT" digital="true" direction="OUTPUT" function="RC1" module="GPIO" name="RC1" start="false" type="pin" wpu="false"/>
+            <file checksum="1126888819" modified="true" name="pin_manager.c" path="mcc_generated_files/pin_manager.c"/>
+            <file checksum="1174616608" modified="false" name="pin_manager.h" path="mcc_generated_files/pin_manager.h"/>
+        </manager>
+        <manager generated="true" name="Interrupt Manager" reloadPin="manual">
+            <setting name="preemptHigh" option="true"/>
+            <setting name="preemptLow" option="true"/>
+            <setting name="useIPEN" option="false"/>
+            <file checksum="146462187" modified="false" name="interrupt_manager.c" path="mcc_generated_files/interrupt_manager.c"/>
+            <file checksum="2029386593" modified="false" name="interrupt_manager.h" path="mcc_generated_files/interrupt_manager.h"/>
+            <interrupt module="Pin Manager" name="IOCI" priority="2"/>
+        </manager>
+        <manager generated="true" name="System" reloadPin="manual">
+            <initializer comment="" name="Initialize">
+                <setting name="SCS" option="INTOSC" register="OSCCON"/>
+                <setting name="IRCF" option="16MHz_HF" register="OSCCON"/>
+                <setting name="LFIOFR" option="disabled" register="OSCSTAT"/>
+                <setting name="HFIOFS" option="not0.5percent_acc" register="OSCSTAT"/>
+                <setting name="HFIOFR" option="disabled" register="OSCSTAT"/>
+                <additionalSetting name="pllMultiplier" option=""/>
+                <additionalSetting name="extclk" option="1.0 MHz"/>
+            </initializer>
+            <setting name="CLKOUTEN" option="OFF"/>
+            <setting name="MCLRE" option="OFF"/>
+            <setting name="WDTE" option="OFF"/>
+            <setting name="FOSC" option="INTOSC"/>
+            <setting name="BOREN" option="ON"/>
+            <setting name="PWRTE" option="OFF"/>
+            <setting name="CP" option="OFF"/>
+            <setting name="LPBOR" option="OFF"/>
+            <setting name="LVP" option="OFF"/>
+            <setting name="WRT" option="OFF"/>
+            <setting name="STVREN" option="ON"/>
+            <setting name="BORV" option="LO"/>
+            <setting name="generateConfigBits" option="true"/>
+            <file checksum="2724218450" modified="false" name="mcc.c" path="mcc_generated_files/mcc.c"/>
+            <file checksum="1443500119" modified="false" name="mcc.h" path="mcc_generated_files/mcc.h"/>
+        </manager>
+    </managers>
+    <modules>
+        <module generated="true" mode="GPIO" name="GPIO" order="0" reloadPin="manual" type="GPIO">
+            <resource customName="SENSOR1" digital="true" direction="INPUT" function="RA5" ioc="0" module="GPIO" name="RA5" start="false" type="pin" wpu="false"/>
+            <resource customName="SENSOR2" digital="true" direction="INPUT" function="RA4" ioc="1" module="GPIO" name="RA4" start="false" type="pin" wpu="false"/>
+            <resource customName="OUTPUT" digital="true" direction="OUTPUT" function="RC1" module="GPIO" name="RC1" start="false" type="pin" wpu="false"/>
+        </module>
+    </modules>
+</configuration>

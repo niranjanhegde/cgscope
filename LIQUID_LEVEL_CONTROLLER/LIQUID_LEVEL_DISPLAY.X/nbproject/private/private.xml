@@ -2,16 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/D:/Niranjan/MyRepo/cgscope/LIQUID_LEVEL_CONTROLLER/LIQUID_LEVEL_DISPLAY.X/mcc_generated_files/mcc.h</file>
-            <file>file:/D:/Niranjan/MyRepo/cgscope/LIQUID_LEVEL_CONTROLLER/LIQUID_LEVEL_DISPLAY.X/water_level_display/water_level_display.c</file>
-            <file>file:/D:/Niranjan/MyRepo/cgscope/LIQUID_LEVEL_CONTROLLER/LIQUID_LEVEL_DISPLAY.X/water_level_display/water_level_conversion.h</file>
-            <file>file:/D:/Niranjan/MyRepo/cgscope/LIQUID_LEVEL_CONTROLLER/LIQUID_LEVEL_DISPLAY.X/water_level_display/water_level_display.h</file>
-            <file>file:/D:/Niranjan/MyRepo/cgscope/LIQUID_LEVEL_CONTROLLER/LIQUID_LEVEL_DISPLAY.X/main.c</file>
-            <file>file:/D:/Niranjan/MyRepo/cgscope/LIQUID_LEVEL_CONTROLLER/LIQUID_LEVEL_DISPLAY.X/mcc_generated_files/mcc.c</file>
-            <file>file:/D:/Niranjan/MyRepo/cgscope/LIQUID_LEVEL_CONTROLLER/LIQUID_LEVEL_DISPLAY.X/mcc_generated_files/tmr1.c</file>
-            <file>file:/D:/Niranjan/MyRepo/cgscope/LIQUID_LEVEL_CONTROLLER/LIQUID_LEVEL_DISPLAY.X/mcc_generated_files/interrupt_manager.c</file>
-            <file>file:/D:/Niranjan/MyRepo/cgscope/LIQUID_LEVEL_CONTROLLER/LIQUID_LEVEL_DISPLAY.X/mcc_generated_files/interrupt_manager.h</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
