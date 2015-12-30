@@ -41,10 +41,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _INTCONbits `VS26 ~T0 @X0 0 e@11 ]
 "7151
 [v _IOCAF4 `Vb ~T0 @X0 0 e@7324 ]
-"7687
-[v _RA5 `Vb ~T0 @X0 0 e@101 ]
 "50 mcc_generated_files/pin_manager.c
-[v _loadOff `uc ~T0 @X0 0 e ]
+[v _pulse `uc ~T0 @X0 0 e ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -2851,7 +2849,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic.h: 186: extern __bit __timeout;
 [; ;pin_manager.h: 118: void PIN_MANAGER_Initialize(void);
 [; ;pin_manager.h: 130: void PIN_MANAGER_IOC(void);
-[; ;pin_manager.c: 50: extern char loadOff;
+[; ;pin_manager.c: 50: extern char pulse;
 "52 mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize `(v ~T0 @X0 1 ef ]
 {
@@ -2905,11 +2903,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "75
 [e $ ! && == -> _IOCAP4 `i -> 1 `i == -> _IOCAF4 `i -> 1 `i 344  ]
 {
-[; ;pin_manager.c: 77: if(RA5==1) loadOff=1;
+[; ;pin_manager.c: 77: pulse=1;
 "77
-[e $ ! == -> _RA5 `i -> 1 `i 345  ]
-[e = _loadOff -> -> 1 `i `uc ]
-[e :U 345 ]
+[e = _pulse -> -> 1 `i `uc ]
 [; ;pin_manager.c: 79: IOCAF4 = 0;
 "79
 [e = _IOCAF4 -> -> 0 `i `b ]

@@ -3786,7 +3786,7 @@ void PIN_MANAGER_Initialize(void);
 void PIN_MANAGER_IOC(void);
 
 # 50 "mcc_generated_files/pin_manager.c"
-extern char pulse;
+extern char loadOff;
 
 void PIN_MANAGER_Initialize(void) {
 LATA = 0x00;
@@ -3803,19 +3803,5 @@ OPTION_REGbits.nWPUEN = 0x01;
 APFCON = 0x00;
 
 
-IOCAP4 = 1;
-
-
-INTCONbits.IOCIE = 1;
-
-}
-
-void PIN_MANAGER_IOC(void) {
-if ((IOCAP4 == 1) && (IOCAF4 == 1)) {
-
-pulse=1;
-
-IOCAF4 = 0;
-}
 }
 

@@ -47,7 +47,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include <xc.h>
 #include "pin_manager.h"
 
-extern char loadOff;
+extern char pulse;
 
 void PIN_MANAGER_Initialize(void) {
     LATA = 0x00;
@@ -74,7 +74,7 @@ void PIN_MANAGER_Initialize(void) {
 void PIN_MANAGER_IOC(void) {
     if ((IOCAP4 == 1) && (IOCAF4 == 1)) {
         //@TODO Add handling code for IOC on pin RA4
-        if(SENSOR1_GetValue()==1) loadOff=1;
+        pulse=1;
         // clear interrupt-on-change flag
         IOCAF4 = 0;
     }

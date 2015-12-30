@@ -49,7 +49,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 /*
                          Main application
  */
-char loadOff=0;
+char pulse=0;
 void main(void) {
     // initialize the device
     SYSTEM_Initialize();
@@ -71,14 +71,24 @@ void main(void) {
     
     while (1) 
     {
-        if(loadOff == 1)
+        if(pulse == 1)
         {
-            OUTPUT_SetHigh();
-            __delay_ms(3000);
-            OUTPUT_SetLow();
-            loadOff = 0;
+            __delay_ms(3);
+            if(SENSOR2_GetValue())
+            {
+                if(SENSOR1_GetValue())
+                {
+                    __delay_ms(6);
+                    if(SENSOR1_GetValue())
+                    {
+                        OUTPUT_SetHigh();
+                        __delay_ms(3000);
+                        OUTPUT_SetLow();
+                    }
+                }
+            }
+            pulse=0;
         }
-        // Add your application code
     }
 }
 /**

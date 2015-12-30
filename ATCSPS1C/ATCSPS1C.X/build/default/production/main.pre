@@ -3888,7 +3888,7 @@ void SYSTEM_Initialize(void);
 void OSCILLATOR_Initialize(void);
 
 # 52 "main.c"
-char loadOff=0;
+char pulse=0;
 void main(void) {
 
 SYSTEM_Initialize();
@@ -3902,14 +3902,24 @@ SYSTEM_Initialize();
 # 72
 while (1)
 {
-if(loadOff == 1)
+if(pulse == 1)
+{
+_delay((unsigned long)((3)*(16000000/4000.0)));
+if(RA4)
+{
+if(RA5)
+{
+_delay((unsigned long)((6)*(16000000/4000.0)));
+if(RA5)
 {
 do { LATC1 = 1; } while(0);
 _delay((unsigned long)((3000)*(16000000/4000.0)));
 do { LATC1 = 0; } while(0);
-loadOff = 0;
 }
-
+}
+}
+pulse=0;
+}
 }
 }
 

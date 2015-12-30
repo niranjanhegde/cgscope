@@ -11,20 +11,20 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\niranjan\AppData\Local\Temp\s810.obj
-reset_vec CODE 0 0 0 1 2
-end_init CODE 0 13 13 1 2
-config CONFIG 0 8007 8007 2 2
 $dist/default/production\ATCSPS1C.X.production.obj
 cinit CODE 0 14 14 4 2
-text1 CODE 0 5D 5D 3 2
-text2 CODE 0 18 18 1A 2
-text3 CODE 0 58 58 5 2
-text5 CODE 0 4B 4B D 2
-maintext CODE 0 32 32 19 2
+text1 CODE 0 72 72 3 2
+text2 CODE 0 4A 4A 1A 2
+text3 CODE 0 6D 6D 5 2
+text5 CODE 0 64 64 9 2
+maintext CODE 0 18 18 32 2
 cstackCOMMON COMMON 1 70 70 4 1
 intentry CODE 0 4 4 F 2
 bssCOMMON COMMON 1 74 74 1 1
+$C:\Users\niranjan\AppData\Local\Temp\s4h0.obj
+reset_vec CODE 0 0 0 1 2
+end_init CODE 0 13 13 1 2
+config CONFIG 0 8007 8007 2 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
@@ -36,9 +36,9 @@ RAM A0-BF 1
 BANK0 20-6F 1
 BANK1 A0-BF 1
 CONST 1-3 2
-CONST 60-7FF 2
+CONST 75-7FF 2
 ENTRY 1-3 2
-ENTRY 60-7FF 2
+ENTRY 75-7FF 2
 IDLOC 8000-8003 2
 SFR10 500-56F 1
 SFR11 580-5EF 1
@@ -64,7 +64,7 @@ SFR30 F00-F6F 1
 SFR31 F80-FEF 1
 STACK 2000-206F 1
 CODE 1-3 2
-CODE 60-7FF 2
+CODE 75-7FF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-16F 1
@@ -78,9 +78,9 @@ SFR9 480-4EF 1
 BIGRAM 2000-206F 1
 COMMON 75-7D 1
 STRCODE 1-3 2
-STRCODE 60-7FF 2
+STRCODE 75-7FF 2
 STRING 1-3 2
-STRING 60-7FF 2
+STRING 75-7FF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -95,53 +95,58 @@ STRING 60-7FF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\ATCSPS1C.X.production.obj
-14 cinit CODE >1276:C:\Users\niranjan\AppData\Local\Temp\s810.
-14 cinit CODE >1279:C:\Users\niranjan\AppData\Local\Temp\s810.
-14 cinit CODE >1291:C:\Users\niranjan\AppData\Local\Temp\s810.
-15 cinit CODE >1297:C:\Users\niranjan\AppData\Local\Temp\s810.
-15 cinit CODE >1299:C:\Users\niranjan\AppData\Local\Temp\s810.
-16 cinit CODE >1300:C:\Users\niranjan\AppData\Local\Temp\s810.
-17 cinit CODE >1301:C:\Users\niranjan\AppData\Local\Temp\s810.
-4 intentry CODE >52:D:\Niranjan\MyRepo\cgscope\ATCSPS1C.X\mcc_generated_files/interrupt_manager.c
-9 intentry CODE >54:D:\Niranjan\MyRepo\cgscope\ATCSPS1C.X\mcc_generated_files/interrupt_manager.c
-C intentry CODE >55:D:\Niranjan\MyRepo\cgscope\ATCSPS1C.X\mcc_generated_files/interrupt_manager.c
-D intentry CODE >58:D:\Niranjan\MyRepo\cgscope\ATCSPS1C.X\mcc_generated_files/interrupt_manager.c
-E intentry CODE >62:D:\Niranjan\MyRepo\cgscope\ATCSPS1C.X\mcc_generated_files/interrupt_manager.c
-4B text5 CODE >74:D:\Niranjan\MyRepo\cgscope\ATCSPS1C.X\mcc_generated_files/pin_manager.c
-4B text5 CODE >75:D:\Niranjan\MyRepo\cgscope\ATCSPS1C.X\mcc_generated_files/pin_manager.c
-50 text5 CODE >77:D:\Niranjan\MyRepo\cgscope\ATCSPS1C.X\mcc_generated_files/pin_manager.c
-55 text5 CODE >79:D:\Niranjan\MyRepo\cgscope\ATCSPS1C.X\mcc_generated_files/pin_manager.c
-58 text3 CODE >72:D:\Niranjan\MyRepo\cgscope\ATCSPS1C.X\mcc_generated_files/mcc.c
-58 text3 CODE >74:D:\Niranjan\MyRepo\cgscope\ATCSPS1C.X\mcc_generated_files/mcc.c
-5B text3 CODE >76:D:\Niranjan\MyRepo\cgscope\ATCSPS1C.X\mcc_generated_files/mcc.c
-5C text3 CODE >79:D:\Niranjan\MyRepo\cgscope\ATCSPS1C.X\mcc_generated_files/mcc.c
-18 text2 CODE >52:D:\Niranjan\MyRepo\cgscope\ATCSPS1C.X\mcc_generated_files/pin_manager.c
-18 text2 CODE >53:D:\Niranjan\MyRepo\cgscope\ATCSPS1C.X\mcc_generated_files/pin_manager.c
-1A text2 CODE >54:D:\Niranjan\MyRepo\cgscope\ATCSPS1C.X\mcc_generated_files/pin_manager.c
-1D text2 CODE >55:D:\Niranjan\MyRepo\cgscope\ATCSPS1C.X\mcc_generated_files/pin_manager.c
-20 text2 CODE >56:D:\Niranjan\MyRepo\cgscope\ATCSPS1C.X\mcc_generated_files/pin_manager.c
-22 text2 CODE >58:D:\Niranjan\MyRepo\cgscope\ATCSPS1C.X\mcc_generated_files/pin_manager.c
-24 text2 CODE >59:D:\Niranjan\MyRepo\cgscope\ATCSPS1C.X\mcc_generated_files/pin_manager.c
-27 text2 CODE >60:D:\Niranjan\MyRepo\cgscope\ATCSPS1C.X\mcc_generated_files/pin_manager.c
-2A text2 CODE >62:D:\Niranjan\MyRepo\cgscope\ATCSPS1C.X\mcc_generated_files/pin_manager.c
-2C text2 CODE >64:D:\Niranjan\MyRepo\cgscope\ATCSPS1C.X\mcc_generated_files/pin_manager.c
-2E text2 CODE >67:D:\Niranjan\MyRepo\cgscope\ATCSPS1C.X\mcc_generated_files/pin_manager.c
-30 text2 CODE >70:D:\Niranjan\MyRepo\cgscope\ATCSPS1C.X\mcc_generated_files/pin_manager.c
-31 text2 CODE >72:D:\Niranjan\MyRepo\cgscope\ATCSPS1C.X\mcc_generated_files/pin_manager.c
-5D text1 CODE >67:D:\Niranjan\MyRepo\cgscope\ATCSPS1C.X\mcc_generated_files/mcc.c
-5D text1 CODE >68:D:\Niranjan\MyRepo\cgscope\ATCSPS1C.X\mcc_generated_files/mcc.c
-5E text1 CODE >69:D:\Niranjan\MyRepo\cgscope\ATCSPS1C.X\mcc_generated_files/mcc.c
-5F text1 CODE >70:D:\Niranjan\MyRepo\cgscope\ATCSPS1C.X\mcc_generated_files/mcc.c
-32 maintext CODE >53:D:\Niranjan\MyRepo\cgscope\ATCSPS1C.X\main.c
-32 maintext CODE >55:D:\Niranjan\MyRepo\cgscope\ATCSPS1C.X\main.c
-33 maintext CODE >61:D:\Niranjan\MyRepo\cgscope\ATCSPS1C.X\main.c
-34 maintext CODE >64:D:\Niranjan\MyRepo\cgscope\ATCSPS1C.X\main.c
-35 maintext CODE >74:D:\Niranjan\MyRepo\cgscope\ATCSPS1C.X\main.c
-38 maintext CODE >76:D:\Niranjan\MyRepo\cgscope\ATCSPS1C.X\main.c
-3A maintext CODE >77:D:\Niranjan\MyRepo\cgscope\ATCSPS1C.X\main.c
-47 maintext CODE >78:D:\Niranjan\MyRepo\cgscope\ATCSPS1C.X\main.c
-49 maintext CODE >79:D:\Niranjan\MyRepo\cgscope\ATCSPS1C.X\main.c
-4A maintext CODE >72:D:\Niranjan\MyRepo\cgscope\ATCSPS1C.X\main.c
+14 cinit CODE >1278:C:\Users\niranjan\AppData\Local\Temp\s4h0.
+14 cinit CODE >1281:C:\Users\niranjan\AppData\Local\Temp\s4h0.
+14 cinit CODE >1293:C:\Users\niranjan\AppData\Local\Temp\s4h0.
+15 cinit CODE >1299:C:\Users\niranjan\AppData\Local\Temp\s4h0.
+15 cinit CODE >1301:C:\Users\niranjan\AppData\Local\Temp\s4h0.
+16 cinit CODE >1302:C:\Users\niranjan\AppData\Local\Temp\s4h0.
+17 cinit CODE >1303:C:\Users\niranjan\AppData\Local\Temp\s4h0.
+4 intentry CODE >52:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\mcc_generated_files/interrupt_manager.c
+9 intentry CODE >54:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\mcc_generated_files/interrupt_manager.c
+C intentry CODE >55:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\mcc_generated_files/interrupt_manager.c
+D intentry CODE >58:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\mcc_generated_files/interrupt_manager.c
+E intentry CODE >62:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\mcc_generated_files/interrupt_manager.c
+64 text5 CODE >74:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\mcc_generated_files/pin_manager.c
+64 text5 CODE >75:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\mcc_generated_files/pin_manager.c
+69 text5 CODE >77:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\mcc_generated_files/pin_manager.c
+6B text5 CODE >79:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\mcc_generated_files/pin_manager.c
+6D text3 CODE >72:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\mcc_generated_files/mcc.c
+6D text3 CODE >74:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\mcc_generated_files/mcc.c
+70 text3 CODE >76:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\mcc_generated_files/mcc.c
+71 text3 CODE >79:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\mcc_generated_files/mcc.c
+4A text2 CODE >52:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\mcc_generated_files/pin_manager.c
+4A text2 CODE >53:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\mcc_generated_files/pin_manager.c
+4C text2 CODE >54:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\mcc_generated_files/pin_manager.c
+4F text2 CODE >55:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\mcc_generated_files/pin_manager.c
+52 text2 CODE >56:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\mcc_generated_files/pin_manager.c
+54 text2 CODE >58:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\mcc_generated_files/pin_manager.c
+56 text2 CODE >59:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\mcc_generated_files/pin_manager.c
+59 text2 CODE >60:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\mcc_generated_files/pin_manager.c
+5C text2 CODE >62:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\mcc_generated_files/pin_manager.c
+5E text2 CODE >64:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\mcc_generated_files/pin_manager.c
+60 text2 CODE >67:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\mcc_generated_files/pin_manager.c
+62 text2 CODE >70:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\mcc_generated_files/pin_manager.c
+63 text2 CODE >72:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\mcc_generated_files/pin_manager.c
+72 text1 CODE >67:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\mcc_generated_files/mcc.c
+72 text1 CODE >68:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\mcc_generated_files/mcc.c
+73 text1 CODE >69:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\mcc_generated_files/mcc.c
+74 text1 CODE >70:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\mcc_generated_files/mcc.c
+18 maintext CODE >53:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\main.c
+18 maintext CODE >55:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\main.c
+19 maintext CODE >61:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\main.c
+1A maintext CODE >64:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\main.c
+1B maintext CODE >74:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\main.c
+1E maintext CODE >76:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\main.c
+27 maintext CODE >77:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\main.c
+29 maintext CODE >79:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\main.c
+2B maintext CODE >81:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\main.c
+34 maintext CODE >82:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\main.c
+37 maintext CODE >84:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\main.c
+39 maintext CODE >85:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\main.c
+46 maintext CODE >86:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\main.c
+48 maintext CODE >90:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\main.c
+49 maintext CODE >72:D:\Niranjan\MyRepo\cgscope\ATCSPS1C\ATCSPS1C.X\main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -160,7 +165,7 @@ __Hspace_1 75 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
-__end_of_PIN_MANAGER_IOC B0 0 CODE 0 text5 dist/default/production\ATCSPS1C.X.production.obj
+__end_of_PIN_MANAGER_IOC DA 0 CODE 0 text5 dist/default/production\ATCSPS1C.X.production.obj
 ltemp0 7E 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
 ltemp1 82 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
 ltemp2 86 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
@@ -169,11 +174,11 @@ __Hstrings 0 0 ABS 0 strings -
 _LATA 10C 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
 _LATC 10E 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
 _WPUA 20C 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
-___sp 0 0 STACK 2 stack C:\Users\niranjan\AppData\Local\Temp\s810.obj
-_main 64 0 CODE 0 maintext dist/default/production\ATCSPS1C.X.production.obj
+___sp 0 0 STACK 2 stack C:\Users\niranjan\AppData\Local\Temp\s4h0.obj
+_main 30 0 CODE 0 maintext dist/default/production\ATCSPS1C.X.production.obj
 btemp 7E 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
 ltemp 7E 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
-start 26 0 CODE 0 init C:\Users\niranjan\AppData\Local\Temp\s810.obj
+start 26 0 CODE 0 init C:\Users\niranjan\AppData\Local\Temp\s4h0.obj
 ttemp 7E 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
 wtemp 7E 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
 __size_of_main 0 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
@@ -186,12 +191,12 @@ ttemp2 84 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
 ttemp3 87 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
 ttemp4 7F 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
 __size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
-intlevel0 0 0 CODE 0 functab C:\Users\niranjan\AppData\Local\Temp\s810.obj
-intlevel1 0 0 CODE 0 functab C:\Users\niranjan\AppData\Local\Temp\s810.obj
-intlevel2 0 0 CODE 0 functab C:\Users\niranjan\AppData\Local\Temp\s810.obj
-intlevel3 0 0 CODE 0 functab C:\Users\niranjan\AppData\Local\Temp\s810.obj
-intlevel4 0 0 CODE 0 functab C:\Users\niranjan\AppData\Local\Temp\s810.obj
-intlevel5 0 0 CODE 0 functab C:\Users\niranjan\AppData\Local\Temp\s810.obj
+intlevel0 0 0 CODE 0 functab C:\Users\niranjan\AppData\Local\Temp\s4h0.obj
+intlevel1 0 0 CODE 0 functab C:\Users\niranjan\AppData\Local\Temp\s4h0.obj
+intlevel2 0 0 CODE 0 functab C:\Users\niranjan\AppData\Local\Temp\s4h0.obj
+intlevel3 0 0 CODE 0 functab C:\Users\niranjan\AppData\Local\Temp\s4h0.obj
+intlevel4 0 0 CODE 0 functab C:\Users\niranjan\AppData\Local\Temp\s4h0.obj
+intlevel5 0 0 CODE 0 functab C:\Users\niranjan\AppData\Local\Temp\s4h0.obj
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 wtemp0 7E 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
 wtemp1 80 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
@@ -201,7 +206,7 @@ wtemp4 86 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
 wtemp5 88 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
 wtemp6 7F 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
 __Hfunctab 0 0 CODE 0 functab -
-_PIN_MANAGER_IOC 96 0 CODE 0 text5 dist/default/production\ATCSPS1C.X.production.obj
+_PIN_MANAGER_IOC C8 0 CODE 0 text5 dist/default/production\ATCSPS1C.X.production.obj
 __Hclrtext 0 0 ABS 0 clrtext -
 _ANSELA 18C 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
 _ANSELC 18E 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
@@ -211,12 +216,12 @@ __Lmaintext 0 0 ABS 0 maintext -
 _IOCAF4 1C9C 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
 _IOCAP4 1C8C 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
 __CFG_MCLRE$OFF 0 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
-_PIN_MANAGER_Initialize 30 0 CODE 0 text2 dist/default/production\ATCSPS1C.X.production.obj
+_PIN_MANAGER_Initialize 94 0 CODE 0 text2 dist/default/production\ATCSPS1C.X.production.obj
 start_initialization 28 0 CODE 0 cinit dist/default/production\ATCSPS1C.X.production.obj
 _OSCCON 99 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
 __size_of_PIN_MANAGER_IOC 0 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
-__end_of_SYSTEM_Initialize C0 0 CODE 0 text1 dist/default/production\ATCSPS1C.X.production.obj
-___int_sp 0 0 STACK 2 stack C:\Users\niranjan\AppData\Local\Temp\s810.obj
+__end_of_SYSTEM_Initialize EA 0 CODE 0 text1 dist/default/production\ATCSPS1C.X.production.obj
+___int_sp 0 0 STACK 2 stack C:\Users\niranjan\AppData\Local\Temp\s4h0.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 BANK2 1 bank2 -
@@ -347,16 +352,17 @@ __Ltext 0 0 ABS 0 text -
 int$flags 7E 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 __size_of_INTERRUPT_InterruptManager 0 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
+_RA4 64 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
 _RA5 65 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
 __S0 8009 0 ABS 0 - -
 __S1 75 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
-_SYSTEM_Initialize BA 0 CODE 0 text1 dist/default/production\ATCSPS1C.X.production.obj
+_SYSTEM_Initialize E4 0 CODE 0 text1 dist/default/production\ATCSPS1C.X.production.obj
 __CFG_BOREN$ON 0 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\niranjan\AppData\Local\Temp\s810.obj
+reset_vec 0 0 CODE 0 reset_vec C:\Users\niranjan\AppData\Local\Temp\s4h0.obj
 _INTERRUPT_InterruptManager 8 0 CODE 0 intentry dist/default/production\ATCSPS1C.X.production.obj
-__end_of_PIN_MANAGER_Initialize 64 0 CODE 0 text2 dist/default/production\ATCSPS1C.X.production.obj
+__end_of_PIN_MANAGER_Initialize C8 0 CODE 0 text2 dist/default/production\ATCSPS1C.X.production.obj
 __Lbank10 0 0 BANK10 1 bank10 -
 __Lbank11 0 0 BANK11 1 bank11 -
 __Lbank12 0 0 BANK12 1 bank12 -
@@ -379,16 +385,15 @@ __Lbank28 0 0 BANK28 1 bank28 -
 __Lbank29 0 0 BANK29 1 bank29 -
 __Lbank30 0 0 BANK30 1 bank30 -
 __Lbank31 0 0 BANK31 1 bank31 -
-__pmaintext 64 0 CODE 0 maintext dist/default/production\ATCSPS1C.X.production.obj
+__pmaintext 30 0 CODE 0 maintext dist/default/production\ATCSPS1C.X.production.obj
 __Lbigram 0 0 ABS 0 bigram -
 __CFG_BORV$LO 0 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 1000E 0 CONFIG 0 config -
 __CFG_CP$OFF 0 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
 __CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
-_loadOff 74 0 COMMON 1 bssCOMMON dist/default/production\ATCSPS1C.X.production.obj
-stackhi 206F 0 ABS 0 - C:\Users\niranjan\AppData\Local\Temp\s810.obj
-stacklo 2000 0 ABS 0 - C:\Users\niranjan\AppData\Local\Temp\s810.obj
+stackhi 206F 0 ABS 0 - C:\Users\niranjan\AppData\Local\Temp\s4h0.obj
+stacklo 2000 0 ABS 0 - C:\Users\niranjan\AppData\Local\Temp\s4h0.obj
 _OSCSTAT 9A 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
 __CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
 __Lspace_0 0 0 ABS 0 - -
@@ -403,10 +408,10 @@ __Hintentry 26 0 CODE 0 intentry -
 __CFG_STVREN$ON 0 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
 __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 2 0 CODE 0 reset_vec -
-__ptext1 BA 0 CODE 0 text1 dist/default/production\ATCSPS1C.X.production.obj
-__ptext2 30 0 CODE 0 text2 dist/default/production\ATCSPS1C.X.production.obj
-__ptext3 B0 0 CODE 0 text3 dist/default/production\ATCSPS1C.X.production.obj
-__ptext5 96 0 CODE 0 text5 dist/default/production\ATCSPS1C.X.production.obj
+__ptext1 E4 0 CODE 0 text1 dist/default/production\ATCSPS1C.X.production.obj
+__ptext2 94 0 CODE 0 text2 dist/default/production\ATCSPS1C.X.production.obj
+__ptext3 DA 0 CODE 0 text3 dist/default/production\ATCSPS1C.X.production.obj
+__ptext5 C8 0 CODE 0 text5 dist/default/production\ATCSPS1C.X.production.obj
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __Lreset_vec 0 0 CODE 0 reset_vec -
@@ -417,19 +422,20 @@ __Lfunctab 0 0 CODE 0 functab -
 __Lclrtext 0 0 ABS 0 clrtext -
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\ATCSPS1C.X.production.obj
 __Hend_init 28 0 CODE 0 end_init -
-__end_of_main 96 0 CODE 0 maintext dist/default/production\ATCSPS1C.X.production.obj
+__end_of_main 94 0 CODE 0 maintext dist/default/production\ATCSPS1C.X.production.obj
 _LATC1 871 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
 _TRISA 8C 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
 _TRISC 8E 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
+_pulse 74 0 COMMON 1 bssCOMMON dist/default/production\ATCSPS1C.X.production.obj
 __size_of_PIN_MANAGER_Initialize 0 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
 __pintentry 8 0 CODE 0 intentry dist/default/production\ATCSPS1C.X.production.obj
-__end_of_OSCILLATOR_Initialize BA 0 CODE 0 text3 dist/default/production\ATCSPS1C.X.production.obj
+__end_of_OSCILLATOR_Initialize E4 0 CODE 0 text3 dist/default/production\ATCSPS1C.X.production.obj
 __initialization 28 0 CODE 0 cinit dist/default/production\ATCSPS1C.X.production.obj
 __CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
 __CFG_WRT$OFF 0 0 ABS 0 - dist/default/production\ATCSPS1C.X.production.obj
-_OSCILLATOR_Initialize B0 0 CODE 0 text3 dist/default/production\ATCSPS1C.X.production.obj
+_OSCILLATOR_Initialize DA 0 CODE 0 text3 dist/default/production\ATCSPS1C.X.production.obj
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -456,6 +462,6 @@ _OSCILLATOR_Initialize B0 0 CODE 0 text3 dist/default/production\ATCSPS1C.X.prod
 # All other numeric quantities are in decimal.
 %SEGMENTS
 cstackCOMMON 1 70 70 5 1
-intentry 0 4 8 5C 2
+intentry 0 4 8 71 2
 reset_vec 0 0 0 1 2
 config 0 8007 1000E 2 2

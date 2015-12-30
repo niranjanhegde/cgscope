@@ -1,28 +1,36 @@
 Version 3.2 HI-TECH Software Intermediate Code
-[p mainexit ]
-"68 mcc_generated_files/mcc.h
-[v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-"343 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic16f1503.h
-[s S27 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S27 . IOCIF INTF TMR0IF IOCIE INTE TMR0IE PEIE GIE ]
-"353
-[s S28 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S28 . . T0IF . T0IE ]
-"342
-[u S26 `S27 1 `S28 1 ]
-[n S26 . . . ]
-"360
-[v _INTCONbits `VS26 ~T0 @X0 0 e@11 ]
-[v F2899 `(v ~T0 @X0 1 tf1`ul ]
-"150 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic.h
-[v __delay `JF2899 ~T0 @X0 0 e ]
-[p i __delay ]
-"7685 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic16f1503.h
-[v _RA4 `Vb ~T0 @X0 0 e@100 ]
-"7687
-[v _RA5 `Vb ~T0 @X0 0 e@101 ]
-"7203
-[v _LATC1 `Vb ~T0 @X0 0 e@2161 ]
+"80 mcc_generated_files/mcc.h
+[v _OSCILLATOR_Initialize `(v ~T0 @X0 0 ef ]
+"118 mcc_generated_files/pin_manager.h
+[v _PIN_MANAGER_Initialize `(v ~T0 @X0 0 ef ]
+"1335 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic16f1503.h
+[v _OSCCON `Vuc ~T0 @X0 0 e@153 ]
+"1400
+[v _OSCSTAT `Vuc ~T0 @X0 0 e@154 ]
+"50 mcc_generated_files/mcc.c
+[p x CLKOUTEN=OFF ]
+"51
+[p x MCLRE=OFF ]
+"52
+[p x WDTE=OFF ]
+"53
+[p x FOSC=INTOSC ]
+"54
+[p x BOREN=ON ]
+"55
+[p x PWRTE=OFF ]
+"56
+[p x CP=OFF ]
+"59
+[p x LPBOR=OFF ]
+"60
+[p x LVP=OFF ]
+"61
+[p x WRT=OFF ]
+"62
+[p x STVREN=ON ]
+"63
+[p x BORV=LO ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -2858,110 +2866,37 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdint.h: 210: typedef int16_t intptr_t;
 [; ;stdint.h: 215: typedef uint16_t uintptr_t;
 [; ;stdbool.h: 12: typedef unsigned char bool;
-[; ;interrupt_manager.h: 111: void interrupt INTERRUPT_InterruptManager(void);
-[; ;mcc.h: 68: void SYSTEM_Initialize(void);
-[; ;mcc.h: 81: void OSCILLATOR_Initialize(void);
-"52 main.c
-[v _pulse `uc ~T0 @X0 1 e ]
-[i _pulse
--> -> 0 `i `uc
-]
-[; ;main.c: 52: char pulse=0;
-"53
-[v _main `(v ~T0 @X0 1 ef ]
+[; ;mcc.h: 67: void SYSTEM_Initialize(void);
+[; ;mcc.h: 80: void OSCILLATOR_Initialize(void);
+"67 mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 53: void main(void) {
-[e :U _main ]
+[; ;mcc.c: 67: void SYSTEM_Initialize(void) {
+[e :U _SYSTEM_Initialize ]
 [f ]
-[; ;main.c: 55: SYSTEM_Initialize();
-"55
-[e ( _SYSTEM_Initialize ..  ]
-[; ;main.c: 61: (INTCONbits.GIE = 1);
-"61
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-[; ;main.c: 64: (INTCONbits.PEIE = 1);
-"64
-[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-[; ;main.c: 72: while (1)
-"72
-[e :U 344 ]
-[; ;main.c: 73: {
-"73
-{
-[; ;main.c: 74: if(pulse == 1)
-"74
-[e $ ! == -> _pulse `i -> 1 `i 346  ]
-[; ;main.c: 75: {
-"75
-{
-[; ;main.c: 76: _delay((unsigned long)((3)*(16000000/4000.0)));
-"76
-[e ( __delay (1 -> * -> -> 3 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-[; ;main.c: 77: if(RA4)
-"77
-[e $ ! _RA4 347  ]
-[; ;main.c: 78: {
-"78
-{
-[; ;main.c: 79: if(RA5)
-"79
-[e $ ! _RA5 348  ]
-[; ;main.c: 80: {
-"80
-{
-[; ;main.c: 81: _delay((unsigned long)((6)*(16000000/4000.0)));
-"81
-[e ( __delay (1 -> * -> -> 6 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-[; ;main.c: 82: if(RA5)
-"82
-[e $ ! _RA5 349  ]
-[; ;main.c: 83: {
-"83
-{
-[; ;main.c: 84: do { LATC1 = 1; } while(0);
-"84
-[e :U 352 ]
-{
-[e = _LATC1 -> -> 1 `i `b ]
-}
-[e :U 351 ]
-[; ;main.c: 85: _delay((unsigned long)((3000)*(16000000/4000.0)));
-"85
-[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-[; ;main.c: 86: do { LATC1 = 0; } while(0);
-"86
-[e :U 355 ]
-{
-[e = _LATC1 -> -> 0 `i `b ]
-}
-[e :U 354 ]
-"87
-}
-[e :U 349 ]
-"88
-}
-[e :U 348 ]
-"89
-}
-[e :U 347 ]
-[; ;main.c: 87: }
-[; ;main.c: 88: }
-[; ;main.c: 89: }
-[; ;main.c: 90: pulse=0;
-"90
-[e = _pulse -> -> 0 `i `uc ]
-"91
-}
-[e :U 346 ]
-"92
-}
-[e :U 343 ]
-"72
-[e $U 344  ]
-[e :U 345 ]
-[; ;main.c: 91: }
-[; ;main.c: 92: }
-[; ;main.c: 93: }
-"93
+[; ;mcc.c: 68: OSCILLATOR_Initialize();
+"68
+[e ( _OSCILLATOR_Initialize ..  ]
+[; ;mcc.c: 69: PIN_MANAGER_Initialize();
+"69
+[e ( _PIN_MANAGER_Initialize ..  ]
+[; ;mcc.c: 70: }
+"70
 [e :UE 342 ]
+}
+"72
+[v _OSCILLATOR_Initialize `(v ~T0 @X0 1 ef ]
+{
+[; ;mcc.c: 72: void OSCILLATOR_Initialize(void) {
+[e :U _OSCILLATOR_Initialize ]
+[f ]
+[; ;mcc.c: 74: OSCCON = 0x7A;
+"74
+[e = _OSCCON -> -> 122 `i `uc ]
+[; ;mcc.c: 76: OSCSTAT = 0x00;
+"76
+[e = _OSCSTAT -> -> 0 `i `uc ]
+[; ;mcc.c: 79: }
+"79
+[e :UE 343 ]
 }
